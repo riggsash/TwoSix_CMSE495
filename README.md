@@ -1,4 +1,5 @@
-# TwoSix_LLM
+# TwoSix_LLM  
+## NEED TO FIX README LOL
 Repository for CMSE 495 Experiential Learning in Data Science
 
 **Prerequisites**
