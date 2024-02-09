@@ -4,6 +4,26 @@ from dash.dependencies import Input, Output, State
 import json
 from dash_selectable import DashSelectable
 
+"""
+Functionality ideas:
+- Could write "helper" functions for callbacks to increase readability of callbacks
+
+Functionality to be added:
+- Ability to read in files and be added to sentences for data labeling (Look at: Dash upload component)
+-- Ability to read metadata off of said files and assign them to a new dcc.Store so it can be added to every sentence's metadata
+
+Functionality to be updated:
+- (Not Required) Being able to choose the file name for the download
+-- Currently cannot override previous downloaded files, will save as test.json, then the next as test(1).json
+
+Errors in Functionality:
+- (Not tested, but theorized) Final sentence data is currently unsavable as "save relation" only saves to current sentence,
+and not to all-relation-store
+-- Can be fixed by changing the case where n_clicks># of sentences in function next_sentence()
+
+"""
+
+
 app = dash.Dash(__name__)
 
 sentences = [
@@ -12,9 +32,7 @@ sentences = [
     "The curious cat explored the mysterious backyard at night."
 ]
 
-labeled_sentences = []
 relation = {"text": "", "casual_relations": [], "meta_data": {"title": "", "authors": "", "year": -1}}
-current_sentence_index = 0
 
 app.layout = html.Div([
     html.Div([
@@ -111,7 +129,6 @@ def next_sentence(n_clicks, current_text, all_data,curr_relation,curr_sen_data):
      Input('reset-btn', 'n_clicks')],
     [State("dash-selectable", "selectedValue"),
      State("current-relation-store", "data")],
-     #prevent_initial_call='initial_duplicate'
 )
 def allLabel(inc,dec,src,tgt,next,reset,selected_data,relation):
     """
