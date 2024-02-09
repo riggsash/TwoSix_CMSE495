@@ -52,7 +52,7 @@ app.layout = html.Div([
     ])
 ])
 
-#test
+
 @app.callback(Output("output", "children"),
               [Input("dash-selectable", "selectedValue")])
 def display_output(value):
@@ -91,12 +91,12 @@ def next_sentence(n_clicks, current_text, all_data,curr_relation,curr_sen_data):
         curr_sen_data = {"text": sentences[current_sentence_index],
                            "causal relations": [],
                            "meta_data": {"title": "", "authors": "", "year": ""}}
-        curr_relation = {}
+        curr_relation = {'src':"",'tgt':'','direction':''}
         return all_data,sentences[current_sentence_index], curr_sen_data, curr_relation
     else:
         return all_data, current_text, curr_sen_data, curr_relation
 
-# Similar callbacks for increase, decrease, save, reset, etc.
+#Callback for increase, decrease, source,target, save, and reset in the following
 
 @app.callback(
     [Output('my-direction','children'),
@@ -106,20 +106,22 @@ def next_sentence(n_clicks, current_text, all_data,curr_relation,curr_sen_data):
     [Input('increase-btn', 'n_clicks'),
      Input('decrease-btn', 'n_clicks'),
      Input('source-btn', 'n_clicks'),
-     Input('target-btn', 'n_clicks')],
+     Input('target-btn', 'n_clicks'),
+     Input('next-btn', 'n_clicks'),
+     Input('reset-btn', 'n_clicks')],
     [State("dash-selectable", "selectedValue"),
-     State("current-relation-store", "data")]
+     State("current-relation-store", "data")],
+     #prevent_initial_call='initial_duplicate'
 )
-
-def allLabel(inc,dec,src,tgt,selected_data,relation):
+def allLabel(inc,dec,src,tgt,next,reset,selected_data,relation):
     """
-    Function to
-    :param inc:
-    :param dec:
-    :param src:
-    :param tgt:
-    :param selected_data:
-    :param relation:
+    Function that handles all relation button data
+    :param inc: Increase button
+    :param dec: Decrease button
+    :param src: Source button
+    :param tgt: Target button
+    :param selected_data: User-selected data
+    :param relation: Relation data storage
     :return: [Direction text, ]
     """
     button_id = ctx.triggered_id if not None else False
@@ -138,15 +140,30 @@ def allLabel(inc,dec,src,tgt,selected_data,relation):
     elif button_id == "target-btn":
         relation["tgt"] = selected_data
         return dash.no_update, dash.no_update, f"Target: {selected_data}",relation
-    else:
+    elif button_id == "reset-btn":
+        relation = {'src': "", 'tgt': '', 'direction': ''}
+        return direcText, srcText, tgtText, relation
+    else: #This else corresponds to initial call (program start) and when the next button is hit
+        #Have not tried multiple changes to one output from one button, and it probably isn't a good idea, so don't change this
         return direcText,srcText,tgtText,relation
-"""
+
+
+
 @app.callback(
-    Output('stored-data','children'),
-    [Input('saved-btn', 'n_clicks')],
-    State('current-relation-store','data')
+    [Output('curr-sentence-store','data'),
+     Output('current-relation-store','data',allow_duplicate=True)],
+    [Input('save-btn', 'n_clicks')],
+    [State('current-relation-store','data'),
+     State('curr-sentence-store', 'data')],
+     prevent_initial_call=True,
 )
-"""
+def save_relation(n_clicks,curr_relation,curr_sentence):
+    if curr_relation["src"] is not None and curr_relation["tgt"] is not None:
+        curr_sentence["causal relations"].append(curr_relation)
+        return curr_sentence,curr_relation
+    else:
+        return dash.no_update,curr_relation
+
 
 
 @app.callback(
@@ -154,11 +171,11 @@ def allLabel(inc,dec,src,tgt,selected_data,relation):
     [Input('saved-btn', 'n_clicks')],
     State('all-relation-store','data'),
 )
-
 def currentStorage(n_clicks,data):
     if not data:
         return f"Stored: []"
     return f"Stored: {data}"
+
 
 @app.callback(
     Output("download-json", "data"),
@@ -167,7 +184,7 @@ def currentStorage(n_clicks,data):
     prevent_initial_call=True,
 )
 def download(n_clicks,data):
-    fileData = json.dumps(data,indent=1)
+    fileData = json.dumps(data,indent=2)
     return dict(content=fileData,filename="test.json")
 
 
