@@ -40,6 +40,7 @@ app.layout = html.Div([
         html.Button('Next', id='next-btn', n_clicks=0),
         html.Br(),
         html.Button('Saved', id='saved-btn', n_clicks=0),
+        html.Button('Download JSON', id='download-btn', n_clicks=0),
         html.Br(),
         html.Div(id='stored-data'),
         dcc.Store(id='all-relation-store',data=[], storage_type='local'),
@@ -47,6 +48,7 @@ app.layout = html.Div([
                            "causal relations": [],
                            "meta_data": {"title": "", "authors": "", "year": ""}}, storage_type='local'),
         dcc.Store(id='current-relation-store',data={"src":"","tgt":"","direction":""},storage_type='local'),
+        dcc.Download(id="download-json"),
     ])
 ])
 
@@ -150,13 +152,24 @@ def allLabel(inc,dec,src,tgt,selected_data,relation):
 @app.callback(
     Output('stored-data','children'),
     [Input('saved-btn', 'n_clicks')],
-    State('all-relation-store','data')
+    State('all-relation-store','data'),
 )
 
 def currentStorage(n_clicks,data):
     if not data:
         return f"Stored: []"
     return f"Stored: {data}"
+
+@app.callback(
+    Output("download-json", "data"),
+    Input("download-btn", "n_clicks"),
+    State('all-relation-store','data'),
+    prevent_initial_call=True,
+)
+def download(n_clicks,data):
+    fileData = json.dumps(data,indent=1)
+    return dict(content=fileData,filename="test.json")
+
 
 if __name__ == '__main__':
     app.run_server(debug=True)
