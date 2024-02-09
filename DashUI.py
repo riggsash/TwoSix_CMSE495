@@ -63,89 +63,99 @@ def display_output(value):
 
 
 @app.callback(
-    [Output('all-relation-store', 'data'),
-     Output('sentence','children')],
+    [Output('all-relation-store', 'data',allow_duplicate=True),
+     Output('sentence','children'),
+     Output('curr-sentence-store', 'data',allow_duplicate=True),
+     Output('current-relation-store', 'data',allow_duplicate=True)],
     [Input('next-btn', 'n_clicks')],
     [State('sentence', 'children'),
      State('all-relation-store', 'data'),
      State('current-relation-store', 'data'),
-     State('curr-sentence-store', 'data')]
+     State('curr-sentence-store', 'data')],
+     prevent_initial_call='initial_duplicate'
 )
 def next_sentence(n_clicks, current_text, all_data,curr_relation,curr_sen_data):
     current_sentence_index = int(n_clicks)
-    if current_sentence_index < len(sentences):
+    if current_sentence_index == 0:
+        all_data = [] #CHANGE LATER, THIS FORCES DATA DELETE ON REFRESH
+        curr_sen_data["text"] = sentences[current_sentence_index]
+        return all_data, sentences[current_sentence_index], curr_sen_data, curr_relation
+    elif current_sentence_index < len(sentences):
         if curr_relation["src"] is None or curr_relation["tgt"] is None:
             pass
         else:
             curr_sen_data["causal relations"].append(curr_relation)
-        all_data.append(curr_relation)
-        return all_data,sentences[current_sentence_index]
+        all_data.append(curr_sen_data)
+        curr_sen_data = {"text": sentences[current_sentence_index],
+                           "causal relations": [],
+                           "meta_data": {"title": "", "authors": "", "year": ""}}
+        curr_relation = {}
+        return all_data,sentences[current_sentence_index], curr_sen_data, curr_relation
     else:
-        return all_data, current_text
+        return all_data, current_text, curr_sen_data, curr_relation
 
 # Similar callbacks for increase, decrease, save, reset, etc.
 
 @app.callback(
-    [Output('my-source','children'),
-     Output("current-relation-store", "data")],
-    [Input('source-btn', 'n_clicks')],
-    [State("dash-selectable", "selectedValue"),
-     State("current-relation-store", "data")]
-)
-
-def sourceLabel(n_clicks, selected_data,relation_data):
-    text = f"Source: "
-    if selected_data:
-        relation_data["src"] = selected_data
-        return f"Source: {selected_data}", relation_data
-    else:
-        return text, relation_data
-
-
-@app.callback(
-    Output('my-target','children'),
-    [Input('target-btn', 'n_clicks')],
-    [State("dash-selectable", "selectedValue"),
-     State("current-relation-store", "data")]
-)
-
-def targetLabel(n_clicks, selected_data,relation):
-    text = f"Target: "
-    if selected_data:
-        relation["tgt"]=selected_data
-        return f"Target: {selected_data}",relation
-    else:
-        return text
-
-@app.callback(
     [Output('my-direction','children'),
-    Output("current-relation-store", "data")],
+     Output('my-source','children'),
+     Output('my-target','children'),
+     Output("current-relation-store", "data")],
     [Input('increase-btn', 'n_clicks'),
-     Input('decrease-btn', 'n_clicks')],
-     State("current-relation-store", "data")
+     Input('decrease-btn', 'n_clicks'),
+     Input('source-btn', 'n_clicks'),
+     Input('target-btn', 'n_clicks')],
+    [State("dash-selectable", "selectedValue"),
+     State("current-relation-store", "data")]
 )
 
-def targetLabel(inc,dec,relation):
+def allLabel(inc,dec,src,tgt,selected_data,relation):
+    """
+    Function to
+    :param inc:
+    :param dec:
+    :param src:
+    :param tgt:
+    :param selected_data:
+    :param relation:
+    :return: [Direction text, ]
+    """
     button_id = ctx.triggered_id if not None else False
-    text = f"Direction: "
+    direcText = f"Direction: "
+    srcText = f"Source: "
+    tgtText = f"Target: "
     if button_id == "increase-btn":
         relation["direction"]="Increase"
-        return f"Direction: Increase",relation
+        return f"Direction: Increase",dash.no_update, dash.no_update,relation
     elif button_id == "decrease-btn":
         relation["direction"] = "Decrease"
-        return f"Direction: Decrease",relation
+        return f"Direction: Decrease",dash.no_update, dash.no_update,relation
+    elif button_id == "source-btn":
+        relation["src"] = selected_data
+        return dash.no_update, f"Source: {selected_data}", dash.no_update,relation
+    elif button_id == "target-btn":
+        relation["tgt"] = selected_data
+        return dash.no_update, dash.no_update, f"Target: {selected_data}",relation
     else:
-        return text,relation
-
+        return direcText,srcText,tgtText,relation
+"""
 @app.callback(
     Output('stored-data','children'),
     [Input('saved-btn', 'n_clicks')],
     State('current-relation-store','data')
 )
+"""
+
+
+@app.callback(
+    Output('stored-data','children'),
+    [Input('saved-btn', 'n_clicks')],
+    State('all-relation-store','data')
+)
 
 def currentStorage(n_clicks,data):
     if not data:
-        return dash.no_update
+        return f"Stored: []"
     return f"Stored: {data}"
 
 if __name__ == '__main__':
