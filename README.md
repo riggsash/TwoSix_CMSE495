@@ -2,6 +2,9 @@
 ## NEED TO FIX README LOL
 Repository for CMSE 495 Experiential Learning in Data Science
 
+**Project Plan Video:**  
+https://mediaspace.msu.edu/media/t/1_8ezxk12i  
+
 **Prerequisites**
 Python 3.0
 [Required Python Libraries]
