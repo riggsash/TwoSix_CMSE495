@@ -9,14 +9,22 @@ from striprtf.striprtf import rtf_to_text
 """
 Functionality ideas:
 - Could write "helper" functions for callbacks to increase readability of callbacks
+-- Will become more necessary as other features are added (back, reverse relations, etc)
+- Having the JSON be downloadable is nice and fine, but maybe it could be directly uploaded to git
 
 Functionality to be added:
-- Ability to read in files and be added to sentences for data labeling (Look at: Dash upload component)
+- Ability to read in files (besides RTF) and be added to sentences for data labeling (Look at: Dash upload component)
 -- Ability to read metadata off of said files and assign them to a new dcc.Store so it can be added to every sentence's metadata
+- Ability to create opposite relations from a previous sentence *** Priority
+- A back button to iterate backwards through the paper.
 
 Functionality to be updated:
 - (Not Required) Being able to choose the file name for the download
 -- Currently cannot override previous downloaded files, will save as test.json, then the next as test(1).json
+
+Unexpected (or frustrating) Behavior:
+- Clicking anywhere on the same "y" as the upload button opens the file menu
+
 
 Errors in Functionality:
 - (Not tested, but theorized) Final sentence data is currently unsavable as "save relation" only saves to current sentence,
@@ -27,14 +35,6 @@ and not to all-relation-store
 
 
 app = dash.Dash(__name__)
-
-#sentences = [
-#    "The wind farms in the Gulf of Mexico create new fishing zones.",
-#    "Other perceived impacts of the BIWF included the negative effects of sound and increased turbidity during construction and an increase in cod in the area.",
-#    "The curious cat explored the mysterious backyard at night."
-#]
-
-relation = {"text": "", "casual_relations": [], "meta_data": {"title": "", "authors": "", "year": -1}}
 
 app.layout = html.Div([
     html.Div([
@@ -62,7 +62,7 @@ app.layout = html.Div([
         dcc.Upload(
             id='upload-data',
             children=html.Div([
-                html.A('Select Files')
+                html.Button('Select Files')
         ]),),
         html.Button('Saved', id='saved-btn', n_clicks=0),
         html.Button('Download JSON', id='download-btn', n_clicks=0),
@@ -115,13 +115,13 @@ def next_sentence(n_clicks, current_text, all_data,curr_relation,curr_sen_data,s
         curr_sen_data["text"] = sentences[current_sentence_index]
         return all_data, sentences[current_sentence_index], curr_sen_data, curr_relation
     elif current_sentence_index < len(sentences):
+        #Handling case where current relation is not filled out enough to be usable
         if curr_relation["src"] == '' or curr_relation["tgt"] == '':
             if not len(curr_sen_data["causal relations"]):
                 curr_sen_data["causal relations"].append(curr_relation)
         else:
             if len(curr_sen_data["causal relations"]):
                 if curr_sen_data["causal relations"][-1] != curr_relation:
-                    #why does this if error
                     curr_sen_data["causal relations"].append(curr_relation)
             else:
                 curr_sen_data["causal relations"].append(curr_relation)
@@ -206,12 +206,12 @@ def save_relation(n_clicks,curr_relation,curr_sentence):
 @app.callback(
     Output('stored-data','children'),
     [Input('saved-btn', 'n_clicks')],
-    State('input-sentences','data'),
+    State('all-relation-store','data'),
 )
 def currentStorage(n_clicks,data):
     if not data:
         return f"Stored: []"
-    return f"Stored: {data}" + f" Length: {len(data)}" + f" Test: {data[1]}"
+    return f"Stored: {data}"
 
 
 @app.callback(
@@ -223,6 +223,23 @@ def currentStorage(n_clicks,data):
 def download(n_clicks,data):
     fileData = json.dumps(data,indent=2)
     return dict(content=fileData,filename="test.json")
+
+#File handler helper function
+def abbreviation_handler(sentences):
+
+    sentences_to_add = []
+    temp = sentences[0]
+    for i in range(len(sentences) - 1):
+        if sentences[i] == '':
+            continue
+        if not (sentences[i + 1].strip())[0].isupper():
+            temp = temp + '. ' + sentences[i + 1]
+        else:
+            sentences_to_add.append(temp)
+            temp = sentences[i + 1]
+    return sentences_to_add
+
+
 
 @app.callback([Output('output-data-upload', 'children'),
                Output('input-sentences', 'data'),],
@@ -240,10 +257,20 @@ def update_output(list_of_contents, list_of_names,inp_sentences):
     if ".rtf" in list_of_names:
         temp = io.StringIO(decoded.decode('utf-8')).getvalue()
         text = rtf_to_text(temp)
-        sentences = text.split(".")
+        text = text.replace("\n", "")
+        sentences = text.split(". ")
+        #temp = sentences[0]
+        sentences = abbreviation_handler(sentences)
+
         for sentence in sentences:
+            if sentence == '':
+                continue
+            sentence = sentence + "."
             inp_sentences.append(sentence)
-    return text,inp_sentences
+    if not inp_sentences:
+        return f"Input Paper By Sentence: []"
+    return f"Input Paper By Sentence: {inp_sentences}" + f" Length: {len(inp_sentences)}",inp_sentences
+    #return text,inp_sentences
 
 
 
