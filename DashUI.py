@@ -237,6 +237,7 @@ def abbreviation_handler(sentences):
         else:
             sentences_to_add.append(temp)
             temp = sentences[i + 1]
+    sentences_to_add.append(temp)
     return sentences_to_add
 
 
@@ -257,14 +258,23 @@ def update_output(list_of_contents, list_of_names,inp_sentences):
     if ".rtf" in list_of_names:
         temp = io.StringIO(decoded.decode('utf-8')).getvalue()
         text = rtf_to_text(temp)
-        text = text.replace("\n", "")
-        sentences = text.split(". ")
-        #temp = sentences[0]
+        period_split = text.split(". ")
+        sentences = []
+        for sentence in period_split:
+            temp = sentence.split(".\n")
+            if type(temp) is str:
+                sentences.append(sentence)
+            else:
+                for sen in temp:
+                    if sen == "":
+                        continue
+                    sentences.append(sen)
         sentences = abbreviation_handler(sentences)
 
         for sentence in sentences:
             if sentence == '':
                 continue
+            sentence = sentence.replace("\n", "")
             sentence = sentence + "."
             inp_sentences.append(sentence)
     if not inp_sentences:
