@@ -24,13 +24,21 @@ Functionality to be updated:
 
 Unexpected (or frustrating) Behavior:
 - Clicking anywhere on the same "y" as the upload button opens the file menu
-
+- After saving a json, the input sentences are removed and the program is basically reset
+-- However, even though it is reset, you cannot upload the same file consecutively.
+-- You CAN upload 1 paper, then upload a second paper, and they will combine in the storage.
+--- This problem likely occurs based on how dash is handling uploads, and may not be fixable. 
+--- Also, this issue may not be relevant as why would you upload the same thing multiple times consecutively.
 
 Errors in Functionality:
-- (Not tested, but theorized) Final sentence data is currently unsavable as "save relation" only saves to current sentence,
-and not to all-relation-store
--- Can be fixed by changing the case where n_clicks># of sentences in function next_sentence()
-
+- Fixed problem where last sentence would not save
+* As sentences currently do not reset until the json is saved, if you refresh the page, it will reset the sentence
+* index, and return to 0. This means that if you hit next afterwards, 
+* you will create another relation of the same sentence
+** A potential solution to this is to add a skip sentence button, that will prevent adding the current sentence to the
+** Storage.
+*** Another potential solution, which may just be a good idea anyways, is adding another button to
+*** remove the current paper from the program
 """
 
 
@@ -70,9 +78,9 @@ app.layout = html.Div([
         html.Div(id='stored-data'),
         html.Br(),
         html.Div(id="output-data-upload"),
-        dcc.Store(id='input-sentences', data=["Please Insert RTF File"], storage_type='memory'),
+        dcc.Store(id='input-sentences', data=["Please Insert RTF File"], storage_type='local'),
 
-        dcc.Store(id='all-relation-store', data=[], storage_type='memory'),
+        dcc.Store(id='all-relation-store', data=[], storage_type='local'),
         # CHANGE BACK TO SESSION OR LOCAL FOR RESEARCHER RELEASE
 
         dcc.Store(id='curr-sentence-store',data={"text": "",
@@ -99,22 +107,30 @@ def display_output(value):
     [Output('all-relation-store', 'data',allow_duplicate=True),
      Output('sentence','children'),
      Output('curr-sentence-store', 'data',allow_duplicate=True),
-     Output('current-relation-store', 'data',allow_duplicate=True)],
+     Output('current-relation-store', 'data',allow_duplicate=True),
+     Output('next-btn', 'n_clicks',allow_duplicate=True)],
     [Input('next-btn', 'n_clicks')],
     [State('sentence', 'children'),
      State('all-relation-store', 'data'),
      State('current-relation-store', 'data'),
      State('curr-sentence-store', 'data'),
      State('input-sentences','data'),],
-     prevent_initial_call='initial_duplicate'
+    prevent_initial_call='initial_duplicate',
 )
 def next_sentence(n_clicks, current_text, all_data,curr_relation,curr_sen_data,sentences):
     current_sentence_index = int(n_clicks)
+    if len(sentences) == 1: #Prevents moving the amount of clicks, and thus the index of sentences
+        # , when there is no file [On start, and after download]
+        curr_sen_data["text"] = sentences[0]
+        return all_data, sentences[0], curr_sen_data, curr_relation, 0
     if current_sentence_index == 0:
         curr_sen_data["text"] = sentences[current_sentence_index]
-        return all_data, sentences[current_sentence_index], curr_sen_data, curr_relation
+        return all_data, sentences[current_sentence_index], curr_sen_data, curr_relation, n_clicks
+    elif current_sentence_index == 1:
+        curr_sen_data["text"] = sentences[current_sentence_index]
+        return all_data, sentences[current_sentence_index], curr_sen_data, curr_relation, n_clicks
     elif current_sentence_index < len(sentences):
-        #Handling case where current relation is not filled out enough to be usable
+        # Handling case where current relation is not filled out enough to be usable
         if curr_relation["src"] == '' or curr_relation["tgt"] == '':
             if not len(curr_sen_data["causal relations"]):
                 curr_sen_data["causal relations"].append(curr_relation)
@@ -126,12 +142,30 @@ def next_sentence(n_clicks, current_text, all_data,curr_relation,curr_sen_data,s
                 curr_sen_data["causal relations"].append(curr_relation)
         all_data.append(curr_sen_data)
         curr_sen_data = {"text": sentences[current_sentence_index],
-                           "causal relations": [],
-                           "meta_data": {"title": "", "authors": "", "year": ""}}
+                         "causal relations": [],
+                         "meta_data": {"title": "", "authors": "", "year": ""}}
         curr_relation = {'src':"",'tgt':'','direction':''}
-        return all_data,sentences[current_sentence_index], curr_sen_data, curr_relation
+        return all_data, sentences[current_sentence_index], curr_sen_data, curr_relation, n_clicks
+    elif all_data[-1]["text"] != current_text:
+        # This case is hit when the user hits the final sentence of a paper, and hits next 1 additional time
+        # This makes sure that the last sentence is saved.
+        if curr_relation["src"] == '' or curr_relation["tgt"] == '':
+            if not len(curr_sen_data["causal relations"]):
+                curr_sen_data["causal relations"].append(curr_relation)
+        else:
+            if len(curr_sen_data["causal relations"]):
+                if curr_sen_data["causal relations"][-1] != curr_relation:
+                    curr_sen_data["causal relations"].append(curr_relation)
+            else:
+                curr_sen_data["causal relations"].append(curr_relation)
+        all_data.append(curr_sen_data)
+        curr_sen_data = {"text": current_text,
+                         "causal relations": [],
+                         "meta_data": {"title": "", "authors": "", "year": ""}}
+        curr_relation = {'src': "", 'tgt': '', 'direction': ''}
+        return all_data, current_text, curr_sen_data, curr_relation, n_clicks
     else:
-        return all_data, current_text, curr_sen_data, curr_relation
+        return all_data, current_text, curr_sen_data, curr_relation, n_clicks
 
 #Callback for increase, decrease, source,target, save, and reset in the following
 
@@ -156,6 +190,8 @@ def allLabel(inc,dec,src,tgt,next,reset,selected_data,relation):
     :param dec: Decrease button
     :param src: Source button
     :param tgt: Target button
+    :param next: Next button - allows next button to access function
+    :param reset: Reset button - allows reset button to access function
     :param selected_data: User-selected data
     :param relation: Relation data storage
     :return: [Direction text, ]
@@ -214,14 +250,53 @@ def currentStorage(n_clicks,data):
 
 
 @app.callback(
-    Output("download-json", "data"),
+    [Output("download-json", "data"),
+     Output('all-relation-store','data'),
+     Output('input-sentences','data', allow_duplicate=True),
+     Output('next-btn','n_clicks')],
     Input("download-btn", "n_clicks"),
-    State('all-relation-store','data'),
+    [State('all-relation-store','data'),
+     State('next-btn','n_clicks'),
+     State('input-sentences','data'),],
     prevent_initial_call=True,
 )
-def download(n_clicks,data):
-    fileData = json.dumps(data,indent=2)
-    return dict(content=fileData,filename="test.json")
+def download(n_clicks,data,curr_sen_index, inp_sentences):
+    # In current implementation, only required variables are the input (download-btn)
+    # and the state of all-relation-store
+    """
+
+    :param n_clicks:
+    :param data:
+    :param curr_sen_index:
+    :param inp_sentences:
+    :return: json, relational storage, input_sentences, next btn n_clicks
+    """
+    # WHEN YOU HIT SAVE, YOU ARE DONE WITH THAT SESSION, ALL REMAINING SENTENCES ARE REMOVED, AND THE PROGRAM IS
+    # BASICALLY RESET
+    fileData = json.dumps(data, indent=2)
+    #if len(inp_sentences) == 1:
+    #    inp_sentences = ["Please Insert RTF File"]
+    #    curr_sen_index = 0
+    #elif int(curr_sen_index) < len(inp_sentences):
+    #    inp_sentences = (inp_sentences[int(curr_sen_index)-1:])
+    #    curr_sen_index = int(curr_sen_index)-1
+    #else:
+    #    inp_sentences = ["Please Insert RTF File"]
+    #    curr_sen_index = 0
+    # json, relational, input, next
+    return dict(content=fileData, filename="test.json"), [], ["Please Insert RTF File"], 0
+
+
+# This callback also activates on download, and updates the text on screen.
+
+
+@app.callback(
+    Output('output-data-upload', 'children', allow_duplicate=True),
+    Input('input-sentences','data'),
+    prevent_initial_call='initial_duplicate',
+)
+def refresh(inp_sentences):
+    return f"Current Sentences: {inp_sentences}" + f" Length: {len(inp_sentences)}"
 
 #File handler helper function
 def abbreviation_handler(sentences):
@@ -240,17 +315,16 @@ def abbreviation_handler(sentences):
     return sentences_to_add
 
 
-
-@app.callback([Output('output-data-upload', 'children'),
-               Output('input-sentences', 'data'),],
+@app.callback(Output('input-sentences','data'),
               Input('upload-data', 'contents'),
               [State('upload-data', 'filename'),
                State('input-sentences','data')],
-              prevent_initial_callback=True,
 )
 
 def update_output(list_of_contents, list_of_names,inp_sentences):
     if list_of_contents is None:
+        if len(inp_sentences) > 1:
+            return inp_sentences
         return dash.no_update
     content_type, content_string = list_of_contents.split(',')
     decoded = base64.b64decode(content_string)
@@ -278,7 +352,7 @@ def update_output(list_of_contents, list_of_names,inp_sentences):
             inp_sentences.append(sentence)
     if not inp_sentences:
         return f"Input Paper By Sentence: []"
-    return f"Input Paper By Sentence: {inp_sentences}" + f" Length: {len(inp_sentences)}",inp_sentences
+    return inp_sentences
     #return text,inp_sentences
 
 
