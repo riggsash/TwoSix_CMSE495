@@ -70,11 +70,11 @@ app.layout = html.Div([
         html.Div(id='stored-data'),
         html.Br(),
         html.Div(id="output-data-upload"),
-        dcc.Store(id='input-sentences',data=[
-            "The wind farms in the Gulf of Mexico create new fishing zones.",
-            "Other perceived impacts of the BIWF included the negative effects of sound and increased turbidity during construction and an increase in cod in the area.",
-            "The curious cat explored the mysterious backyard at night."],storage_type='memory'),
-        dcc.Store(id='all-relation-store',data=[], storage_type='local'),
+        dcc.Store(id='input-sentences', data=["Please Insert RTF File"], storage_type='memory'),
+
+        dcc.Store(id='all-relation-store', data=[], storage_type='memory'),
+        # CHANGE BACK TO SESSION OR LOCAL FOR RESEARCHER RELEASE
+
         dcc.Store(id='curr-sentence-store',data={"text": "",
                            "causal relations": [],
                            "meta_data": {"title": "", "authors": "", "year": ""}}, storage_type='local'),
@@ -111,7 +111,6 @@ def display_output(value):
 def next_sentence(n_clicks, current_text, all_data,curr_relation,curr_sen_data,sentences):
     current_sentence_index = int(n_clicks)
     if current_sentence_index == 0:
-        all_data = [] #CHANGE LATER, THIS FORCES DATA DELETE ON REFRESH
         curr_sen_data["text"] = sentences[current_sentence_index]
         return all_data, sentences[current_sentence_index], curr_sen_data, curr_relation
     elif current_sentence_index < len(sentences):
