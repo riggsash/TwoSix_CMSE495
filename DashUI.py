@@ -39,6 +39,8 @@ Errors in Functionality:
 ** Storage.
 *** Another potential solution, which may just be a good idea anyways, is adding another button to
 *** remove the current paper from the program
+** A third solution would be to see if the text is already in all_data, and if it is, whichever is larger is saved
+** or maybe updated instead? unsure how this would work
 """
 
 
@@ -54,11 +56,11 @@ app.layout = html.Div([
         html.Button('Source', id='source-btn', n_clicks=0),
         html.Button('Target', id='target-btn', n_clicks=0),
         html.Br(),
-        html.Div(id = 'my-source'),
+        html.Div(id='my-source'),
 
-        html.Div(id = 'my-target'),
+        html.Div(id='my-target'),
 
-        html.Div(id = 'my-direction'),
+        html.Div(id='my-direction'),
         html.Br(),
         html.Br(),
         html.Button('Increase', id='increase-btn', n_clicks=0),
@@ -72,7 +74,6 @@ app.layout = html.Div([
             children=html.Div([
                 html.Button('Select Files')
         ]),),
-        html.Button('Saved', id='saved-btn', n_clicks=0),
         html.Button('Download JSON', id='download-btn', n_clicks=0),
         html.Br(),
         html.Div(id='stored-data'),
@@ -102,7 +103,6 @@ def display_output(value):
     return "Currently selected: {}".format(text)
 
 
-
 @app.callback(
     [Output('all-relation-store', 'data',allow_duplicate=True),
      Output('sentence','children'),
@@ -119,7 +119,7 @@ def display_output(value):
 )
 def next_sentence(n_clicks, current_text, all_data,curr_relation,curr_sen_data,sentences):
     current_sentence_index = int(n_clicks)
-    if len(sentences) == 1: #Prevents moving the amount of clicks, and thus the index of sentences
+    if len(sentences) == 1:  # Prevents moving the amount of clicks, and thus the index of sentences
         # , when there is no file [On start, and after download]
         curr_sen_data["text"] = sentences[0]
         return all_data, sentences[0], curr_sen_data, curr_relation, 0
@@ -149,6 +149,7 @@ def next_sentence(n_clicks, current_text, all_data,curr_relation,curr_sen_data,s
     elif all_data[-1]["text"] != current_text:
         # This case is hit when the user hits the final sentence of a paper, and hits next 1 additional time
         # This makes sure that the last sentence is saved.
+        # The following code in this elif could be made into a function as it is now repeated.
         if curr_relation["src"] == '' or curr_relation["tgt"] == '':
             if not len(curr_sen_data["causal relations"]):
                 curr_sen_data["causal relations"].append(curr_relation)
@@ -167,7 +168,8 @@ def next_sentence(n_clicks, current_text, all_data,curr_relation,curr_sen_data,s
     else:
         return all_data, current_text, curr_sen_data, curr_relation, n_clicks
 
-#Callback for increase, decrease, source,target, save, and reset in the following
+# Callback for increase, decrease, source,target, save, and reset in the following
+
 
 @app.callback(
     [Output('my-direction','children'),
@@ -201,7 +203,7 @@ def allLabel(inc,dec,src,tgt,next,reset,selected_data,relation):
     srcText = f"Source: "
     tgtText = f"Target: "
     if button_id == "increase-btn":
-        relation["direction"]="Increase"
+        relation["direction"] = "Increase"
         return f"Direction: Increase",dash.no_update, dash.no_update,relation
     elif button_id == "decrease-btn":
         relation["direction"] = "Decrease"
@@ -215,10 +217,10 @@ def allLabel(inc,dec,src,tgt,next,reset,selected_data,relation):
     elif button_id == "reset-btn":
         relation = {'src': "", 'tgt': '', 'direction': ''}
         return direcText, srcText, tgtText, relation
-    else: #This else corresponds to initial call (program start) and when the next button is hit
-        #Have not tried multiple changes to one output from one button, and it probably isn't a good idea, so don't change this
+    else: # This else corresponds to initial call (program start) and when the next button is hit
+        # Have not tried multiple changes to one output from one button,
+        # and it probably isn't a good idea, so don't change this
         return direcText,srcText,tgtText,relation
-
 
 
 @app.callback(
@@ -227,7 +229,7 @@ def allLabel(inc,dec,src,tgt,next,reset,selected_data,relation):
     [Input('save-btn', 'n_clicks')],
     [State('current-relation-store','data'),
      State('curr-sentence-store', 'data')],
-     prevent_initial_call=True,
+    prevent_initial_call=True,
 )
 def save_relation(n_clicks,curr_relation,curr_sentence):
     if curr_relation["src"] is not None and curr_relation["tgt"] is not None:
@@ -240,10 +242,9 @@ def save_relation(n_clicks,curr_relation,curr_sentence):
 
 @app.callback(
     Output('stored-data','children'),
-    [Input('saved-btn', 'n_clicks')],
-    State('all-relation-store','data'),
+    Input('all-relation-store','data'),
 )
-def currentStorage(n_clicks,data):
+def currentStorage(data):
     if not data:
         return f"Stored: []"
     return f"Stored: {data}"
@@ -298,9 +299,9 @@ def download(n_clicks,data,curr_sen_index, inp_sentences):
 def refresh(inp_sentences):
     return f"Current Sentences: {inp_sentences}" + f" Length: {len(inp_sentences)}"
 
-#File handler helper function
-def abbreviation_handler(sentences):
 
+def abbreviation_handler(sentences):
+    # File handler helper function
     sentences_to_add = []
     temp = sentences[0]
     for i in range(len(sentences) - 1):
@@ -320,7 +321,6 @@ def abbreviation_handler(sentences):
               [State('upload-data', 'filename'),
                State('input-sentences','data')],
 )
-
 def update_output(list_of_contents, list_of_names,inp_sentences):
     if list_of_contents is None:
         if len(inp_sentences) > 1:
@@ -350,11 +350,7 @@ def update_output(list_of_contents, list_of_names,inp_sentences):
             sentence = sentence.replace("\n", "")
             sentence = sentence + "."
             inp_sentences.append(sentence)
-    if not inp_sentences:
-        return f"Input Paper By Sentence: []"
     return inp_sentences
-    #return text,inp_sentences
-
 
 
 if __name__ == '__main__':
