@@ -6,6 +6,7 @@ import base64
 from dash_selectable import DashSelectable
 import io
 from striprtf.striprtf import rtf_to_text
+from datetime import date
 """
 Functionality ideas:
 - Could write "helper" functions for callbacks to increase readability of callbacks
@@ -258,10 +259,11 @@ def currentStorage(data):
     Input("download-btn", "n_clicks"),
     [State('all-relation-store','data'),
      State('next-btn','n_clicks'),
-     State('input-sentences','data'),],
+     State('input-sentences','data'),
+     State('upload-data', 'filename')],
     prevent_initial_call=True,
 )
-def download(n_clicks,data,curr_sen_index, inp_sentences):
+def download(n_clicks,data,curr_sen_index, inp_sentences,file):
     # In current implementation, only required variables are the input (download-btn)
     # and the state of all-relation-store
     """
@@ -285,7 +287,9 @@ def download(n_clicks,data,curr_sen_index, inp_sentences):
     #    inp_sentences = ["Please Insert RTF File"]
     #    curr_sen_index = 0
     # json, relational, input, next
-    return dict(content=fileData, filename="test.json"), [], ["Please Insert RTF File"], 0
+    today = date.today()
+    file = file.replace(".rtf",f"-{today}.json")
+    return dict(content=fileData, filename=file), [], ["Please Insert RTF File"], 0
 
 
 # This callback also activates on download, and updates the text on screen.
