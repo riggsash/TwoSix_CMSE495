@@ -51,13 +51,16 @@ metadata_prompt = html.Div(hidden=True,children=[
     html.Button("Finished",id='metadata-finish-button'),
 ])
 
-
+inverse_in = html.Div(id="inverse-div", hidden=True,children=[
+    dcc.Input(id='inverse-in', value='text', type='text')
+])
 
 app = dash.Dash(__name__)
 
 app.layout = html.Div([
     html.Div([
         metadata_prompt,
+        inverse_in,
         DashSelectable(
             id="dash-selectable",
             children=[html.P(id="sentence"), html.P(id="output")],
@@ -79,6 +82,8 @@ app.layout = html.Div([
         html.Button('Reset', id='reset-btn', n_clicks=0),
         html.Button('Back', id='back-btn', n_clicks=0),
         html.Button('Next', id='next-btn', n_clicks=0),
+        html.Br(),
+        html.Button('Modify and add new sentence', id="inverse-btn"),
         html.Br(),
         dcc.Upload(
             id='upload-data',
@@ -382,6 +387,47 @@ def metadata(n_clicks, title, author, year, data):
         if data[i]["meta_data"] == {"title": "", "authors": "", "year": ""}:
             data[i]["meta_data"] = meta_dict
     return True, data
+
+@app.callback([
+               Output("inverse-div",'hidden',allow_duplicate=True),
+               Output('all-relation-store','data', allow_duplicate=True),
+               Output('sentence','children', allow_duplicate=True),
+               Output('input-sentences','data', allow_duplicate=True)],
+              Input('inverse-btn', 'n_clicks'),
+              [State("inverse-div",'hidden'),
+               State('sentence','children'),
+               State('all-relation-store','data'),
+               State('next-btn', 'n_clicks'),
+               State('back-btn', 'n_clicks'),
+               State('inverse-in', 'value'),
+               State('input-sentences', 'data')],
+              prevent_initial_call=True
+)
+def modify(n_clicks, editable, sen, data,for_index,back_index,input_val,sentence_list):
+    index = int(for_index)-int(back_index)
+    if editable:
+
+        return False, dash.no_update, dash.no_update, dash.no_update
+    else:
+        template = {"text": input_val,
+                    "causal relations": [],
+                    "meta_data": data[index]["meta_data"]}
+        data.append(template)
+        sentence_list.append(input_val)
+        return True, data, dash.no_update,sentence_list
+
+
+@app.callback([
+               Output('sentence','children', allow_duplicate=True),
+               Output('inverse-in', 'value',allow_duplicate=True),],
+              Input('inverse-div', 'hidden'),
+              [State('sentence','children'),
+               ],
+              prevent_initial_call=True
+)
+def inverse_pt2(hidden,sen):
+    return sen, sen
+
 
 if __name__ == '__main__':
     app.run_server(debug=True)
