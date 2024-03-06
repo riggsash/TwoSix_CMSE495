@@ -281,11 +281,8 @@ def download(n_clicks,data,curr_sen_index, inp_sentences,file):
     #    curr_sen_index = 0
     # json, relational, input, next
     today = date.today()
-<<<<<<< Updated upstream
-=======
     if file is None:
         return dict(content=fileData, filename=f"Labeled_Data-{today}.json"), [], ["Please Insert RTF File"], 0
->>>>>>> Stashed changes
     file = file.replace(".rtf",f"-{today}.json")
     return dict(content=fileData, filename=file), [], ["Please Insert RTF File"], 0
 
