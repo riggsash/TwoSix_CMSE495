@@ -30,20 +30,34 @@ Unexpected (or frustrating) Behavior:
 -- You CAN upload 1 paper, then upload a second paper, and they will combine in the storage.
 --- This problem likely occurs based on how dash is handling uploads, and may not be fixable. 
 --- Also, this issue may not be relevant as why would you upload the same thing multiple times consecutively.
-
+--- This issue is probably due to the filename not changing within the app, thus not invoking the callback.
 Errors in Functionality:
-- Fixed problem where last sentence would not save
 * As sentences currently do not reset until the json is saved, if you refresh the page, it will reset the sentence
 * index, and return to 0.
 ** A potential solution to this is to add a skip sentence button, that will prevent adding the current sentence to the
 ** Storage.
 """
 
+metadata_prompt = html.Div(hidden=True,children=[
+    html.P(id="metadata-prompt-text",title="Please enter the following metadata."),
+    html.Div([
+        #"Title: ",
+        dcc.Input(id='title', value='Title', type='text'),
+        #"Author: ",
+        dcc.Input(id='author', value='Author(s)', type='text'),
+        dcc.Input(id='year', value='Year', type='text'),
+    ]),
+    html.Br(),
+    html.Button("Finished",id='metadata-finish-button'),
+])
+
+
 
 app = dash.Dash(__name__)
 
 app.layout = html.Div([
     html.Div([
+        metadata_prompt,
         DashSelectable(
             id="dash-selectable",
             children=[html.P(id="sentence"), html.P(id="output")],
@@ -248,7 +262,8 @@ def currentStorage(data):
     [Output("download-json", "data"),
      Output('all-relation-store','data'),
      Output('input-sentences','data', allow_duplicate=True),
-     Output('next-btn','n_clicks')],
+     Output('next-btn','n_clicks'),
+     ],
     Input("download-btn", "n_clicks"),
     [State('all-relation-store','data'),
      State('next-btn','n_clicks'),
@@ -269,17 +284,9 @@ def download(n_clicks,data,curr_sen_index, inp_sentences,file):
     """
     # WHEN YOU HIT SAVE, YOU ARE DONE WITH THAT SESSION, ALL REMAINING SENTENCES ARE REMOVED, AND THE PROGRAM IS
     # BASICALLY RESET
+    if not data:
+        return dash.no_update, dash.no_update, dash.no_update, dash.no_update
     fileData = json.dumps(data, indent=2)
-    #if len(inp_sentences) == 1:
-    #    inp_sentences = ["Please Insert RTF File"]
-    #    curr_sen_index = 0
-    #elif int(curr_sen_index) < len(inp_sentences):
-    #    inp_sentences = (inp_sentences[int(curr_sen_index)-1:])
-    #    curr_sen_index = int(curr_sen_index)-1
-    #else:
-    #    inp_sentences = ["Please Insert RTF File"]
-    #    curr_sen_index = 0
-    # json, relational, input, next
     today = date.today()
     if file is None:
         return dict(content=fileData, filename=f"Labeled_Data-{today}.json"), [], ["Please Insert RTF File"], 0
@@ -316,7 +323,8 @@ def abbreviation_handler(sentences):
 
 
 @app.callback([Output('input-sentences','data'),
-               Output('all-relation-store','data', allow_duplicate=True)],
+               Output('all-relation-store','data', allow_duplicate=True),
+               Output(metadata_prompt,'hidden')],
               Input('upload-data', 'contents'),
               [State('upload-data', 'filename'),
                State('input-sentences','data'),
@@ -326,8 +334,8 @@ def abbreviation_handler(sentences):
 def update_output(list_of_contents, list_of_names,inp_sentences,data):
     if list_of_contents is None:
         if len(inp_sentences) > 1:
-            return inp_sentences, dash.no_update
-        return dash.no_update, dash.no_update
+            return inp_sentences, dash.no_update, dash.no_update
+        return dash.no_update, dash.no_update, dash.no_update
     content_type, content_string = list_of_contents.split(',')
     decoded = base64.b64decode(content_string)
     if ".rtf" in list_of_names:
@@ -356,8 +364,24 @@ def update_output(list_of_contents, list_of_names,inp_sentences,data):
                         "meta_data": {"title": "", "authors": "", "year": ""}}
             data.append(template)
 
-    return inp_sentences, data
+    return inp_sentences, data, False
 
+@app.callback([Output(metadata_prompt,'hidden',allow_duplicate=True),
+               Output('all-relation-store','data', allow_duplicate=True)],
+              Input('metadata-finish-button', 'n_clicks'),
+              [State('title', 'value'),
+               State('author','value'),
+               State('year','value'),
+               State('all-relation-store','data'),],
+            prevent_initial_call="initial_duplicate"
+)
+
+def metadata(n_clicks, title, author, year, data):
+    meta_dict = {"title": title, "authors": author, "year": year}
+    for i in range(len(data)):
+        if data[i]["meta_data"] == {"title": "", "authors": "", "year": ""}:
+            data[i]["meta_data"] = meta_dict
+    return True, data
 
 if __name__ == '__main__':
     app.run_server(debug=True)
