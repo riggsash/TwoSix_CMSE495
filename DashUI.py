@@ -44,14 +44,39 @@ Errors in Functionality:
 ** or maybe updated instead? unsure how this would work
 """
 
+<<<<<<< Updated upstream
+=======
+metadata_prompt = html.Div(hidden=True,children=[
+    html.P(id="metadata-prompt-text",title="Please enter the following metadata."),
+    html.Div([
+        #"Title: ",
+        dcc.Input(id='title', value='Title', type='text'),
+        #"Author: ",
+        dcc.Input(id='author', value='Author(s)', type='text'),
+        dcc.Input(id='year', value='Year', type='text'),
+    ]),
+    html.Br(),
+    html.Button("Finished",id='metadata-finish-button'),
+])
+
+inverse_in = html.Div(id="inverse-div", hidden=True,children=[
+    dcc.Input(id='inverse-in', value='text', type='text')
+])
+>>>>>>> Stashed changes
 
 app = dash.Dash(__name__)
 
 app.layout = html.Div([
     html.Div([
+<<<<<<< Updated upstream
+=======
+        metadata_prompt,
+        inverse_in,
+>>>>>>> Stashed changes
         DashSelectable(
             id="dash-selectable",
-            children=[html.P(id="sentence"), html.P(id="output")],
+            children=[html.P(id="sentence", contentEditable="False"),
+                      html.P(id="output")],
         ),
         html.Br(),
         html.Button('Source', id='source-btn', n_clicks=0),
@@ -69,6 +94,8 @@ app.layout = html.Div([
         html.Button('Save Relation', id='save-btn', n_clicks=0),
         html.Button('Reset', id='reset-btn', n_clicks=0),
         html.Button('Next', id='next-btn', n_clicks=0),
+        html.Br(),
+        html.Button('Modify and add new sentence', id="inverse-btn"),
         html.Br(),
         dcc.Upload(
             id='upload-data',
@@ -355,6 +382,75 @@ def update_output(list_of_contents, list_of_names,inp_sentences):
             sentence = sentence + "."
             inp_sentences.append(sentence)
     return inp_sentences
+
+<<<<<<< Updated upstream
+=======
+    return inp_sentences, data, False
+
+
+@app.callback([Output(metadata_prompt,'hidden',allow_duplicate=True),
+               Output('all-relation-store','data', allow_duplicate=True)],
+              Input('metadata-finish-button', 'n_clicks'),
+              [State('title', 'value'),
+               State('author','value'),
+               State('year','value'),
+               State('all-relation-store','data'),],
+            prevent_initial_call="initial_duplicate"
+)
+
+def metadata(n_clicks, title, author, year, data):
+    meta_dict = {"title": title, "authors": author, "year": year}
+    for i in range(len(data)):
+        if data[i]["meta_data"] == {"title": "", "authors": "", "year": ""}:
+            data[i]["meta_data"] = meta_dict
+    return True, data
+>>>>>>> Stashed changes
+
+
+@app.callback([
+               Output("inverse-div",'hidden',allow_duplicate=True),
+               Output('all-relation-store','data', allow_duplicate=True),
+               Output('sentence','children', allow_duplicate=True),],
+              Input('inverse-btn', 'n_clicks'),
+              [State("inverse-div",'hidden'),
+               State('sentence','children'),
+               State('all-relation-store','data'),
+               State('next-btn', 'n_clicks'),
+               State('back-btn', 'n_clicks'),
+               State('inverse-in', 'value')
+               ],
+              prevent_initial_call=True
+)
+def modify(n_clicks, editable, sen, data,for_index,back_index,input_val):
+    index = int(for_index)-int(back_index)
+    if editable:
+
+        return False, dash.no_update, dash.no_update
+    else:
+        template = {"text": input_val,
+                    "causal relations": [],
+                    "meta_data": data[index]["meta_data"]}
+        data.append(template)
+        return True, data, dash.no_update
+
+
+@app.callback([
+               Output('sentence','children', allow_duplicate=True),
+               Output('inverse-in', 'value',allow_duplicate=True),],
+              Input('inverse-div', 'hidden'),
+              [State('sentence','children'),
+               State('all-relation-store','data'),
+               State('next-btn', 'n_clicks'),
+               State('back-btn', 'n_clicks'),
+               State('inverse-in', 'value')
+               ],
+              prevent_initial_call=True
+)
+def inverse_pt2(hidden,sen,data,next,back,inverse_text):
+    index = int(next) - int(back)
+    return sen, sen
+
+
 
 
 if __name__ == '__main__':
