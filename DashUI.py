@@ -11,13 +11,9 @@ from datetime import date
 Functionality ideas:
 - Could write "helper" functions for callbacks to increase readability of callbacks
 -- Will become more necessary as other features are added (back, reverse relations, etc)
-- Having the JSON be downloadable is nice and fine, but maybe it could be directly uploaded to git
 
 Functionality to be added:
 - Ability to read in files (besides RTF) and be added to sentences for data labeling (Look at: Dash upload component)
----- Ability to read metadata off of said files and assign them to a new dcc.Store so it can be added to every sentence's metadata
----- Instead, use dialog to prompt user for said metadata on file upload
-- Ability to create opposite relations from a previous sentence *** Priority
 
 
 Functionality to be updated:
@@ -32,10 +28,7 @@ Unexpected (or frustrating) Behavior:
 --- Also, this issue may not be relevant as why would you upload the same thing multiple times consecutively.
 --- This issue is probably due to the filename not changing within the app, thus not invoking the callback.
 Errors in Functionality:
-* As sentences currently do not reset until the json is saved, if you refresh the page, it will reset the sentence
-* index, and return to 0.
-** A potential solution to this is to add a skip sentence button, that will prevent adding the current sentence to the
-** Storage.
+- Currently have not found any errors in this iteration
 """
 
 metadata_prompt = html.Div(hidden=True,children=[
@@ -83,7 +76,14 @@ app.layout = html.Div([
         html.Button('Back', id='back-btn', n_clicks=0),
         html.Button('Next', id='next-btn', n_clicks=0),
         html.Br(),
+        html.Br(),
+        html.Br(),
+        html.Button('Discard Current Sentence', id="discard-btn"),
+        html.Br(),
+        html.Br(),
+        html.Br(),
         html.Button('Modify and add new sentence', id="inverse-btn"),
+        html.Br(),
         html.Br(),
         dcc.Upload(
             id='upload-data',
@@ -137,7 +137,7 @@ def next_sentence(n_clicks, back_clicks, current_text, all_data,curr_relation,se
     if len(sentences) == 1:  # Prevents moving the amount of clicks, and thus the index of sentences
         # , when there is no file [On start, and after download]
         return all_data, sentences[0], curr_relation, 0, 0
-    if current_sentence_index < 0: #if we've gone negative, we can just reset the clicks and return default sentence
+    if current_sentence_index < 0: # if we've gone negative, we can just reset the clicks and return default sentence
         return all_data, sentences[0], curr_relation, 0, 0
     if current_sentence_index == 0:
         return all_data, sentences[current_sentence_index], curr_relation, 0, 0
@@ -427,6 +427,33 @@ def modify(n_clicks, editable, sen, data,for_index,back_index,input_val,sentence
 )
 def inverse_pt2(hidden,sen):
     return sen, sen
+
+@app.callback([
+               Output('input-sentences','data', allow_duplicate=True),
+               Output('all-relation-store','data',allow_duplicate=True),
+               Output('next-btn', 'n_clicks',allow_duplicate=True),
+               Output('sentence', 'children',allow_duplicate=True),],
+              Input('discard-btn', 'n_clicks'),
+              [State('input-sentences','data'),
+               State('all-relation-store','data'),
+               State('next-btn', 'n_clicks'),
+               State('back-btn', 'n_clicks')
+               ],
+              prevent_initial_call=True
+)
+def discard(n_clicks,sentence_storage,data,for_index,back_index):
+    if len(sentence_storage) == 1:
+        return dash.no_update, dash.no_update, dash.no_update, dash.no_update
+    index = int(for_index)-int(back_index)
+    if index == 0:
+        return dash.no_update, dash.no_update, dash.no_update, dash.no_update
+    if index == len(sentence_storage):
+        for_index -= 1
+    sentence_storage.pop(index)
+    data.pop(index-1)
+    if index == len(sentence_storage):
+        return sentence_storage,data, for_index-1, dash.no_update
+    return sentence_storage,data, dash.no_update, sentence_storage[index]
 
 
 if __name__ == '__main__':
