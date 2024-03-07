@@ -10,11 +10,9 @@ from datetime import date
 """
 Functionality ideas:
 - Could write "helper" functions for callbacks to increase readability of callbacks
--- Will become more necessary as other features are added (back, reverse relations, etc)
 
 Functionality to be added:
 - Ability to read in files (besides RTF) and be added to sentences for data labeling (Look at: Dash upload component)
-
 
 Functionality to be updated:
 - (Not Required) Being able to choose the file name for the download
@@ -34,9 +32,7 @@ Errors in Functionality:
 metadata_prompt = html.Div(hidden=True,children=[
     html.P(id="metadata-prompt-text",title="Please enter the following metadata."),
     html.Div([
-        #"Title: ",
         dcc.Input(id='title', value='Title', type='text'),
-        #"Author: ",
         dcc.Input(id='author', value='Author(s)', type='text'),
         dcc.Input(id='year', value='Year', type='text'),
     ]),
@@ -62,6 +58,9 @@ app.layout = html.Div([
         html.Button('Source', id='source-btn', n_clicks=0),
         html.Button('Target', id='target-btn', n_clicks=0),
         html.Br(),
+        html.Button('Increase', id='increase-btn', n_clicks=0),
+        html.Button('Decrease', id='decrease-btn', n_clicks=0),
+        html.Br(),
         html.Div(id='my-source'),
 
         html.Div(id='my-target'),
@@ -69,8 +68,6 @@ app.layout = html.Div([
         html.Div(id='my-direction'),
         html.Br(),
         html.Br(),
-        html.Button('Increase', id='increase-btn', n_clicks=0),
-        html.Button('Decrease', id='decrease-btn', n_clicks=0),
         html.Button('Save Relation', id='save-btn', n_clicks=0),
         html.Button('Reset', id='reset-btn', n_clicks=0),
         html.Button('Back', id='back-btn', n_clicks=0),
@@ -247,7 +244,7 @@ def saving_relation(index,all_data,curr_relation):
             for relation in all_data[index]["causal relations"]:
                 if relation == curr_relation:
                     check = True
-            if not check:  # checking if its a duplicate
+            if not check:  # checking if it's a duplicate
                 all_data[index]["causal relations"].append(curr_relation)
         else:
             all_data[index]["causal relations"].append(curr_relation)
@@ -371,6 +368,7 @@ def update_output(list_of_contents, list_of_names,inp_sentences,data):
 
     return inp_sentences, data, False
 
+
 @app.callback([Output(metadata_prompt,'hidden',allow_duplicate=True),
                Output('all-relation-store','data', allow_duplicate=True)],
               Input('metadata-finish-button', 'n_clicks'),
@@ -380,13 +378,13 @@ def update_output(list_of_contents, list_of_names,inp_sentences,data):
                State('all-relation-store','data'),],
             prevent_initial_call="initial_duplicate"
 )
-
 def metadata(n_clicks, title, author, year, data):
     meta_dict = {"title": title, "authors": author, "year": year}
     for i in range(len(data)):
         if data[i]["meta_data"] == {"title": "", "authors": "", "year": ""}:
             data[i]["meta_data"] = meta_dict
     return True, data
+
 
 @app.callback([
                Output("inverse-div",'hidden',allow_duplicate=True),
@@ -409,11 +407,19 @@ def modify(n_clicks, editable, sen, data,for_index,back_index,input_val,sentence
 
         return False, dash.no_update, dash.no_update, dash.no_update
     else:
+        relations = []
+        for relation in data[index-1]["causal relations"]:# =1 because data does not have starter sentence
+            temp = relation
+            if temp["direction"] == "Increase":
+                temp["direction"] = "Decrease"
+            else:
+                temp["direction"] = "Increase"
+            relations.append(temp)
         template = {"text": input_val,
-                    "causal relations": [],
+                    "causal relations": relations,
                     "meta_data": data[index]["meta_data"]}
-        data.append(template)
-        sentence_list.append(input_val)
+        data.insert(index, template)
+        sentence_list.insert(index+1, input_val)
         return True, data, dash.no_update,sentence_list
 
 
@@ -427,6 +433,7 @@ def modify(n_clicks, editable, sen, data,for_index,back_index,input_val,sentence
 )
 def inverse_pt2(hidden,sen):
     return sen, sen
+
 
 @app.callback([
                Output('input-sentences','data', allow_duplicate=True),
