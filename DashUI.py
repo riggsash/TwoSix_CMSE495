@@ -269,6 +269,8 @@ def currentStorage(data, for_index, back_index):
     index = int(for_index)-int(back_index)
     if index <= 0:  # If we're at the starter sentence
         return f"Current Sentence: []", dash.no_update, dash.no_update
+    elif len(data) == 1:
+        return f"Current Sentence: {data[index - 1]}",f"Next Sentence: []", f"Previous Sentence: []"
     elif index == 1:  # If at first sentence of paper, there is no previous sentence
         return f"Current Sentence: {data[index - 1]}", f"Next Sentence: {data[index]}", "Previous Sentence: []"
     elif index == len(data):  # If we're at EOF, there is no next sentence
@@ -418,7 +420,11 @@ def metadata(n_clicks, title, author, year, data):
               prevent_initial_call=True
 )
 def modify(n_clicks, editable, sen, data,for_index,back_index,input_val,sentence_list):
+    if not data:
+        return dash.no_update, dash.no_update, dash.no_update, dash.no_update
     index = int(for_index)-int(back_index)
+    if index == 0:
+        return dash.no_update, dash.no_update, dash.no_update, dash.no_update
     if editable:
 
         return False, dash.no_update, dash.no_update, dash.no_update
