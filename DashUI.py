@@ -67,12 +67,16 @@ app.layout = html.Div([
 
         html.Div(id='my-direction'),
         html.Br(),
+        html.Div(id='current-data'),
         html.Br(),
         html.Button('Save Relation', id='save-btn', n_clicks=0),
         html.Button('Reset', id='reset-btn', n_clicks=0),
+        html.Br(),
         html.Button('Back', id='back-btn', n_clicks=0),
         html.Button('Next', id='next-btn', n_clicks=0),
         html.Br(),
+        html.Div(id="prev-data"),
+        html.Div(id="next-data"),
         html.Br(),
         html.Br(),
         html.Button('Discard Current Sentence', id="discard-btn"),
@@ -89,7 +93,6 @@ app.layout = html.Div([
         ]),),
         html.Button('Download JSON', id='download-btn', n_clicks=0),
         html.Br(),
-        html.Div(id='stored-data'),
         html.Br(),
         html.Div(id="output-data-upload"),
         dcc.Store(id='input-sentences', data=["Please Insert RTF File"], storage_type='local'),
@@ -133,13 +136,13 @@ def next_sentence(n_clicks, back_clicks, current_text, all_data,curr_relation,se
     button_id = ctx.triggered_id if not None else False
     if len(sentences) == 1:  # Prevents moving the amount of clicks, and thus the index of sentences
         # , when there is no file [On start, and after download]
-        return all_data, sentences[0], curr_relation, 0, 0
+        return all_data, "Please Insert RTF File", curr_relation, 0, 0
     if current_sentence_index < 0: # if we've gone negative, we can just reset the clicks and return default sentence
-        return all_data, sentences[0], curr_relation, 0, 0
+        return all_data, "Please Insert RTF File", curr_relation, 0, 0
     if current_sentence_index == 0:
         return all_data, sentences[current_sentence_index], curr_relation, 0, 0
     elif current_sentence_index == 1:
-        return all_data, sentences[current_sentence_index], curr_relation, n_clicks, back_clicks
+        return all_data, all_data[current_sentence_index-1]["text"], curr_relation, n_clicks, back_clicks
     elif current_sentence_index < len(sentences):
         # Handling case where current relation is not filled out enough to be usable
         if button_id == "back-btn":
@@ -149,7 +152,7 @@ def next_sentence(n_clicks, back_clicks, current_text, all_data,curr_relation,se
             # of where we are saving, so -2
         all_data = saving_relation(index,all_data,curr_relation)
         curr_relation = {'src':"",'tgt':'','direction':''}
-        return all_data, sentences[current_sentence_index], curr_relation, n_clicks, back_clicks
+        return all_data, all_data[current_sentence_index-1]["text"], curr_relation, n_clicks, back_clicks
     elif all_data[-1]["text"] == current_text:
         # This case is hit when the user hits the final sentence of a paper, and hits next 1 additional time
         # This makes sure that the last sentence is saved.
@@ -157,9 +160,9 @@ def next_sentence(n_clicks, back_clicks, current_text, all_data,curr_relation,se
         all_data = saving_relation(-1,all_data,curr_relation)
         curr_relation = {'src': "", 'tgt': '', 'direction': ''}
         if button_id == "back_btn":
-            return all_data, sentences[-2], curr_relation, n_clicks, back_clicks
+            return all_data, all_data[-2]["text"], curr_relation, n_clicks, back_clicks
         else:
-            return all_data, sentences[-1], curr_relation, n_clicks-1, back_clicks
+            return all_data, all_data[-1]["text"], curr_relation, n_clicks-1, back_clicks
     else:
         return all_data, current_text, curr_relation, n_clicks, back_clicks
 
@@ -167,9 +170,9 @@ def next_sentence(n_clicks, back_clicks, current_text, all_data,curr_relation,se
 
 
 @app.callback(
-    [Output('my-direction','children'),
-     Output('my-source','children'),
-     Output('my-target','children'),
+    [Output('my-direction', 'children'),
+     Output('my-source', 'children'),
+     Output('my-target', 'children'),
      Output("current-relation-store", "data")],
     [Input('increase-btn', 'n_clicks'),
      Input('decrease-btn', 'n_clicks'),
@@ -180,7 +183,7 @@ def next_sentence(n_clicks, back_clicks, current_text, all_data,curr_relation,se
     [State("dash-selectable", "selectedValue"),
      State("current-relation-store", "data")],
 )
-def allLabel(inc,dec,src,tgt,next,reset,selected_data,relation):
+def allLabel(inc, dec, src, tgt, next, reset, selected_data, relation):
     """
     Function that handles all relation button data
     :param inc: Increase button
@@ -212,7 +215,7 @@ def allLabel(inc,dec,src,tgt,next,reset,selected_data,relation):
     elif button_id == "reset-btn":
         relation = {'src': "", 'tgt': '', 'direction': ''}
         return direcText, srcText, tgtText, relation
-    else: # This else corresponds to initial call (program start) and when the next button is hit
+    else:  # This else corresponds to initial call (program start) and when the next button is hit
         # Have not tried multiple changes to one output from one button,
         # and it probably isn't a good idea, so don't change this
         return direcText,srcText,tgtText,relation
@@ -235,6 +238,7 @@ def save_relation(n_clicks,curr_relation,all_data,for_index,back_index):
     all_data = saving_relation(index-1,all_data,curr_relation)
     return all_data,dash.no_update
 
+
 def saving_relation(index,all_data,curr_relation):
     if curr_relation["src"] == '' or curr_relation["tgt"] == '':
         pass
@@ -250,14 +254,26 @@ def saving_relation(index,all_data,curr_relation):
             all_data[index]["causal relations"].append(curr_relation)
     return all_data
 
+
 @app.callback(
-    Output('stored-data','children'),
-    Input('all-relation-store','data'),
+    [Output('current-data', 'children'),
+     Output('next-data', 'children'),
+     Output('prev-data', 'children')],
+    Input('all-relation-store', 'data'),
+    [State('next-btn', 'n_clicks'),
+     State('back-btn', 'n_clicks')]
 )
-def currentStorage(data):
-    if not data:
-        return f"Stored: []"
-    return f"Stored: {data}"
+def currentStorage(data, for_index, back_index):
+    if not data:  # If there is no input file
+        return f"Current Sentence: []", f"Next Sentence: []", f"Previous Sentence: []"
+    index = int(for_index)-int(back_index)
+    if index <= 0:  # If we're at the starter sentence
+        return f"Current Sentence: []", dash.no_update, dash.no_update
+    elif index == 1:  # If at first sentence of paper, there is no previous sentence
+        return f"Current Sentence: {data[index - 1]}", f"Next Sentence: {data[index]}", "Previous Sentence: []"
+    elif index == len(data):  # If we're at EOF, there is no next sentence
+        return f"Current Sentence: {data[index - 1]}", f"Next Sentence: []", f"Previous Sentence: {data[index - 2]}"
+    return f"Current Sentence: {data[index-1]}", f"Next Sentence: {data[index]}", f"Previous Sentence: {data[index - 2]}"
 
 
 @app.callback(
@@ -331,7 +347,7 @@ def abbreviation_handler(sentences):
               [State('upload-data', 'filename'),
                State('input-sentences','data'),
                State('all-relation-store','data')],
-            prevent_initial_call="initial_duplicate"
+              prevent_initial_call="initial_duplicate"
 )
 def update_output(list_of_contents, list_of_names,inp_sentences,data):
     if list_of_contents is None:
@@ -376,7 +392,7 @@ def update_output(list_of_contents, list_of_names,inp_sentences,data):
                State('author','value'),
                State('year','value'),
                State('all-relation-store','data'),],
-            prevent_initial_call="initial_duplicate"
+              prevent_initial_call="initial_duplicate"
 )
 def metadata(n_clicks, title, author, year, data):
     meta_dict = {"title": title, "authors": author, "year": year}
@@ -408,7 +424,7 @@ def modify(n_clicks, editable, sen, data,for_index,back_index,input_val,sentence
         return False, dash.no_update, dash.no_update, dash.no_update
     else:
         relations = []
-        for relation in data[index-1]["causal relations"]:# =1 because data does not have starter sentence
+        for relation in data[index-1]["causal relations"]:# -1 because data does not have starter sentence
             temp = relation
             if temp["direction"] == "Increase":
                 temp["direction"] = "Decrease"
