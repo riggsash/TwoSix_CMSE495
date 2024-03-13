@@ -1,6 +1,7 @@
 import dash
-from dash import dcc, html, ctx
+from dash import dcc, html, ctx, dash_table, callback
 from dash.dependencies import Input, Output, State
+from dash.exceptions import PreventUpdate
 import json
 import base64
 from dash_selectable import DashSelectable
@@ -26,7 +27,11 @@ Unexpected (or frustrating) Behavior:
 --- Also, this issue may not be relevant as why would you upload the same thing multiple times consecutively.
 --- This issue is probably due to the filename not changing within the app, thus not invoking the callback.
 Errors in Functionality:
-- Currently have not found any errors in this iteration
+- When modifying a sentence, for some reason it is not inversing the relations that it is copying, however
+- the text is still modifyable, as is the relations in the dataframe, so it is still "functional"
+-- This may be due to how the datatable is updating the JSON currently but modify does not change what the current
+-- sentence is looking at, so the datatable should not be affecting it.
+--- FIXED THIS ISSUE - created a copy of dict by using dict() to not alter original, edited text modifiers to all lowercase
 """
 
 metadata_prompt = html.Div(hidden=True,children=[
@@ -67,10 +72,33 @@ app.layout = html.Div([
 
         html.Div(id='my-direction'),
         html.Br(),
-        html.Div(id='current-data'),
-        html.Br(),
         html.Button('Save Relation', id='save-btn', n_clicks=0),
         html.Button('Reset', id='reset-btn', n_clicks=0),
+        html.Br(),
+        dash_table.DataTable(id="datatable-current",
+                             style_cell={
+                                 'height': 'auto',
+                                 # all three widths are needed
+                                 'minWidth': '180px', 'width': '180px', 'maxWidth': '180px',
+                                 'whiteSpace': 'normal'
+                             },
+                             columns=[{
+                                'name': 'src',
+                                'id': "1"
+                             },
+                                {
+                                    'name': 'tgt',
+                                    'id': "2"
+                                },
+                                {
+                                     'name': 'direction',
+                                     'id': "3"
+                                }
+                             ],
+                             data=[],
+                             editable=True,
+                             row_deletable=True,
+                             ),
         html.Br(),
         html.Button('Back', id='back-btn', n_clicks=0),
         html.Button('Next', id='next-btn', n_clicks=0),
@@ -95,13 +123,14 @@ app.layout = html.Div([
         html.Br(),
         html.Br(),
         html.Div(id="output-data-upload"),
-        dcc.Store(id='input-sentences', data=["Please Insert RTF File"], storage_type='local'),
+        dcc.Store(id='input-sentences', data=["Please Insert RTF or JSON File"], storage_type='local'),
 
         dcc.Store(id='all-relation-store', data=[], storage_type='local'),
         # CHANGE BACK TO SESSION OR LOCAL FOR RESEARCHER RELEASE
 
         dcc.Store(id='current-relation-store',data={"src":"","tgt":"","direction":""},storage_type='memory'),
         dcc.Store(id='meta-data',data={"title": "", "authors": "", "year": ""},storage_type='memory'),
+        dcc.Store(id='llm-metrics',data=[], storage_type='memory'),
         dcc.Download(id="download-json"),
     ])
 ])
@@ -148,7 +177,7 @@ def next_sentence(n_clicks, back_clicks, current_text, all_data,curr_relation,se
         if button_id == "back-btn":
             index = current_sentence_index
         else:
-            index = current_sentence_index - 2 # -1 because of starter sentence,-1 again because next button makes index + 1
+            index = current_sentence_index - 2  # -1 because of starter sentence,-1 again because next button makes index + 1
             # of where we are saving, so -2
         all_data = saving_relation(index,all_data,curr_relation)
         curr_relation = {'src':"",'tgt':'','direction':''}
@@ -255,26 +284,71 @@ def saving_relation(index,all_data,curr_relation):
     return all_data
 
 
-@app.callback(
-    [Output('current-data', 'children'),
+@callback(
+    [Output('datatable-current', 'data'),
      Output('next-data', 'children'),
      Output('prev-data', 'children')],
     Input('all-relation-store', 'data'),
     [State('next-btn', 'n_clicks'),
-     State('back-btn', 'n_clicks')]
+     State('back-btn', 'n_clicks'),
+     State('datatable-current', 'data'),
+     State('datatable-current', 'columns')]
 )
-def currentStorage(data, for_index, back_index):
+def currentStorage(data, for_index, back_index, rows,columns):
     if not data:  # If there is no input file
-        return f"Current Sentence: []", f"Next Sentence: []", f"Previous Sentence: []"
+        return dash.no_update, dash.no_update, dash.no_update
     index = int(for_index)-int(back_index)
     if index <= 0:  # If we're at the starter sentence
-        return f"Current Sentence: []", dash.no_update, dash.no_update
+        return dash.no_update, dash.no_update, dash.no_update
     elif index == 1:  # If at first sentence of paper, there is no previous sentence
-        return f"Current Sentence: {data[index - 1]}", f"Next Sentence: {data[index]}", "Previous Sentence: []"
+        rows = []
+        for relation in data[index-1]['causal relations']:
+            rows.append({c['id']: relation[val] for c, val in zip(columns,relation)})
+        return rows, f"Next Sentence: {data[index]}", "Previous Sentence: []"
     elif index == len(data):  # If we're at EOF, there is no next sentence
-        return f"Current Sentence: {data[index - 1]}", f"Next Sentence: []", f"Previous Sentence: {data[index - 2]}"
-    return f"Current Sentence: {data[index-1]}", f"Next Sentence: {data[index]}", f"Previous Sentence: {data[index - 2]}"
+        rows = []
+        for relation in data[index - 1]['causal relations']:
+            rows.append({c['id']: relation[val] for c, val in zip(columns, relation)})
+        return rows, f"Next Sentence: []", f"Previous Sentence: {data[index - 2]}"
+    rows = []
+    for relation in data[index - 1]['causal relations']:
+        rows.append({c['id']: relation[val] for c, val in zip(columns, relation)})
+    return rows, f"Next Sentence: {data[index]}", f"Previous Sentence: {data[index - 2]}"
 
+
+@app.callback(
+    Output('all-relation-store', 'data', allow_duplicate=True),
+    Input('datatable-current', 'data'),
+    [State('all-relation-store', 'data'),
+     State('next-btn', 'n_clicks'),
+     State('back-btn', 'n_clicks'),],
+    prevent_initial_call=True
+)
+def updating_json(rows,data,next_index,back_index):
+    """
+    This function updates the JSON after the editable dash datatable has been changed.
+    :param value:
+    :return:
+    """
+    index = int(next_index)-int(back_index)
+    conv = []
+    for row, i in zip(rows,range(len(rows))):  # row is a singular relation
+        temp = {}
+        temp["src"] = row["1"]
+        temp["tgt"] = row["2"]
+        temp["direction"] = row["3"]
+        if temp["direction"] == "+":
+            temp["direction"] = 'increase'
+        if temp["direction"] == "-":
+            temp["direction"] = 'decrease'
+        if temp["direction"] != "increase" and temp["direction"] != "decrease":
+            temp["direction"] = data[index-1]['causal relations'][i]['direction']
+        if temp["src"] == "" or temp["tgt"] == "" or temp["direction"] == "": #  if any parameters are empty, lose the relation
+            continue
+        conv.append(temp)
+
+    data[index-1]['causal relations'] = conv
+    return data
 
 @app.callback(
     [Output("download-json", "data"),
@@ -342,20 +416,53 @@ def abbreviation_handler(sentences):
 
 @app.callback([Output('input-sentences','data'),
                Output('all-relation-store','data', allow_duplicate=True),
-               Output(metadata_prompt,'hidden')],
+               Output(metadata_prompt,'hidden'),
+               Output('llm-metrics','data')],
               Input('upload-data', 'contents'),
               [State('upload-data', 'filename'),
                State('input-sentences','data'),
                State('all-relation-store','data')],
               prevent_initial_call="initial_duplicate"
 )
-def update_output(list_of_contents, list_of_names,inp_sentences,data):
+def upload(list_of_contents, list_of_names,inp_sentences,data):
     if list_of_contents is None:
         if len(inp_sentences) > 1:
-            return inp_sentences, dash.no_update, dash.no_update
-        return dash.no_update, dash.no_update, dash.no_update
+            return inp_sentences, dash.no_update, dash.no_update, dash.no_update
+        return dash.no_update, dash.no_update, dash.no_update, dash.no_update
     content_type, content_string = list_of_contents.split(',')
     decoded = base64.b64decode(content_string)
+    if ".json" in list_of_names:
+        data = json.loads(decoded)
+        for sentence in data:
+            inp_sentences.append(sentence["text"])
+        if 'LLM' in data[0].keys():
+            LLM_scores = {}
+            LLM_metrics = {}
+            for LLM in data[0]['LLM']:
+                LLM_scores[LLM] = {"TP":0, "FP":0, "TN":0, "FN": 0}
+                LLM_metrics[LLM] = {}
+            for sentence in data:
+                for LLM in sentence['LLM'].keys():  # LLM is a list of relations
+                    for relation in sentence['causal relations']:
+                        if relation not in sentence['LLM'][LLM]:
+                            LLM_scores[LLM]['FN'] += 1
+                        else:
+                            LLM_scores[LLM]['TP'] += 1
+                    if len(LLM) == 0:
+                        if len(sentence['causal relations']) == 0:
+                            LLM_scores[LLM]['TN'] += 1
+                    for relation in LLM:
+                        if relation not in sentence['causal relations']:
+                            LLM_scores[LLM]['FP'] += 1
+                        # Don't need an else here, as that'd be a true positive and is already added
+            for LLM in LLM_scores:
+                LLM_metrics[LLM]['precision'] = LLM_scores[LLM]['TP'] / (LLM_scores[LLM]['TP'] + LLM_scores[LLM]['FP'])
+                LLM_metrics[LLM]['recall'] = LLM_scores[LLM]['TP'] / (LLM_scores[LLM]['TP'] + LLM_scores[LLM]['FN'])
+                LLM_metrics[LLM]['F1'] = (2 * LLM_metrics[LLM]['precision'] * LLM_metrics[LLM]['recall']) / (LLM_metrics[LLM]['precision'] + LLM_metrics[LLM]['recall'])
+                LLM_metrics[LLM]['accuracy'] = ((LLM_scores[LLM]['TP'] + LLM_scores[LLM]['TN']) /
+                                                (LLM_scores[LLM]['TP'] + LLM_scores[LLM]['TN'] + LLM_scores[LLM]['FP'] + LLM_scores[LLM]['FN']))
+            return inp_sentences, data, dash.no_update, dash.no_update
+        return inp_sentences, data, dash.no_update, dash.no_update
     if ".rtf" in list_of_names:
         temp = io.StringIO(decoded.decode('utf-8')).getvalue()
         text = rtf_to_text(temp)
@@ -382,7 +489,7 @@ def update_output(list_of_contents, list_of_names,inp_sentences,data):
                         "meta_data": {"title": "", "authors": "", "year": ""}}
             data.append(template)
 
-    return inp_sentences, data, False
+    return inp_sentences, data, False, dash.no_update
 
 
 @app.callback([Output(metadata_prompt,'hidden',allow_duplicate=True),
@@ -424,12 +531,12 @@ def modify(n_clicks, editable, sen, data,for_index,back_index,input_val,sentence
         return False, dash.no_update, dash.no_update, dash.no_update
     else:
         relations = []
-        for relation in data[index-1]["causal relations"]:# -1 because data does not have starter sentence
-            temp = relation
-            if temp["direction"] == "Increase":
-                temp["direction"] = "Decrease"
+        for relation in data[index-1]["causal relations"]:  # -1 because data does not have starter sentence
+            temp = dict(relation)
+            if temp["direction"] == "increase":
+                temp["direction"] = "decrease"
             else:
-                temp["direction"] = "Increase"
+                temp["direction"] = "increase"
             relations.append(temp)
         template = {"text": input_val,
                     "causal relations": relations,
