@@ -525,7 +525,11 @@ def metadata(n_clicks, title, author, year, data):
               prevent_initial_call=True
 )
 def modify(n_clicks, editable, sen, data,for_index,back_index,input_val,sentence_list):
+    if not data:
+        return dash.no_update, dash.no_update, dash.no_update, dash.no_update
     index = int(for_index)-int(back_index)
+    if index == 0:
+        return dash.no_update, dash.no_update, dash.no_update, dash.no_update
     if editable:
 
         return False, dash.no_update, dash.no_update, dash.no_update
