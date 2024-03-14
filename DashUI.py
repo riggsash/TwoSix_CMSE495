@@ -162,6 +162,7 @@ app.layout = html.Div([
         dcc.Store(id='current-relation-store',data={"src":"","tgt":"","direction":""},storage_type='memory'),
         dcc.Store(id='meta-data',data={"title": "", "authors": "", "year": ""},storage_type='memory'),
         dcc.Store(id='llm-metrics',data=[], storage_type='memory'),
+        dcc.Store(id='index-store',data=0, storage_type='memory'),
         dcc.Download(id="download-json"),
     ])
 ])
@@ -340,18 +341,18 @@ def currentStorage(data, for_index, back_index, rows,columns):
         rows = []
         for relation in data[index-1]['causal relations']:
             rows.append({c['id']: relation[val] for c, val in zip(columns,relation)})
-        return rows, f"Next Sentence: {data[index]['text']}", "Previous Sentence: []"
+        return rows, f"Next Passage: {data[index]['text']}", "Previous Passage: []"
     elif len(data) <= index:  # If we're at EOF, there is no next sentence
         rows = []
         index = len(data)
         for relation in data[index - 1]['causal relations']:
             rows.append({c['id']: relation[val] for c, val in zip(columns, relation)})
-        return rows, f"Next Sentence: []", f"Previous Sentence: {data[index - 2]['text']}"
+        return rows, f"Next Passage: []", f"Previous Passage: {data[index - 2]['text']}"
     else:
         rows = []
         for relation in data[index - 1]['causal relations']:
             rows.append({c['id']: relation[val] for c, val in zip(columns, relation)})
-        return rows, f"Next Sentence: {data[index]['text']}", f"Previous Sentence: {data[index - 2]['text']}"
+        return rows, f"Next Passage: {data[index]['text']}", f"Previous Passage: {data[index - 2]['text']}"
 
 
 @app.callback(
@@ -681,15 +682,15 @@ app.clientside_callback(
 def show_value(n1, n2,data):
     index = int(n2)-int(n1)
     if ctx.triggered_id == 'back-btn':
-        return f"Index: {index}, Total Sentences: {len(data)}"
+        return f"Index: {index}, Total Passages: {len(data)}"
     if index == 0: # without this, get caught in case 3 EOF at 0 index
         if ctx.triggered_id == 'next-btn':
-            return f"Index: {index}, Total Sentences: {len(data)}"
+            return f"Index: {index}, Total Passages: {len(data)}"
     if len(data) == index:
-        return f"Index: {index}, Total Sentences: {len(data)}, EOF"
+        return f"Index: {index}, Total Passages: {len(data)}, EOF"
     elif len(data) < index:
-        return f"Index: {index}, Total Sentences: {len(data)}, Past EOF"
-    return f"Index: {index}, Total Sentences: {len(data)}"
+        return f"Index: {index}, Total Passages: {len(data)}, Past EOF"
+    return f"Index: {index}, Total Passages: {len(data)}"
 
 
 
