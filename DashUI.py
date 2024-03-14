@@ -1,6 +1,7 @@
 import dash
-from dash import dcc, html, ctx, dash_table, callback
+from dash import dcc, html, ctx, dash_table, callback, ClientsideFunction
 from dash.dependencies import Input, Output, State
+import dash_bootstrap_components as dbc
 from dash.exceptions import PreventUpdate
 import json
 import base64
@@ -27,44 +28,56 @@ Unexpected (or frustrating) Behavior:
 --- Also, this issue may not be relevant as why would you upload the same thing multiple times consecutively.
 --- This issue is probably due to the filename not changing within the app, thus not invoking the callback.
 Errors in Functionality:
-- When modifying a sentence, for some reason it is not inversing the relations that it is copying, however
-- the text is still modifyable, as is the relations in the dataframe, so it is still "functional"
--- This may be due to how the datatable is updating the JSON currently but modify does not change what the current
--- sentence is looking at, so the datatable should not be affecting it.
---- FIXED THIS ISSUE - created a copy of dict by using dict() to not alter original, edited text modifiers to all lowercase
+- If you hold down the right arrow key, it will out of index on the function for the datatable, this affects nothing for
+- the program as far as I can tell, and the error it throws does not crash the program.
+- Weird infrequent error where next/back count increases by an additional 1 every live update from dash
+-- There should be no live update for users as this occurs when the code or css is edited
+-- A fix could be to put the JS code into its own asset file, and maybe it won't dupe the event reader
 """
 
 metadata_prompt = html.Div(hidden=True,children=[
     html.P(id="metadata-prompt-text",title="Please enter the following metadata."),
     html.Div([
-        dcc.Input(id='title', value='Title', type='text'),
-        dcc.Input(id='author', value='Author(s)', type='text'),
-        dcc.Input(id='year', value='Year', type='text'),
+        dbc.Input(id='title', value='Title', type='text'),
+        dbc.Input(id='author', value='Author(s)', type='text'),
+        dbc.Input(id='year', value='Year', type='text'),
     ]),
     html.Br(),
-    html.Button("Finished",id='metadata-finish-button'),
+    dbc.Button("Finished",id='metadata-finish-button'),
 ])
 
 inverse_in = html.Div(id="inverse-div", hidden=True,children=[
-    dcc.Input(id='inverse-in', value='text', type='text')
+    dbc.Input(id='inverse-in', value='text', type='text'),
+    dbc.Button("Submit", color="success", id='submit-inverse', className="me-2", n_clicks=0),
+    html.Br(),
+    html.Br(),
+    dbc.Button("Cancel", color="danger",id='cancel-inverse',n_clicks=0),
 ])
 
-app = dash.Dash(__name__)
+app = dash.Dash(__name__,external_stylesheets=[dbc.themes.CYBORG])
 
 app.layout = html.Div([
     html.Div([
         metadata_prompt,
         inverse_in,
+        html.Div([
         DashSelectable(
             id="dash-selectable",
-            children=[html.P(id="sentence"), html.P(id="output")],
-        ),
+            children=[html.H5(id="sentence",className="d-grid gap-2 d-md-flex justify-content-md-center"), html.P(id="output")],
+        ),],),
         html.Br(),
-        html.Button('Source', id='source-btn', n_clicks=0),
-        html.Button('Target', id='target-btn', n_clicks=0),
+        html.P(id="output2"), # output for some key functions that don't actually need an output, but Dash needs an output
+        html.Div([
+            dbc.Button('Source', id='source-btn', outline=True, color="primary", className="me-2", n_clicks=0),
+            dbc.Button('+', id='increase-btn', outline=True, color="primary", className="me-2", n_clicks=0),
+        ],
+        className="d-grid gap-2 d-md-flex justify-content-md-center"),
         html.Br(),
-        html.Button('Increase', id='increase-btn', n_clicks=0),
-        html.Button('Decrease', id='decrease-btn', n_clicks=0),
+        html.Div([
+
+            dbc.Button('Target', id='target-btn', outline=True, color="primary", className="me-3", n_clicks=0),
+            dbc.Button('-', id='decrease-btn', outline=True, color="primary", className="me-2", n_clicks=0),],
+        className="d-grid gap-2 d-md-flex justify-content-md-center"),
         html.Br(),
         html.Div(id='my-source'),
 
@@ -72,8 +85,10 @@ app.layout = html.Div([
 
         html.Div(id='my-direction'),
         html.Br(),
-        html.Button('Save Relation', id='save-btn', n_clicks=0),
-        html.Button('Reset', id='reset-btn', n_clicks=0),
+        html.Br(),
+        dbc.Button('Save Relation', id='save-btn', outline=True, color="success", className="me-5", n_clicks=0),
+        dbc.Button('Reset', id='reset-btn', outline=True, color="warning", n_clicks=0),
+        html.Br(),
         html.Br(),
         dash_table.DataTable(id="datatable-current",
                              style_cell={
@@ -81,6 +96,15 @@ app.layout = html.Div([
                                  # all three widths are needed
                                  'minWidth': '180px', 'width': '180px', 'maxWidth': '180px',
                                  'whiteSpace': 'normal'
+                             },
+                             style_table={'height': '225px', 'overflowY': 'auto'},
+                             style_header={
+                                 'backgroundColor': 'rgb(30, 30, 30)',
+                                 'color': 'white'
+                             },
+                             style_data={
+                                 'backgroundColor': 'rgb(50, 50, 50)',
+                                 'color': 'white'
                              },
                              columns=[{
                                 'name': 'src',
@@ -100,26 +124,33 @@ app.layout = html.Div([
                              row_deletable=True,
                              ),
         html.Br(),
-        html.Button('Back', id='back-btn', n_clicks=0),
-        html.Button('Next', id='next-btn', n_clicks=0),
+        html.Div([
+            dbc.Button('Back', id='back-btn', outline=True, color="primary",  className="me-3", n_clicks=0),
+            dbc.Button('Next', id='next-btn', outline=True, color="primary",  n_clicks=0),
+        ],
+        className="d-grid gap-2 d-md-flex justify-content-md-center"),
         html.Br(),
         html.Div(id="prev-data"),
         html.Div(id="next-data"),
         html.Br(),
         html.Br(),
-        html.Button('Discard Current Sentence', id="discard-btn"),
+        dbc.Button('Discard Current Sentence', outline=True, color="danger", id="discard-btn"),
         html.Br(),
         html.Br(),
         html.Br(),
-        html.Button('Modify and add new sentence', id="inverse-btn"),
+        dbc.Button('Modify and add new sentence', outline=True, color="info", id="inverse-btn"),
+        html.Div([
+            dcc.Upload(
+                id='upload-data',
+                children=html.Div([
+                    dbc.Button('Select Files')
+            ]),),
+            dbc.Button('Download JSON', id='download-btn', n_clicks=0),
+        ],
+        className="d-grid gap-2 d-md-flex justify-content-end"),
         html.Br(),
         html.Br(),
-        dcc.Upload(
-            id='upload-data',
-            children=html.Div([
-                html.Button('Select Files')
-        ]),),
-        html.Button('Download JSON', id='download-btn', n_clicks=0),
+
         html.Br(),
         html.Br(),
         html.Div(id="output-data-upload"),
@@ -168,6 +199,11 @@ def next_sentence(n_clicks, back_clicks, current_text, all_data,curr_relation,se
         return all_data, "Please Insert RTF File", curr_relation, 0, 0
     if current_sentence_index < 0: # if we've gone negative, we can just reset the clicks and return default sentence
         return all_data, "Please Insert RTF File", curr_relation, 0, 0
+    if len(all_data) <= current_sentence_index: # This case is used when arrow keys are used instead of buttons
+        # At max array size
+        all_data = saving_relation(-1, all_data, curr_relation)
+        curr_relation = {'src': "", 'tgt': '', 'direction': ''}
+        return all_data, all_data[-1]["text"], curr_relation, len(all_data), 0
     if current_sentence_index == 0:
         return all_data, sentences[current_sentence_index], curr_relation, 0, 0
     elif current_sentence_index == 1:
@@ -304,20 +340,23 @@ def currentStorage(data, for_index, back_index, rows,columns):
         rows = []
         for relation in data[index-1]['causal relations']:
             rows.append({c['id']: relation[val] for c, val in zip(columns,relation)})
-        return rows, f"Next Sentence: {data[index]}", "Previous Sentence: []"
-    elif index == len(data):  # If we're at EOF, there is no next sentence
+        return rows, f"Next Sentence: {data[index]['text']}", "Previous Sentence: []"
+    elif len(data) <= index:  # If we're at EOF, there is no next sentence
+        rows = []
+        index = len(data)
+        for relation in data[index - 1]['causal relations']:
+            rows.append({c['id']: relation[val] for c, val in zip(columns, relation)})
+        return rows, f"Next Sentence: []", f"Previous Sentence: {data[index - 2]['text']}"
+    else:
         rows = []
         for relation in data[index - 1]['causal relations']:
             rows.append({c['id']: relation[val] for c, val in zip(columns, relation)})
-        return rows, f"Next Sentence: []", f"Previous Sentence: {data[index - 2]}"
-    rows = []
-    for relation in data[index - 1]['causal relations']:
-        rows.append({c['id']: relation[val] for c, val in zip(columns, relation)})
-    return rows, f"Next Sentence: {data[index]}", f"Previous Sentence: {data[index - 2]}"
+        return rows, f"Next Sentence: {data[index]['text']}", f"Previous Sentence: {data[index - 2]['text']}"
 
 
 @app.callback(
-    Output('all-relation-store', 'data', allow_duplicate=True),
+    [Output('all-relation-store', 'data', allow_duplicate=True),
+     Output('datatable-current', 'data', allow_duplicate=True)],
     Input('datatable-current', 'data'),
     [State('all-relation-store', 'data'),
      State('next-btn', 'n_clicks'),
@@ -343,12 +382,14 @@ def updating_json(rows,data,next_index,back_index):
             temp["direction"] = 'decrease'
         if temp["direction"] != "increase" and temp["direction"] != "decrease":
             temp["direction"] = data[index-1]['causal relations'][i]['direction']
-        if temp["src"] == "" or temp["tgt"] == "" or temp["direction"] == "": #  if any parameters are empty, lose the relation
-            continue
+        if temp["src"] == "": #  if any parameters are empty, restore that part of the relation
+            temp["src"] = data[index - 1]['causal relations'][i]['src']
+        if temp["tgt"] == "":
+            temp["tgt"] = data[index - 1]['causal relations'][i]['tgt']
         conv.append(temp)
 
     data[index-1]['causal relations'] = conv
-    return data
+    return data, rows
 
 @app.callback(
     [Output("download-json", "data"),
@@ -509,12 +550,34 @@ def metadata(n_clicks, title, author, year, data):
     return True, data
 
 
+@app.callback(
+               Output("inverse-div",'hidden',allow_duplicate=True),
+              Input('inverse-btn', 'n_clicks'),
+              [State("inverse-div",'hidden'),
+               State('all-relation-store','data'),
+               State('next-btn', 'n_clicks'),
+               State('back-btn', 'n_clicks'),
+               State('inverse-in', 'value')],
+              prevent_initial_call=True
+)
+def modify(n_clicks, editable, data,for_index,back_index,input_val):
+    if not data:
+        return dash.no_update
+    index = int(for_index)-int(back_index)
+    if index == 0:
+        return dash.no_update
+    if editable:
+
+        return False
+    else:
+        return dash.no_update
 @app.callback([
                Output("inverse-div",'hidden',allow_duplicate=True),
                Output('all-relation-store','data', allow_duplicate=True),
                Output('sentence','children', allow_duplicate=True),
                Output('input-sentences','data', allow_duplicate=True)],
-              Input('inverse-btn', 'n_clicks'),
+              [Input('submit-inverse', 'n_clicks'),
+               Input('cancel-inverse', 'n_clicks')],
               [State("inverse-div",'hidden'),
                State('sentence','children'),
                State('all-relation-store','data'),
@@ -524,30 +587,25 @@ def metadata(n_clicks, title, author, year, data):
                State('input-sentences', 'data')],
               prevent_initial_call=True
 )
-def modify(n_clicks, editable, sen, data,for_index,back_index,input_val,sentence_list):
-    if not data:
-        return dash.no_update, dash.no_update, dash.no_update, dash.no_update
-    index = int(for_index)-int(back_index)
-    if index == 0:
-        return dash.no_update, dash.no_update, dash.no_update, dash.no_update
-    if editable:
-
-        return False, dash.no_update, dash.no_update, dash.no_update
-    else:
-        relations = []
-        for relation in data[index-1]["causal relations"]:  # -1 because data does not have starter sentence
-            temp = dict(relation)
-            if temp["direction"] == "increase":
-                temp["direction"] = "decrease"
-            else:
-                temp["direction"] = "increase"
-            relations.append(temp)
-        template = {"text": input_val,
-                    "causal relations": relations,
-                    "meta_data": data[index]["meta_data"]}
-        data.insert(index, template)
-        sentence_list.insert(index+1, input_val)
-        return True, data, dash.no_update,sentence_list
+def save_inverse(n_clicks, n_clicks2, visible, sen, data,for_index,back_index,input_val,sentence_list):
+    trigger = ctx.triggered_id
+    if trigger == "cancel-inverse":
+        return True, dash.no_update, dash.no_update, dash.no_update
+    index = int(for_index) - int(back_index)
+    relations = []
+    for relation in data[index - 1]["causal relations"]:  # -1 because data does not have starter sentence
+        temp = dict(relation)
+        if temp["direction"] == "increase":
+            temp["direction"] = "decrease"
+        else:
+            temp["direction"] = "increase"
+        relations.append(temp)
+    template = {"text": input_val,
+                "causal relations": relations,
+                "meta_data": data[index]["meta_data"]}
+    data.insert(index, template)
+    sentence_list.insert(index + 1, input_val)
+    return True, data, dash.no_update, sentence_list
 
 
 @app.callback([
@@ -589,6 +647,111 @@ def discard(n_clicks,sentence_storage,data,for_index,back_index):
         return sentence_storage,data, for_index-1, dash.no_update
     return sentence_storage,data, dash.no_update, sentence_storage[index]
 
+# Arrow key controls
+# event.key == 37 is for left arrow
+# event.key == 39 is for right arrow
+app.clientside_callback(
+    """
+        function(id) {
+            document.addEventListener("keydown", function(event) {
+                if (event.keyCode == '37') {
+                    document.getElementById('back-btn').click()
+                    event.stopPropogation()
+                }
+                if (event.keyCode == '39') {
+                    document.getElementById('next-btn').click()
+                    event.stopPropogation()
+                }
+            });
+            return window.dash_clientside.no_update       
+        }
+    """,
+    Output("back-btn", "id"),
+    Input("back-btn", "id"),
+
+)
+
+@app.callback(
+    Output("output2", "children", allow_duplicate=True),
+    Input("back-btn", "n_clicks"),
+    Input("next-btn", "n_clicks"),
+    State("all-relation-store","data"),
+    prevent_initial_call=True
+)
+def show_value(n1, n2,data):
+    index = int(n2)-int(n1)
+    if ctx.triggered_id == 'back-btn':
+        return f"Index: {index}, Total Sentences: {len(data)}"
+    if index == 0: # without this, get caught in case 3 EOF at 0 index
+        if ctx.triggered_id == 'next-btn':
+            return f"Index: {index}, Total Sentences: {len(data)}"
+    if len(data) == index:
+        return f"Index: {index}, Total Sentences: {len(data)}, EOF"
+    elif len(data) < index:
+        return f"Index: {index}, Total Sentences: {len(data)}, Past EOF"
+    return f"Index: {index}, Total Sentences: {len(data)}"
+
+
+
+# Following function is used for up-arrow and down-arrow binding to increase and decrease for the current relation
+app.clientside_callback(
+    """
+        function(id) {
+            document.addEventListener("keydown", function(event) {
+                if (event.keyCode == '38' || event.keyCode == '107') {
+                    document.getElementById('increase-btn').click()
+                    event.stopPropogation()
+                }
+                if (event.keyCode == '40' || event.keyCode == '109') {
+                    document.getElementById('decrease-btn').click()
+                    event.stopPropogation()
+                }
+            });
+            return window.dash_clientside.no_update       
+        }
+    """,
+    Output("increase-btn", "id"),
+    Input("increase-btn", "id"),
+
+)
+
+@app.callback(
+    [Output("output2", "children", allow_duplicate=True)],
+    Input("increase-btn", "n_clicks"),
+    Input("decrease-btn", "n_clicks"),
+    State("all-relation-store","data"),
+    prevent_initial_call=True
+)
+def increase_decrease_keys(n1, n2,data): # don't know why we need an additional function and callback here,
+    # but it doesn't seem to work without it
+    return dash.no_update
+
+app.clientside_callback(
+    """
+        function(id) {
+            document.addEventListener("keydown", function(event) {
+                if (event.key == 's') {
+                    document.getElementById('save-btn').click()
+                    event.stopPropogation()
+                }
+            });
+            return window.dash_clientside.no_update
+        }
+    """,
+    Output("save-btn", "id"),
+    Input("save-btn", "id"),
+
+)
+
+@app.callback(
+    [Output("output2", "children", allow_duplicate=True)],
+    Input("save-btn", "n_clicks"),
+    State("all-relation-store","data"),
+    prevent_initial_call=True
+)
+def save_keybind(n1, data): # don't know why we need an additional function and callback here,
+    # but it doesn't seem to work without it
+    return dash.no_update
 
 if __name__ == '__main__':
     app.run_server(debug=True)
