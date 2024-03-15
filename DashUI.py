@@ -14,10 +14,14 @@ Functionality ideas:
 - Having the JSON be downloadable is nice and fine, but maybe it could be directly uploaded to git
 
 Functionality to be added:
+<<<<<<< Updated upstream
 - Ability to read in files (besides RTF) and be added to sentences for data labeling (Look at: Dash upload component)
 -- Ability to read metadata off of said files and assign them to a new dcc.Store so it can be added to every sentence's metadata
 - Ability to create opposite relations from a previous sentence *** Priority
 - A back button to iterate backwards through the paper.
+=======
+- Ability to read in files (besides RTF and JSON) and be added to sentences for data labeling (Look at: Dash upload component)
+>>>>>>> Stashed changes
 
 Functionality to be updated:
 - (Not Required) Being able to choose the file name for the download
@@ -79,14 +83,95 @@ app.layout = html.Div([
                       html.P(id="output")],
         ),
         html.Br(),
+<<<<<<< Updated upstream
         html.Button('Source', id='source-btn', n_clicks=0),
         html.Button('Target', id='target-btn', n_clicks=0),
+=======
+        html.P(id="output2"), # output for some key functions that don't actually need an output, but Dash needs an output
+        html.Div([
+            dbc.Row([
+                dbc.Col([
+                    html.Div(id='my-source')
+                ]),
+                dbc.Col([
+                    dbc.Button('Source', id='source-btn', outline=True, color="primary", className="me-2", n_clicks=0),
+                    dbc.Button('+', id='increase-btn', outline=True, color="primary", className="me-2", n_clicks=0),
+                ],
+                    className="d-grid gap-2 d-md-flex justify-content-md-center",),
+                dbc.Col([]),
+            ]),
+            dbc.Row([
+                dbc.Col([
+                    html.Div(id='my-target'),
+                ]),
+                dbc.Col([
+                    dbc.Button('Target', id='target-btn', outline=True, color="primary", className="me-3", n_clicks=0),
+                    dbc.Button('-', id='decrease-btn', outline=True, color="primary", className="me-2", n_clicks=0),
+                ],
+                    className="d-grid gap-2 d-md-flex justify-content-md-center",),
+                dbc.Col([
+                ])
+
+            ]),
+            dbc.Row([
+                dbc.Col([
+                    html.Div(id='my-direction'),
+                ]),
+                dbc.Col([]),
+                dbc.Col([]),
+                dbc.Col([]),
+                dbc.Col([]),
+                dbc.Col([dash_table.DataTable(id="datatable-metrics",
+                                        style_cell={
+                                            'height': 'auto',
+                                            # all three widths are needed
+                                            'minWidth': '10px', 'width': '10px', 'maxWidth': '10px',
+                                            'whiteSpace': 'normal'
+                                        },
+                                        #style_table={'height': '225px', 'overflowY': 'auto'},
+                                        style_header={
+                                             'backgroundColor': 'rgb(30, 30, 30)',
+                                             'color': 'white'
+                                         },
+                                        style_data={
+                                             'backgroundColor': 'rgb(50, 50, 50)',
+                                             'color': 'white'
+                                         },
+                                        columns=[{
+                                                'name': 'src',
+                                                'id': "1"
+                                            },
+                                            {
+                                                 'name': 'tgt',
+                                                 'id': "2"
+                                            },
+                                            {
+                                                 'name': 'direction',
+                                                 'id': "3"
+                                            }
+                                        ],
+                                        data=[{
+                                            1: "BIWF",
+                                            2: "recreational fishing",
+                                            3: "decrease"
+                                        }],
+                                        ),], width=4, align="center"),
+                dbc.Col([]),],
+            ),
+        ], className="pad-row"),
+        #html.Div([
+        #    dbc.Button('Source', id='source-btn', outline=True, color="primary", className="me-2", n_clicks=0),
+        #    dbc.Button('+', id='increase-btn', outline=True, color="primary", className="me-2", n_clicks=0),],
+        #    className="d-grid gap-2 d-md-flex justify-content-md-center"),
         html.Br(),
-        html.Div(id='my-source'),
+        #html.Div([
 
-        html.Div(id='my-target'),
+        #    dbc.Button('Target', id='target-btn', outline=True, color="primary", className="me-3", n_clicks=0),
+        #    dbc.Button('-', id='decrease-btn', outline=True, color="primary", className="me-2", n_clicks=0),],
+        #className="d-grid gap-2 d-md-flex justify-content-md-center"),
+>>>>>>> Stashed changes
+        html.Br(),
 
-        html.Div(id='my-direction'),
         html.Br(),
         html.Br(),
         html.Button('Increase', id='increase-btn', n_clicks=0),
@@ -97,17 +182,94 @@ app.layout = html.Div([
         html.Br(),
         html.Button('Modify and add new sentence', id="inverse-btn"),
         html.Br(),
+<<<<<<< Updated upstream
         dcc.Upload(
             id='upload-data',
             children=html.Div([
                 html.Button('Select Files')
         ]),),
         html.Button('Download JSON', id='download-btn', n_clicks=0),
+=======
+        dbc.Row([
+            #dbc.Col([]),
+            dbc.Col([
+                dash_table.DataTable(id="datatable-current",
+                             style_cell={
+                                 'height': 'auto',
+                                 # all three widths are needed
+                                 'minWidth': '120px', 'width': '120px', 'maxWidth': '120px',
+                                 'whiteSpace': 'normal'
+                             },
+                             style_table={'height': '225px', 'overflowY': 'auto'},
+                             style_header={
+                                 'backgroundColor': 'rgb(30, 30, 30)',
+                                 'color': 'white'
+                             },
+                             style_data={
+                                 'backgroundColor': 'rgb(50, 50, 50)',
+                                 'color': 'white'
+                             },
+                             columns=[{
+                                'name': 'src',
+                                'id': "1"
+                             },
+                                {
+                                    'name': 'tgt',
+                                    'id': "2"
+                                },
+                                {
+                                     'name': 'direction',
+                                     'id': "3"
+                                }
+                             ],
+                             data=[],
+                             editable=True,
+                             row_deletable=True,
+                             ),
+            ], width=9,
+            ),
+            #dbc.Col([]),
+        ],
+            justify='center'),
+        html.Br(),
+        html.Div([
+            dbc.Button('Back', id='back-btn', outline=True, color="primary",  className="me-3", n_clicks=0),
+            dbc.Button('Next', id='next-btn', outline=True, color="primary",  n_clicks=0),
+        ],
+        className="d-grid gap-2 d-md-flex justify-content-md-center"),
+        html.Br(),
+        html.Div(id="prev-data"),
+        html.Div(id="next-data"),
+        html.Br(),
+        html.Br(),
+        dbc.Button('Discard Current Sentence', outline=True, color="danger", id="discard-btn"),
+        html.Br(),
+        html.Br(),
+        html.Br(),
+        dbc.Button('Modify and add new sentence', outline=True, color="info", id="inverse-btn"),
+        html.Div([
+            dcc.Upload(
+                id='upload-data',
+                children=html.Div([
+                    dbc.Button('Select Files')
+            ]),),
+            dbc.Button('Download JSON', id='download-btn', n_clicks=0),
+        ],
+        className="d-grid gap-2 d-md-flex justify-content-center"),
+        html.Br(),
+        html.Br(),
+
+>>>>>>> Stashed changes
         html.Br(),
         html.Div(id='stored-data'),
         html.Br(),
+<<<<<<< Updated upstream
         html.Div(id="output-data-upload"),
         dcc.Store(id='input-sentences', data=["Please Insert RTF File"], storage_type='local'),
+=======
+        html.Div(id="output-data-upload",hidden=True),
+        dcc.Store(id='input-sentences', data=["Please Insert RTF or JSON File"], storage_type='local'),
+>>>>>>> Stashed changes
 
         dcc.Store(id='all-relation-store', data=[], storage_type='local'),
         # CHANGE BACK TO SESSION OR LOCAL FOR RESEARCHER RELEASE
