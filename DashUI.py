@@ -4,6 +4,7 @@ from dash.dependencies import Input, Output, State
 import dash_bootstrap_components as dbc
 from dash.exceptions import PreventUpdate
 import json
+import math
 import base64
 from dash_selectable import DashSelectable
 import io
@@ -46,6 +47,15 @@ metadata_prompt = html.Div(hidden=True,children=[
     dbc.Button("Finished",id='metadata-finish-button'),
 ])
 
+metric_dropdown = dcc.Dropdown(
+    id="metric-dropdown",
+    placeholder="Select LLM",
+    clearable=False,
+    multi=True,
+    options=["All"],
+    style={'width': '400px'}
+)
+
 inverse_in = html.Div(id="inverse-div", hidden=True,children=[
     dbc.Input(id='inverse-in', value='text', type='text'),
     dbc.Button("Submit", color="success", id='submit-inverse', className="me-2", n_clicks=0),
@@ -54,9 +64,12 @@ inverse_in = html.Div(id="inverse-div", hidden=True,children=[
     dbc.Button("Cancel", color="danger",id='cancel-inverse',n_clicks=0),
 ])
 
-app = dash.Dash(__name__,external_stylesheets=[dbc.themes.CYBORG])
+app = dash.Dash(__name__,external_stylesheets=[dbc.themes.CYBORG], meta_tags=[
+        {"name": "viewport", "content": "width=device-width, initial-scale=1"},
+    ],)
 
 app.layout = html.Div([
+
     html.Div([
         metadata_prompt,
         inverse_in,
@@ -88,8 +101,7 @@ app.layout = html.Div([
                     dbc.Button('-', id='decrease-btn', outline=True, color="primary", className="me-2", n_clicks=0),
                 ],
                     className="d-grid gap-2 d-md-flex justify-content-md-center", ),
-                dbc.Col([
-                ])
+                dbc.Col([metric_dropdown])
 
             ]),
             dbc.Row([
@@ -101,42 +113,52 @@ app.layout = html.Div([
                 dbc.Col([]),
                 dbc.Col([]),
                 dbc.Col([dash_table.DataTable(id="datatable-metrics",
-                                              style_cell={
-                                                  'height': 'auto',
-                                                  # all three widths are needed
-                                                  'minWidth': '10px', 'width': '10px', 'maxWidth': '10px',
-                                                  'whiteSpace': 'normal'
-                                              },
-                                              # style_table={'height': '225px', 'overflowY': 'auto'},
-                                              style_header={
-                                                  'backgroundColor': 'rgb(30, 30, 30)',
-                                                  'color': 'white'
-                                              },
-                                              style_data={
-                                                  'backgroundColor': 'rgb(50, 50, 50)',
-                                                  'color': 'white'
-                                              },
-                                              columns=[{
-                                                  'name': 'src',
-                                                  'id': "1"
-                                              },
-                                                  {
-                                                      'name': 'tgt',
-                                                      'id': "2"
-                                                  },
-                                                  {
-                                                      'name': 'direction',
-                                                      'id': "3"
-                                                  }
-                                              ],
-                                              data=[{
-                                                  1: "BIWF",
-                                                  2: "recreational fishing",
-                                                  3: "decrease"
-                                              }],
-                                              ), ], width=4, align="center"),
+                                                    style_cell={
+                                                        'height': 'auto',
+                                                        # all three widths are needed
+                                                        'minWidth': '10px', 'width': '10px', 'maxWidth': '10px',
+                                                        'whiteSpace': 'normal'
+                                                    },
+                                                    # style_table={'height': '225px', 'overflowY': 'auto'},
+                                                    style_header={
+                                                        'backgroundColor': 'rgb(30, 30, 30)',
+                                                        'color': 'white'
+                                                    },
+                                                    style_data={
+                                                        'backgroundColor': 'rgb(50, 50, 50)',
+                                                        'color': 'white'
+                                                    },
+                                                    columns=[
+                                                        {'name': ['GPT3','F1'],
+                                                         'id': "1"},
+                                                        {'name': ['GPT3','Accuracy'],
+                                                         'id': "2"},
+                                                        {'name': ['GPT3','Recall'],
+                                                         'id': "3"},
+
+                                                        {'name': ['Bert','F1'],
+                                                         'id': "4"},
+                                                        {'name': ['Bert','Accuracy'],
+                                                         'id': "5"},
+                                                        {'name': ['Bert','Recall'],
+                                                         'id': "6"}
+                                                    ],
+                                                    data=[{
+                                                        1: "-0.75",
+                                                        2: "-0.56",
+                                                        3: "-0.89"
+                                                    }],
+                                                    merge_duplicate_headers=True,
+                                                    )],
+                        width=3,
+                        align="center"),
                 dbc.Col([]), ],
             ),
+            #dbc.Row([
+            #    dbc.Col([]),
+            #    dbc.Col([]),
+            #    dbc.Col([]),
+            #], justify="evenly")
         ], className="pad-row"),
         html.Br(),
         html.Br(),
@@ -223,10 +245,12 @@ app.layout = html.Div([
 
         dcc.Store(id='current-relation-store',data={"src":"","tgt":"","direction":""},storage_type='memory'),
         dcc.Store(id='meta-data',data={"title": "", "authors": "", "year": ""},storage_type='memory'),
-        dcc.Store(id='llm-metrics',data=[], storage_type='memory'),
+        dcc.Store(id='llm-metrics',data={}, storage_type='local'),
+        dcc.Store(id='llm-scores',data={}, storage_type='local'),
         dcc.Store(id='index-store',data=0, storage_type='memory'),
         dcc.Download(id="download-json"),
-    ])
+    ],
+    style={'overflow-x':'hidden'})
 ])
 
 
@@ -264,6 +288,8 @@ def next_sentence(n_clicks, back_clicks, current_text, all_data,curr_relation,se
         return all_data, "Please Insert RTF File", curr_relation, 0, 0
     if len(all_data) <= current_sentence_index: # This case is used when arrow keys are used instead of buttons
         # At max array size
+        if curr_relation["src"] == '' or curr_relation["tgt"] == '':
+            return dash.no_update, all_data[-1]["text"], curr_relation, len(all_data), 0
         all_data = saving_relation(-1, all_data, curr_relation)
         curr_relation = {'src': "", 'tgt': '', 'direction': ''}
         return all_data, all_data[-1]["text"], curr_relation, len(all_data), 0
@@ -383,7 +409,7 @@ def saving_relation(index,all_data,curr_relation):
     return all_data
 
 
-@callback(
+@app.callback(
     [Output('datatable-current', 'data'),
      Output('next-data', 'children'),
      Output('prev-data', 'children')],
@@ -459,12 +485,15 @@ def updating_json(rows,data,next_index,back_index):
      Output('all-relation-store','data'),
      Output('input-sentences','data', allow_duplicate=True),
      Output('next-btn','n_clicks'),
+     Output('llm-metrics','data', allow_duplicate=True),
+     Output('llm-scores','data', allow_duplicate=True),
      ],
     Input("download-btn", "n_clicks"),
     [State('all-relation-store','data'),
      State('next-btn','n_clicks'),
      State('input-sentences','data'),
-     State('upload-data', 'filename')],
+     State('upload-data', 'filename'),
+     ],
     prevent_initial_call=True,
 )
 def download(n_clicks,data,curr_sen_index, inp_sentences,file):
@@ -481,13 +510,13 @@ def download(n_clicks,data,curr_sen_index, inp_sentences,file):
     # WHEN YOU HIT SAVE, YOU ARE DONE WITH THAT SESSION, ALL REMAINING SENTENCES ARE REMOVED, AND THE PROGRAM IS
     # BASICALLY RESET
     if not data:
-        return dash.no_update, dash.no_update, dash.no_update, dash.no_update
+        return dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update
     fileData = json.dumps(data, indent=2)
     today = date.today()
     if file is None:
-        return dict(content=fileData, filename=f"Labeled_Data-{today}.json"), [], ["Please Insert RTF File"], 0
+        return dict(content=fileData, filename=f"Labeled_Data-{today}.json"), [], ["Please Insert RTF File"], 0, {}, {}
     file = file.replace(".rtf",f"-{today}.json")
-    return dict(content=fileData, filename=file), [], ["Please Insert RTF File"], 0
+    return dict(content=fileData, filename=file), [], ["Please Insert RTF File"], 0, {}, {}
 
 
 # This callback also activates on download, and updates the text on screen.
@@ -521,18 +550,21 @@ def abbreviation_handler(sentences):
 @app.callback([Output('input-sentences','data'),
                Output('all-relation-store','data', allow_duplicate=True),
                Output(metadata_prompt,'hidden'),
-               Output('llm-metrics','data')],
+               Output('llm-metrics','data'),
+               Output('llm-scores','data')],
               Input('upload-data', 'contents'),
               [State('upload-data', 'filename'),
                State('input-sentences','data'),
-               State('all-relation-store','data')],
+               State('all-relation-store','data'),
+               State('llm-metrics','data'),
+               State('llm-scores','data')],
               prevent_initial_call="initial_duplicate"
 )
-def upload(list_of_contents, list_of_names,inp_sentences,data):
+def upload(list_of_contents, list_of_names,inp_sentences,data,LLM_metrics,LLM_scores):
     if list_of_contents is None:
         if len(inp_sentences) > 1:
-            return inp_sentences, dash.no_update, dash.no_update, dash.no_update
-        return dash.no_update, dash.no_update, dash.no_update, dash.no_update
+            return inp_sentences, dash.no_update, dash.no_update, dash.no_update, dash.no_update
+        return dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update
     content_type, content_string = list_of_contents.split(',')
     decoded = base64.b64decode(content_string)
     if ".json" in list_of_names:
@@ -540,8 +572,6 @@ def upload(list_of_contents, list_of_names,inp_sentences,data):
         for sentence in data:
             inp_sentences.append(sentence["text"])
         if 'LLM' in data[0].keys():
-            LLM_scores = {}
-            LLM_metrics = {}
             for LLM in data[0]['LLM']:
                 LLM_scores[LLM] = {"TP":0, "FP":0, "TN":0, "FN": 0}
                 LLM_metrics[LLM] = {}
@@ -565,8 +595,8 @@ def upload(list_of_contents, list_of_names,inp_sentences,data):
                 LLM_metrics[LLM]['F1'] = (2 * LLM_metrics[LLM]['precision'] * LLM_metrics[LLM]['recall']) / (LLM_metrics[LLM]['precision'] + LLM_metrics[LLM]['recall'])
                 LLM_metrics[LLM]['accuracy'] = ((LLM_scores[LLM]['TP'] + LLM_scores[LLM]['TN']) /
                                                 (LLM_scores[LLM]['TP'] + LLM_scores[LLM]['TN'] + LLM_scores[LLM]['FP'] + LLM_scores[LLM]['FN']))
-            return inp_sentences, data, dash.no_update, dash.no_update
-        return inp_sentences, data, dash.no_update, dash.no_update
+            return inp_sentences, data, dash.no_update, LLM_metrics, LLM_scores
+        return inp_sentences, data, dash.no_update, dash.no_update, dash.no_update
     if ".rtf" in list_of_names:
         temp = io.StringIO(decoded.decode('utf-8')).getvalue()
         text = rtf_to_text(temp)
@@ -593,7 +623,7 @@ def upload(list_of_contents, list_of_names,inp_sentences,data):
                         "meta_data": {"title": "", "authors": "", "year": ""}}
             data.append(template)
 
-    return inp_sentences, data, False, dash.no_update
+    return inp_sentences, data, False, dash.no_update, dash.no_update
 
 
 @app.callback([Output(metadata_prompt,'hidden',allow_duplicate=True),
@@ -815,6 +845,56 @@ app.clientside_callback(
 def save_keybind(n1, data): # don't know why we need an additional function and callback here,
     # but it doesn't seem to work without it
     return dash.no_update
+
+@app.callback(
+    [Output('datatable-metrics', 'data'),
+     Output('datatable-metrics', 'columns'),
+     Output(metric_dropdown, 'options')],
+    Input('llm-metrics', 'data'),
+    [State('datatable-metrics', 'columns'),
+     State('back-btn', 'n_clicks'),]
+)
+def update_metrics(llmMetrics, cols, backPass):
+    """
+    This function is for updating the metrics table immediately after a file upload.
+    As a byproduct, it also updates the dropdown menu next to the metrics table.
+    :param llmMetrics:
+    :param cols:
+    :param backPass:
+    :return:
+    """
+    dropdown_items = ["All"]
+    cols = []
+    row = {}
+    rows = []
+    i = 0
+    for llm in llmMetrics.keys():
+        dropdown_items.append(f"{llm}")
+        cols.append({'name': [f'{llm}','F1'], 'id': f"{i}"})
+        row[i] = f"{round(llmMetrics[llm]['F1'],4)}"
+        i += 1
+
+        cols.append({'name': [f'{llm}', 'Accuracy'], 'id': f"{i}"})
+        row[i] = f"{round(llmMetrics[llm]['accuracy'], 4)}"
+        i += 1
+
+        cols.append({'name': [f'{llm}', 'Recall'], 'id': f"{i}"})
+        row[i] = f"{round(llmMetrics[llm]['recall'], 4)}"
+        i += 1
+    rows.append(row)
+    return rows, cols, dropdown_items
+
+
+@app.callback(
+    [Output('datatable-metrics', 'data', allow_duplicate=True),
+     Output('datatable-metrics', 'columns', allow_duplicate=True),],
+    Input(metric_dropdown, 'value'),
+    [State('datatable-metrics', 'columns'),
+     State('back-btn', 'n_clicks'),],
+    prevent_initial_call='initial_duplicate'
+)
+def update_metric_table(n_clicks, cols, dropdown_items):
+    raise PreventUpdate
 
 if __name__ == '__main__':
     app.run_server(debug=True)
