@@ -824,25 +824,82 @@ app.clientside_callback(
         function(id) {
             document.addEventListener("keydown", function(event) {
                 if (event.key == 's') {
-                    document.getElementById('save-btn').click()
+                    document.getElementById('source-btn').click()
                     event.stopPropogation()
                 }
             });
             return window.dash_clientside.no_update
         }
     """,
-    Output("save-btn", "id"),
-    Input("save-btn", "id"),
+    Output("source-btn", "id"),
+    Input("source-btn", "id"),
 
 )
 
 @app.callback(
     [Output("output2", "children", allow_duplicate=True)],
-    Input("save-btn", "n_clicks"),
+    Input("source-btn", "n_clicks"),
     State("all-relation-store","data"),
     prevent_initial_call=True
 )
-def save_keybind(n1, data): # don't know why we need an additional function and callback here,
+def source_keybind(n1, data): # don't know why we need an additional function and callback here,
+    # but it doesn't seem to work without it
+    return dash.no_update
+
+
+app.clientside_callback(
+    """
+        function(id) {
+            document.addEventListener("keydown", function(event) {
+                if (event.key == 't') {
+                    document.getElementById('target-btn').click()
+                    event.stopPropogation()
+                }
+            });
+            return window.dash_clientside.no_update
+        }
+    """,
+    Output("target-btn", "id"),
+    Input("target-btn", "id"),
+
+)
+
+@app.callback(
+    [Output("output2", "children", allow_duplicate=True)],
+    Input("target-btn", "n_clicks"),
+    State("all-relation-store","data"),
+    prevent_initial_call=True
+)
+def target_keybind(n1, data): # don't know why we need an additional function and callback here,
+    # but it doesn't seem to work without it
+    return dash.no_update
+
+
+app.clientside_callback(
+    """
+        function(id) {
+            document.addEventListener("keydown", function(event) {
+                if (event.keyCode == '61') {
+                    document.getElementById('increase-btn').click()
+                    event.stopPropogation()
+                }
+            });
+            return window.dash_clientside.no_update
+        }
+    """,
+    Output("increase-btn", "id",allow_duplicate=True),
+    Input("increase-btn", "id"),
+    prevent_initial_call=True
+)
+
+@app.callback(
+    [Output("output2", "children", allow_duplicate=True)],
+    Input("increase-btn", "n_clicks"),
+    State("all-relation-store","data"),
+    prevent_initial_call=True
+)
+
+def increase_keybind(n1, data): # don't know why we need an additional function and callback here,
     # but it doesn't seem to work without it
     return dash.no_update
 
