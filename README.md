@@ -4,6 +4,8 @@ Repository for CMSE 495 Experiential Learning in Data Science
 
 **Project Plan Video:**  
 https://mediaspace.msu.edu/media/t/1_8ezxk12i  
+**Minimum Viable Product Video:**  
+https://mediaspace.msu.edu/media/3-17-2024-Sun_TwoSix_MVP_PLAN.mp4/1_qlm596vo  
 
 **Prerequisites**
 Python 3.0
