@@ -404,7 +404,7 @@ def saving_relation(index,all_data,curr_relation):
 )
 def currentStorage(data, for_index, back_index, rows,columns):
     if not data:  # If there is no input file
-        return dash.no_update, dash.no_update, dash.no_update
+        return [], dash.no_update, dash.no_update
     index = int(for_index)-int(back_index)
     if index <= 0:  # If we're at the starter sentence
         return dash.no_update, dash.no_update, dash.no_update
@@ -412,7 +412,10 @@ def currentStorage(data, for_index, back_index, rows,columns):
         rows = []
         for relation in data[index-1]['causal relations']:
             rows.append({c['id']: relation[val] for c, val in zip(columns,relation)})
-        return rows, f"Next Passage: {data[index]['text']}", "Previous Passage: []"
+        if len(data)>1:
+            return rows, f"Next Passage: {data[index]['text']}", "Previous Passage: []"
+        else:
+            return rows, f"Next Passage: []", "Previous Passage: []"
     elif len(data) <= index:  # If we're at EOF, there is no next sentence
         rows = []
         index = len(data)
@@ -441,6 +444,8 @@ def updating_json(rows,data,next_index,back_index):
     :param value:
     :return:
     """
+    if len(data)==0:
+        raise PreventUpdate
     index = int(next_index)-int(back_index)
     conv = []
     for row, i in zip(rows,range(len(rows))):  # row is a singular relation
@@ -454,7 +459,7 @@ def updating_json(rows,data,next_index,back_index):
             temp["direction"] = 'decrease'
         if temp["direction"] != "increase" and temp["direction"] != "decrease":
             temp["direction"] = data[index-1]['causal relations'][i]['direction']
-        if temp["src"] == "": #  if any parameters are empty, restore that part of the relation
+        if temp["src"] == "":  # if any parameters are empty, restore that part of the relation
             temp["src"] = data[index - 1]['causal relations'][i]['src']
         if temp["tgt"] == "":
             temp["tgt"] = data[index - 1]['causal relations'][i]['tgt']
@@ -568,7 +573,7 @@ def upload(list_of_contents, list_of_names,inp_sentences,data,LLM_metrics,LLM_sc
                     if len(LLM) == 0:
                         if len(sentence['causal relations']) == 0:
                             LLM_scores[LLM]['TN'] += 1
-                    for relation in LLM:
+                    for relation in sentence['LLM'][LLM]:
                         if relation not in sentence['causal relations']:
                             LLM_scores[LLM]['FP'] += 1
                         # Don't need an else here, as that'd be a true positive and is already added
@@ -910,9 +915,10 @@ def save_keybind(n1, data): # don't know why we need an additional function and 
      Output('datatable-metrics', 'columns'),],
     Input('llm-metrics', 'data'),
     [State('datatable-metrics', 'columns'),
-     State('back-btn', 'n_clicks'),]
+     State('back-btn', 'n_clicks'),
+     State('all-relation-store', 'data')]
 )
-def update_metrics(llmMetrics, cols, backPass):
+def update_metrics(llmMetrics, cols, backPass, data):
     """
     This function is for updating the metrics table immediately after a file upload.
     As a byproduct, it also updates the dropdown menu next to the metrics table.
@@ -925,6 +931,8 @@ def update_metrics(llmMetrics, cols, backPass):
     row = {}
     rows = []
     i = 0
+    if data is None:
+        return [], []
     for llm in llmMetrics.keys():
         cols.append({'name': [f'{llm}','F1'], 'id': f"{i}", 'hideable':'first'})
         row[i] = f"{round(llmMetrics[llm]['F1'],4)}"
@@ -940,17 +948,6 @@ def update_metrics(llmMetrics, cols, backPass):
     rows.append(row)
     return rows, cols
 
-"""
-@app.callback(
-    [Output('datatable-metrics', 'data', allow_duplicate=True),
-     Output('datatable-metrics', 'columns', allow_duplicate=True),],
-    Input(metric_dropdown, 'value'),
-    [State('datatable-metrics', 'columns'),
-     State('back-btn', 'n_clicks'),],
-    prevent_initial_call='initial_duplicate'
-)
-def update_metric_table(n_clicks, cols, dropdown_items):
-    raise PreventUpdate
-"""
+
 if __name__ == '__main__':
     app.run_server(debug=True)
