@@ -34,6 +34,7 @@ Errors in Functionality:
 - Weird infrequent error where next/back count increases by an additional 1 every live update from dash
 -- There should be no live update for users as this occurs when the code or css is edited
 -- A fix could be to put the JS code into its own asset file, and maybe it won't dupe the event reader
+- UI is best on and designed for a 1920x1080 monitor, and needs a way to scale to other sizes
 """
 
 metadata_prompt = html.Div(hidden=True,children=[
@@ -652,6 +653,8 @@ def modify(n_clicks, editable, data,for_index,back_index,input_val):
         return False
     else:
         return dash.no_update
+
+
 @app.callback([
                Output("inverse-div",'hidden',allow_duplicate=True),
                Output('all-relation-store','data', allow_duplicate=True),
@@ -881,44 +884,14 @@ def target_keybind(n1, data): # don't know why we need an additional function an
     # but it doesn't seem to work without it
     return dash.no_update
 
-
-app.clientside_callback(
-    """
-        function(id) {
-            document.addEventListener("keydown", function(event) {
-                if (event.key == 'S') {
-                    document.getElementById('save-btn').click()
-                    event.stopPropogation()
-                }
-            });
-            return window.dash_clientside.no_update
-        }
-    """,
-    Output("save-btn", "id",allow_duplicate=True),
-    Input("save-btn", "id"),
-    prevent_initial_call=True
-)
-
-@app.callback(
-    [Output("output2", "children", allow_duplicate=True)],
-    Input("save-btn", "n_clicks"),
-    State("all-relation-store","data"),
-    prevent_initial_call=True
-)
-
-def save_keybind(n1, data): # don't know why we need an additional function and callback here,
-    # but it doesn't seem to work without it
-    return dash.no_update
-
 @app.callback(
     [Output('datatable-metrics', 'data'),
      Output('datatable-metrics', 'columns'),],
     Input('llm-metrics', 'data'),
     [State('datatable-metrics', 'columns'),
-     State('back-btn', 'n_clicks'),
      State('all-relation-store', 'data')]
 )
-def update_metrics(llmMetrics, cols, backPass, data):
+def update_metrics(llmMetrics, cols, data):
     """
     This function is for updating the metrics table immediately after a file upload.
     As a byproduct, it also updates the dropdown menu next to the metrics table.
