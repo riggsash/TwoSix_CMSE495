@@ -53,7 +53,7 @@ metric_dropdown = dcc.Dropdown(
     clearable=False,
     multi=True,
     options=["All"],
-    style={'width': '400px'}
+    style={'width': '400px'},
 )
 
 inverse_in = html.Div(id="inverse-div", hidden=True,children=[
@@ -101,7 +101,7 @@ app.layout = html.Div([
                     dbc.Button('-', id='decrease-btn', outline=True, color="primary", className="me-2", n_clicks=0),
                 ],
                     className="d-grid gap-2 d-md-flex justify-content-md-center", ),
-                dbc.Col([metric_dropdown])
+                dbc.Col([])
 
             ]),
             dbc.Row([
@@ -128,26 +128,7 @@ app.layout = html.Div([
                                                         'backgroundColor': 'rgb(50, 50, 50)',
                                                         'color': 'white'
                                                     },
-                                                    columns=[
-                                                        {'name': ['GPT3','F1'],
-                                                         'id': "1"},
-                                                        {'name': ['GPT3','Accuracy'],
-                                                         'id': "2"},
-                                                        {'name': ['GPT3','Recall'],
-                                                         'id': "3"},
 
-                                                        {'name': ['Bert','F1'],
-                                                         'id': "4"},
-                                                        {'name': ['Bert','Accuracy'],
-                                                         'id': "5"},
-                                                        {'name': ['Bert','Recall'],
-                                                         'id': "6"}
-                                                    ],
-                                                    data=[{
-                                                        1: "-0.75",
-                                                        2: "-0.56",
-                                                        3: "-0.89"
-                                                    }],
                                                     merge_duplicate_headers=True,
                                                     )],
                         width=3,
@@ -222,16 +203,18 @@ app.layout = html.Div([
         html.Br(),
         html.Br(),
         html.Br(),
-        dbc.Button('Modify and add new sentence', outline=True, color="info", id="inverse-btn"),
-        html.Div([
-            dcc.Upload(
+        dbc.Row([
+            dbc.Col([dbc.Button('Modify and add new sentence', outline=True, color="info", id="inverse-btn")],),
+            dbc.Col([]),
+            dbc.Col([dcc.Upload(
                 id='upload-data',
                 children=html.Div([
                     dbc.Button('Select Files')
             ]),),
-            dbc.Button('Download JSON', id='download-btn', n_clicks=0),
-        ],
+            dbc.Button('Download JSON', id='download-btn', n_clicks=0),],
         className="d-grid gap-2 d-md-flex justify-content-end"),
+        ]),
+        #dbc.Button('Modify and add new sentence', outline=True, color="info", id="inverse-btn"),
         html.Br(),
         html.Br(),
 
@@ -283,9 +266,9 @@ def next_sentence(n_clicks, back_clicks, current_text, all_data,curr_relation,se
     button_id = ctx.triggered_id if not None else False
     if len(sentences) == 1:  # Prevents moving the amount of clicks, and thus the index of sentences
         # , when there is no file [On start, and after download]
-        return all_data, "Please Insert RTF File", curr_relation, 0, 0
+        return all_data, "Please Insert RTF or JSON File", curr_relation, 0, 0
     if current_sentence_index < 0: # if we've gone negative, we can just reset the clicks and return default sentence
-        return all_data, "Please Insert RTF File", curr_relation, 0, 0
+        return all_data, "Please Insert RTF or JSON File", curr_relation, 0, 0
     if len(all_data) <= current_sentence_index: # This case is used when arrow keys are used instead of buttons
         # At max array size
         if curr_relation["src"] == '' or curr_relation["tgt"] == '':
@@ -514,9 +497,9 @@ def download(n_clicks,data,curr_sen_index, inp_sentences,file):
     fileData = json.dumps(data, indent=2)
     today = date.today()
     if file is None:
-        return dict(content=fileData, filename=f"Labeled_Data-{today}.json"), [], ["Please Insert RTF File"], 0, {}, {}
+        return dict(content=fileData, filename=f"Labeled_Data-{today}.json"), [], ["Please Insert RTF or JSON File"], 0, {}, {}
     file = file.replace(".rtf",f"-{today}.json")
-    return dict(content=fileData, filename=file), [], ["Please Insert RTF File"], 0, {}, {}
+    return dict(content=fileData, filename=file), [], ["Please Insert RTF or JSON File"], 0, {}, {}
 
 
 # This callback also activates on download, and updates the text on screen.
@@ -795,6 +778,16 @@ app.clientside_callback(
                     document.getElementById('increase-btn').click()
                     event.stopPropogation()
                 }
+                if (event.shiftKey){
+                    if (event.keyCode == '61') {
+                        document.getElementById('increase-btn').click()
+                        event.stopPropogation()
+                    }
+                    if (event.keyCode == '173') {
+                        document.getElementById('decrease-btn').click()
+                        event.stopPropogation()
+                    }
+                }
                 if (event.keyCode == '40' || event.keyCode == '109') {
                     document.getElementById('decrease-btn').click()
                     event.stopPropogation()
@@ -823,26 +816,35 @@ app.clientside_callback(
     """
         function(id) {
             document.addEventListener("keydown", function(event) {
+                if (event.shiftKey){
+                    if (event.keyCode == '83'){
+                        document.getElementById('save-btn').click()
+                        event.stopPropogation()
+                    }
+                }
                 if (event.key == 's') {
                     document.getElementById('source-btn').click()
                     event.stopPropogation()
-                }
+                } 
             });
             return window.dash_clientside.no_update
         }
     """,
     Output("source-btn", "id"),
+    Output("save-btn", "id"),
     Input("source-btn", "id"),
+    Input("save-btn", "id"),
 
 )
 
 @app.callback(
     [Output("output2", "children", allow_duplicate=True)],
     Input("source-btn", "n_clicks"),
+    Input("save-btn", "n_clicks"),
     State("all-relation-store","data"),
     prevent_initial_call=True
 )
-def source_keybind(n1, data): # don't know why we need an additional function and callback here,
+def source_keybind(n1, n2, data): # don't know why we need an additional function and callback here,
     # but it doesn't seem to work without it
     return dash.no_update
 
@@ -879,34 +881,33 @@ app.clientside_callback(
     """
         function(id) {
             document.addEventListener("keydown", function(event) {
-                if (event.keyCode == '61') {
-                    document.getElementById('increase-btn').click()
+                if (event.key == 'S') {
+                    document.getElementById('save-btn').click()
                     event.stopPropogation()
                 }
             });
             return window.dash_clientside.no_update
         }
     """,
-    Output("increase-btn", "id",allow_duplicate=True),
-    Input("increase-btn", "id"),
+    Output("save-btn", "id",allow_duplicate=True),
+    Input("save-btn", "id"),
     prevent_initial_call=True
 )
 
 @app.callback(
     [Output("output2", "children", allow_duplicate=True)],
-    Input("increase-btn", "n_clicks"),
+    Input("save-btn", "n_clicks"),
     State("all-relation-store","data"),
     prevent_initial_call=True
 )
 
-def increase_keybind(n1, data): # don't know why we need an additional function and callback here,
+def save_keybind(n1, data): # don't know why we need an additional function and callback here,
     # but it doesn't seem to work without it
     return dash.no_update
 
 @app.callback(
     [Output('datatable-metrics', 'data'),
-     Output('datatable-metrics', 'columns'),
-     Output(metric_dropdown, 'options')],
+     Output('datatable-metrics', 'columns'),],
     Input('llm-metrics', 'data'),
     [State('datatable-metrics', 'columns'),
      State('back-btn', 'n_clicks'),]
@@ -920,14 +921,12 @@ def update_metrics(llmMetrics, cols, backPass):
     :param backPass:
     :return:
     """
-    dropdown_items = ["All"]
     cols = []
     row = {}
     rows = []
     i = 0
     for llm in llmMetrics.keys():
-        dropdown_items.append(f"{llm}")
-        cols.append({'name': [f'{llm}','F1'], 'id': f"{i}"})
+        cols.append({'name': [f'{llm}','F1'], 'id': f"{i}", 'hideable':'first'})
         row[i] = f"{round(llmMetrics[llm]['F1'],4)}"
         i += 1
 
@@ -939,9 +938,9 @@ def update_metrics(llmMetrics, cols, backPass):
         row[i] = f"{round(llmMetrics[llm]['recall'], 4)}"
         i += 1
     rows.append(row)
-    return rows, cols, dropdown_items
+    return rows, cols
 
-
+"""
 @app.callback(
     [Output('datatable-metrics', 'data', allow_duplicate=True),
      Output('datatable-metrics', 'columns', allow_duplicate=True),],
@@ -952,6 +951,6 @@ def update_metrics(llmMetrics, cols, backPass):
 )
 def update_metric_table(n_clicks, cols, dropdown_items):
     raise PreventUpdate
-
+"""
 if __name__ == '__main__':
     app.run_server(debug=True)
