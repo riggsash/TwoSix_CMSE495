@@ -22,7 +22,8 @@ LLMs (ChatGPT, lama2, FALCON, Gemini)
 
 **Installation**
 
-Clone the repository: git clone 
+Clone the repository: git clone.  
+Create Figures: see Reproducibility.md  
 
 **Contributors**
 
