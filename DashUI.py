@@ -231,7 +231,7 @@ app.layout = html.Div([
         dcc.Store(id='meta-data',data={"title": "", "authors": "", "year": ""},storage_type='memory'),
         dcc.Store(id='llm-metrics',data={}, storage_type='local'),
         dcc.Store(id='llm-scores',data={}, storage_type='local'),
-        dcc.Store(id='index-store',data=0, storage_type='memory'),
+        #dcc.Store(id='index-store',data=0, storage_type='memory'),
         dcc.Download(id="download-json"),
     ],
     style={'overflow-x':'hidden'})
@@ -611,7 +611,18 @@ def upload(list_of_contents, list_of_names,inp_sentences,data,LLM_metrics,LLM_sc
                         "causal relations": [],
                         "meta_data": {"title": "", "authors": "", "year": ""}}
             data.append(template)
-
+    if ".txt" in list_of_names:
+        text = io.StringIO(decoded.decode('utf-8')).getvalue()
+        newline_split = text.split("\n")
+        for sentence in newline_split:
+            if sentence == '':
+                continue
+            sentence = sentence.replace("\r", "")
+            inp_sentences.append(sentence)
+            template = {"text": sentence,
+                        "causal relations": [],
+                        "meta_data": {"title": "", "authors": "", "year": ""}}
+            data.append(template)
     return inp_sentences, data, False, dash.no_update, dash.no_update
 
 
