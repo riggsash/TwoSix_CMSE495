@@ -339,11 +339,11 @@ def allLabel(inc, dec, src, tgt, next, reset, selected_data, relation):
     srcText = f"Source: "
     tgtText = f"Target: "
     if button_id == "increase-btn":
-        relation["direction"] = "Increase"
-        return f"Direction: Increase",dash.no_update, dash.no_update,relation
+        relation["direction"] = "increase"
+        return f"Direction: increase",dash.no_update, dash.no_update,relation
     elif button_id == "decrease-btn":
-        relation["direction"] = "Decrease"
-        return f"Direction: Decrease",dash.no_update, dash.no_update,relation
+        relation["direction"] = "decrease"
+        return f"Direction: decrease",dash.no_update, dash.no_update,relation
     elif button_id == "source-btn":
         relation["src"] = selected_data
         return dash.no_update, f"Source: {selected_data}", dash.no_update,relation
