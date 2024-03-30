@@ -1,0 +1,1207 @@
+[
+  {
+    "text": "most fishermen observed an increase in recreational fishing in the BIWF area",
+    "causal relations": [
+      {
+        "src": "BIWF",
+        "tgt": "recreational fishing",
+        "direction": "increase"
+      }
+    ],
+    "meta_data": {
+      "title": "Integrating social and ecological research on the impacts of offshore wind farms in North America",
+      "authors": "ten Brink, Talya; Dalton, Tracey; Livermore, Julia",
+      "year": 2020
+    },
+    "LLM": {
+      "GPT3.5": [
+        {
+          "src": "BIWF",
+          "tgt": "recreational fishing",
+          "direction": "increase"
+        }
+      ],
+      "Bert": [
+        {
+          "src": "BIWF",
+          "tgt": "recreational fishing",
+          "direction": "increase"
+        }
+      ]
+    }
+  },
+  {
+    "text": "Many fishermen felt that the wind farm functioned as a \u2018structure\u2019, \u2018reef\u2019 or a \u2018fish aggregating device\u2019 for fish to cluster around the turbines.",
+    "causal relations": [
+      {
+        "src": "wind farm",
+        "tgt": "fish aggregations",
+        "direction": "increase"
+      }
+    ],
+    "meta_data": {
+      "title": "Integrating social and ecological research on the impacts of offshore wind farms in North America",
+      "authors": "ten Brink, Talya; Dalton, Tracey; Livermore, Julia",
+      "year": 2020
+    },
+    "LLM": {
+      "GPT3.5": [
+        {
+          "src": "wind farm",
+          "tgt": "fish aggregations",
+          "direction": "increase"
+        }
+      ],
+      "Bert": [
+        {
+          "src": "wind farm",
+          "tgt": "fish aggregations",
+          "direction": "increase"
+        }
+      ]
+    }
+  },
+  {
+    "text": "Some fishermen described the establishment of large numbers of blue mussels on the turbine structures",
+    "causal relations": [
+      {
+        "src": "turbine structures",
+        "tgt": "blue mussels",
+        "direction": "increase"
+      }
+    ],
+    "meta_data": {
+      "title": "Integrating social and ecological research on the impacts of offshore wind farms in North America",
+      "authors": "ten Brink, Talya; Dalton, Tracey; Livermore, Julia",
+      "year": 2020
+    },
+    "LLM": {
+      "GPT3.5": [
+        {
+          "src": "turbine structures",
+          "tgt": "blue mussels",
+          "direction": "increase"
+        }
+      ],
+      "Bert": [
+        {
+          "src": "turbine structures",
+          "tgt": "blue mussels",
+          "direction": "increase"
+        }
+      ]
+    }
+  },
+  {
+    "text": "Some fishermen observed new fish species in the area, and other fishermen noted that they saw fewer fish species in the area during construction.",
+    "causal relations": [
+      {
+        "src": "wind farms",
+        "tgt": "new fish species",
+        "direction": "increase"
+      },
+      {
+        "src": "wind farm construction",
+        "tgt": "fish species",
+        "direction": "decrease"
+      }
+    ],
+    "meta_data": {
+      "title": "Integrating social and ecological research on the impacts of offshore wind farms in North America",
+      "authors": "ten Brink, Talya; Dalton, Tracey; Livermore, Julia",
+      "year": 2020
+    },
+    "LLM": {
+      "GPT3.5": [
+        {
+          "src": "wind farms",
+          "tgt": "new fish species",
+          "direction": "increase"
+        },
+        {
+          "src": "wind farm construction",
+          "tgt": "fish species",
+          "direction": "decrease"
+        }
+      ],
+      "Bert": [
+        {
+          "src": "wind farms",
+          "tgt": "new fish species",
+          "direction": "increase"
+        },
+        {
+          "src": "wind farm construction",
+          "tgt": "fish species",
+          "direction": "decrease"
+        }
+      ]
+    }
+  },
+  {
+    "text": "Other perceived impacts of the BIWF included the negative effects of sound and increased turbidity during construction and an increase in cod in the area.",
+    "causal relations": [
+      {
+        "src": "BIWF construction",
+        "tgt": "sound",
+        "direction": "increase"
+      },
+      {
+        "src": "BIWF construction",
+        "tgt": "turbidity",
+        "direction": "increase"
+      },
+      {
+        "src": "BIWF construction",
+        "tgt": "cod population",
+        "direction": "increase"
+      }
+    ],
+    "meta_data": {
+      "title": "Integrating social and ecological research on the impacts of offshore wind farms in North America",
+      "authors": "ten Brink, Talya; Dalton, Tracey; Livermore, Julia",
+      "year": 2020
+    },
+    "LLM": {
+      "GPT3.5": [
+        {
+          "src": "BIWF construction",
+          "tgt": "sound",
+          "direction": "increase"
+        },
+        {
+          "src": "BIWF construction",
+          "tgt": "turbidity",
+          "direction": "increase"
+        },
+        {
+          "src": "BIWF construction",
+          "tgt": "cod population",
+          "direction": "increase"
+        }
+      ],
+      "Bert": [
+        {
+          "src": "BIWF construction",
+          "tgt": "sound",
+          "direction": "increase"
+        },
+        {
+          "src": "BIWF construction",
+          "tgt": "turbidity",
+          "direction": "increase"
+        },
+        {
+          "src": "BIWF construction",
+          "tgt": "cod population",
+          "direction": "increase"
+        }
+      ]
+    }
+  },
+  {
+    "text": "Other impacts included lost fishing ground and gear, benefit of not using diesel generators for electrical power on the island, and compensation for negative impacts of the wind farm construction.",
+    "causal relations": [
+      {
+        "src": "wind farms",
+        "tgt": "fishing ground",
+        "direction": "decrease"
+      },
+      {
+        "src": "wind farms",
+        "tgt": "fishing gear",
+        "direction": "decrease"
+      },
+      {
+        "src": "wind farms",
+        "tgt": "diesel generator use",
+        "direction": "decrease"
+      },
+      {
+        "src": "wind farm construction",
+        "tgt": "financial compensation for fishermen",
+        "direction": "increase"
+      }
+    ],
+    "meta_data": {
+      "title": "Integrating social and ecological research on the impacts of offshore wind farms in North America",
+      "authors": "ten Brink, Talya; Dalton, Tracey; Livermore, Julia",
+      "year": 2020
+    },
+    "LLM": {
+      "GPT3.5": [
+        {
+          "src": "wind farms",
+          "tgt": "fishing ground",
+          "direction": "decrease"
+        },
+        {
+          "src": "wind farms",
+          "tgt": "fishing gear",
+          "direction": "decrease"
+        },
+        {
+          "src": "wind farms",
+          "tgt": "diesel generator use",
+          "direction": "decrease"
+        },
+        {
+          "src": "wind farm construction",
+          "tgt": "financial compensation for fishermen",
+          "direction": "increase"
+        }
+      ],
+      "Bert": [
+        {
+          "src": "wind farms",
+          "tgt": "fishing ground",
+          "direction": "decrease"
+        },
+        {
+          "src": "wind farms",
+          "tgt": "fishing gear",
+          "direction": "decrease"
+        },
+        {
+          "src": "wind farms",
+          "tgt": "diesel generator use",
+          "direction": "decrease"
+        },
+        {
+          "src": "wind farm construction",
+          "tgt": "financial compensation for fishermen",
+          "direction": "increase"
+        }
+      ]
+    }
+  },
+  {
+    "text": "fishermen noted in the interviews that they saw mahi (Coryphaena hippurus) near the turbines, but since mahi is a migratory pelagic species, it was not captured in the benthic trawl survey. The same phenomenon occurred for striped bass (Morone saxatilis); the social science component suggested that striped bass decreased in the area of the turbines during pile driving.",
+    "causal relations": [
+      {
+        "src": "turbines",
+        "tgt": "mahi",
+        "direction": "increase"
+      },
+      {
+        "src": "pile driving",
+        "tgt": "striped bass",
+        "direction": "decrease"
+      }
+    ],
+    "meta_data": {
+      "title": "Integrating social and ecological research on the impacts of offshore wind farms in North America",
+      "authors": "ten Brink, Talya; Dalton, Tracey; Livermore, Julia",
+      "year": 2020
+    },
+    "LLM": {
+      "GPT3.5": [
+        {
+          "src": "turbines",
+          "tgt": "mahi",
+          "direction": "increase"
+        },
+        {
+          "src": "pile driving",
+          "tgt": "striped bass",
+          "direction": "decrease"
+        }
+      ],
+      "Bert": [
+        {
+          "src": "turbines",
+          "tgt": "mahi",
+          "direction": "increase"
+        },
+        {
+          "src": "pile driving",
+          "tgt": "striped bass",
+          "direction": "decrease"
+        }
+      ]
+    }
+  },
+  {
+    "text": "Studies have found that place attachment influences support level, where those who are more place-attached are more likely to oppose proposed developments",
+    "causal relations": [
+      {
+        "src": "place attachment",
+        "tgt": "support of proposed developments",
+        "direction": "decrease"
+      }
+    ],
+    "meta_data": {
+      "title": "Resident perceptions of local offshore wind energy development: Modeling efforts to improve participatory processes",
+      "authors": "Gonyo, Sarah Ball; Fleming, Chloe S.; Freitag, Amy; Goedeke, Theresa L.",
+      "year": 2021
+    },
+    "LLM": {
+      "GPT3.5": [
+        {
+          "src": "place attachment",
+          "tgt": "support of proposed developments",
+          "direction": "decrease"
+        }
+      ],
+      "Bert": [
+        {
+          "src": "place attachment",
+          "tgt": "support of proposed developments",
+          "direction": "decrease"
+        }
+      ]
+    }
+  },
+  {
+    "text": "greater awareness has been found to increase support for invasive species management (Novoa et al., 2017) and wind energy development (Bidwell, 2016)",
+    "causal relations": [
+      {
+        "src": "awareness",
+        "tgt": "support of wind energy development",
+        "direction": "increase"
+      }
+    ],
+    "meta_data": {
+      "title": "Resident perceptions of local offshore wind energy development: Modeling efforts to improve participatory processes",
+      "authors": "Gonyo, Sarah Ball; Fleming, Chloe S.; Freitag, Amy; Goedeke, Theresa L.",
+      "year": 2021
+    },
+    "LLM": {
+      "GPT3.5": [
+        {
+          "src": "awareness",
+          "tgt": "support of wind energy development",
+          "direction": "increase"
+        }
+      ],
+      "Bert": [
+        {
+          "src": "awareness",
+          "tgt": "support of wind energy development",
+          "direction": "increase"
+        }
+      ]
+    }
+  },
+  {
+    "text": "The average Carolina coast resident believes local offshore wind energy development will damage the environment but improve local economies.",
+    "causal relations": [
+      {
+        "src": "local offshore wind energy development",
+        "tgt": "damaged environment",
+        "direction": "increase"
+      },
+      {
+        "src": "local offshore wind energy development",
+        "tgt": "local economies",
+        "direction": "increase"
+      }
+    ],
+    "meta_data": {
+      "title": "Resident perceptions of local offshore wind energy development: Modeling efforts to improve participatory processes",
+      "authors": "Gonyo, Sarah Ball; Fleming, Chloe S.; Freitag, Amy; Goedeke, Theresa L.",
+      "year": 2021
+    },
+    "LLM": {
+      "GPT3.5": [
+        {
+          "src": "local offshore wind energy development",
+          "tgt": "damaged environment",
+          "direction": "increase"
+        },
+        {
+          "src": "local offshore wind energy development",
+          "tgt": "local economies",
+          "direction": "increase"
+        }
+      ],
+      "Bert": [
+        {
+          "src": "local offshore wind energy development",
+          "tgt": "damaged environment",
+          "direction": "increase"
+        },
+        {
+          "src": "local offshore wind energy development",
+          "tgt": "local economies",
+          "direction": "increase"
+        }
+      ]
+    }
+  },
+  {
+    "text": "wind turbine foundations may act as artificial reefs, which could increase both the number of shellfish and the animals that feed on them, including other fish and marine mammals",
+    "causal relations": [
+      {
+        "src": "wind turbine foundations",
+        "tgt": "shellfish",
+        "direction": "increase"
+      },
+      {
+        "src": "wind turbine foundations",
+        "tgt": "fish",
+        "direction": "increase"
+      },
+      {
+        "src": "wind turbine foundations",
+        "tgt": "marine mammals",
+        "direction": "increase"
+      }
+    ],
+    "meta_data": {
+      "title": "Resident perceptions of local offshore wind energy development: Modeling efforts to improve participatory processes",
+      "authors": "Gonyo, Sarah Ball; Fleming, Chloe S.; Freitag, Amy; Goedeke, Theresa L.",
+      "year": 2021
+    },
+    "LLM": {
+      "GPT3.5": [
+        {
+          "src": "wind turbine foundations",
+          "tgt": "shellfish",
+          "direction": "increase"
+        },
+        {
+          "src": "wind turbine foundations",
+          "tgt": "fish",
+          "direction": "increase"
+        },
+        {
+          "src": "wind turbine foundations",
+          "tgt": "marine mammals",
+          "direction": "increase"
+        }
+      ],
+      "Bert": [
+        {
+          "src": "wind turbine foundations",
+          "tgt": "shellfish",
+          "direction": "increase"
+        },
+        {
+          "src": "wind turbine foundations",
+          "tgt": "fish",
+          "direction": "increase"
+        },
+        {
+          "src": "wind turbine foundations",
+          "tgt": "marine mammals",
+          "direction": "increase"
+        }
+      ]
+    }
+  },
+  {
+    "text": "A sheltering effect may also occur where the exclusion of boats within safety buffer zones surrounding wind turbines may become de-facto marine reserves where fish stocks and benthic habitats are able to recover. The exclusion of some or all types of fishing could also increase local prey abundance for top predators, while further reducing the risk of bycatch",
+    "causal relations": [
+      {
+        "src": "buffer zones surrounding wind turbines",
+        "tgt": "recovery of fish stocks",
+        "direction": "increase"
+      },
+      {
+        "src": "buffer zones surrounding wind turbines",
+        "tgt": "recovery of benthic habitats",
+        "direction": "increase"
+      },
+      {
+        "src": "buffer zones surrounding wind turbines",
+        "tgt": "local prey abundance for top predators",
+        "direction": "increase"
+      },
+      {
+        "src": "buffer zones surrounding wind turbines",
+        "tgt": "risk of bycatch",
+        "direction": "decrease"
+      }
+    ],
+    "meta_data": {
+      "title": "Resident perceptions of local offshore wind energy development: Modeling efforts to improve participatory processes",
+      "authors": "Gonyo, Sarah Ball; Fleming, Chloe S.; Freitag, Amy; Goedeke, Theresa L.",
+      "year": 2021
+    },
+    "LLM": {
+      "GPT3.5": [
+        {
+          "src": "buffer zones surrounding wind turbines",
+          "tgt": "recovery of fish stocks",
+          "direction": "increase"
+        },
+        {
+          "src": "buffer zones surrounding wind turbines",
+          "tgt": "recovery of benthic habitats",
+          "direction": "increase"
+        },
+        {
+          "src": "buffer zones surrounding wind turbines",
+          "tgt": "local prey abundance for top predators",
+          "direction": "increase"
+        },
+        {
+          "src": "buffer zones surrounding wind turbines",
+          "tgt": "risk of bycatch",
+          "direction": "decrease"
+        }
+      ],
+      "Bert": [
+        {
+          "src": "buffer zones surrounding wind turbines",
+          "tgt": "recovery of fish stocks",
+          "direction": "increase"
+        },
+        {
+          "src": "buffer zones surrounding wind turbines",
+          "tgt": "recovery of benthic habitats",
+          "direction": "increase"
+        },
+        {
+          "src": "buffer zones surrounding wind turbines",
+          "tgt": "local prey abundance for top predators",
+          "direction": "increase"
+        },
+        {
+          "src": "buffer zones surrounding wind turbines",
+          "tgt": "risk of bycatch",
+          "direction": "decrease"
+        }
+      ]
+    }
+  },
+  {
+    "text": "Despite the positive resonance of OWFs and the seeming general support by the public, OWF developments are often receiving resistance and opposition locally [22,23]. This is often because of fear for potential negative impacts on the environment and marine life [24,25], on the sea landscape [29], on various recreational and work activities of the local population [24,26], or on the emotional attachment that people have to the place [27].",
+    "causal relations": [
+      {
+        "src": "OWF",
+        "tgt": "negative impacts on the environment",
+        "direction": "increase"
+      },
+      {
+        "src": "OWF",
+        "tgt": "negative impacts on marine life",
+        "direction": "increase"
+      },
+      {
+        "src": "OWF",
+        "tgt": "negative impacts on the sea landscape",
+        "direction": "increase"
+      },
+      {
+        "src": "OWF",
+        "tgt": "negative impacts on recreational activities of the local population",
+        "direction": "increase"
+      },
+      {
+        "src": "OWF",
+        "tgt": "negative impacts on the work activities of the local population",
+        "direction": "increase"
+      },
+      {
+        "src": "OWF",
+        "tgt": "negative impacts on the emotional attachment people have to a place",
+        "direction": "increase"
+      }
+    ],
+    "meta_data": {
+      "title": "How to model social-ecological systems? \u2013 A case study on the effects of a future offshore wind farm on the local society and ecosystem, and whether social compensation matters",
+      "authors": "Haraldsson, Matilda; Raoux, Aurore; Riera, Fabien; Hay, Julien; Dambacher, Jeffrey H.; Niquil, Nathalie",
+      "year": 2020
+    },
+    "LLM": {
+      "GPT3.5": [
+        {
+          "src": "OWF",
+          "tgt": "negative impacts on the environment",
+          "direction": "increase"
+        },
+        {
+          "src": "OWF",
+          "tgt": "negative impacts on marine life",
+          "direction": "increase"
+        },
+        {
+          "src": "OWF",
+          "tgt": "negative impacts on the sea landscape",
+          "direction": "increase"
+        },
+        {
+          "src": "OWF",
+          "tgt": "negative impacts on recreational activities of the local population",
+          "direction": "increase"
+        },
+        {
+          "src": "OWF",
+          "tgt": "negative impacts on the work activities of the local population",
+          "direction": "increase"
+        },
+        {
+          "src": "OWF",
+          "tgt": "negative impacts on the emotional attachment people have to a place",
+          "direction": "increase"
+        }
+      ],
+      "Bert": [
+        {
+          "src": "OWF",
+          "tgt": "negative impacts on the environment",
+          "direction": "increase"
+        },
+        {
+          "src": "OWF",
+          "tgt": "negative impacts on marine life",
+          "direction": "increase"
+        },
+        {
+          "src": "OWF",
+          "tgt": "negative impacts on the sea landscape",
+          "direction": "increase"
+        },
+        {
+          "src": "OWF",
+          "tgt": "negative impacts on recreational activities of the local population",
+          "direction": "increase"
+        },
+        {
+          "src": "OWF",
+          "tgt": "negative impacts on the work activities of the local population",
+          "direction": "increase"
+        },
+        {
+          "src": "OWF",
+          "tgt": "negative impacts on the emotional attachment people have to a place",
+          "direction": "increase"
+        }
+      ]
+    }
+  },
+  {
+    "text": "The aim of ecological compensation is to take physical management measures that benefit the impaired local ecosystems so that no net ecological loss happens once a project is set up",
+    "causal relations": [
+      {
+        "src": "ecological compensation",
+        "tgt": "physical management measures",
+        "direction": "increase"
+      },
+      {
+        "src": "physical management measures",
+        "tgt": "benefit of impaired local ecosystems",
+        "direction": "increase"
+      }
+    ],
+    "meta_data": {
+      "title": "How to model social-ecological systems? \u2013 A case study on the effects of a future offshore wind farm on the local society and ecosystem, and whether social compensation matters",
+      "authors": "Haraldsson, Matilda; Raoux, Aurore; Riera, Fabien; Hay, Julien; Dambacher, Jeffrey H.; Niquil, Nathalie",
+      "year": 2020
+    },
+    "LLM": {
+      "GPT3.5": [
+        {
+          "src": "ecological compensation",
+          "tgt": "physical management measures",
+          "direction": "increase"
+        },
+        {
+          "src": "physical management measures",
+          "tgt": "benefit of impaired local ecosystems",
+          "direction": "increase"
+        }
+      ],
+      "Bert": [
+        {
+          "src": "ecological compensation",
+          "tgt": "physical management measures",
+          "direction": "increase"
+        },
+        {
+          "src": "physical management measures",
+          "tgt": "benefit of impaired local ecosystems",
+          "direction": "increase"
+        }
+      ]
+    }
+  },
+  {
+    "text": "Social compensation measures, also referred as community benefits, target more anthropological local issues, such as the impacts - actual as well as perceived - of a project on a local population, its health, its living environment as well as leisure or economic activities.",
+    "causal relations": [
+      {
+        "src": "social compensation",
+        "tgt": "impacts of a OWF project on a local population",
+        "direction": "decrease"
+      },
+      {
+        "src": "social compensation",
+        "tgt": "impacts of a OWF project on the health of a local population",
+        "direction": "decrease"
+      },
+      {
+        "src": "social compensation",
+        "tgt": "impacts of a OWF project on the local living environment",
+        "direction": "decrease"
+      },
+      {
+        "src": "social compensation",
+        "tgt": "impacts of a OWF project on the leisure activities of a local population",
+        "direction": "decrease"
+      },
+      {
+        "src": "social compensation",
+        "tgt": "impacts of a OWF project on the economic activities of a local population",
+        "direction": "decrease"
+      }
+    ],
+    "meta_data": {
+      "title": "How to model social-ecological systems? \u2013 A case study on the effects of a future offshore wind farm on the local society and ecosystem, and whether social compensation matters",
+      "authors": "Haraldsson, Matilda; Raoux, Aurore; Riera, Fabien; Hay, Julien; Dambacher, Jeffrey H.; Niquil, Nathalie",
+      "year": 2020
+    },
+    "LLM": {
+      "GPT3.5": [
+        {
+          "src": "social compensation",
+          "tgt": "impacts of a OWF project on a local population",
+          "direction": "decrease"
+        },
+        {
+          "src": "social compensation",
+          "tgt": "impacts of a OWF project on the health of a local population",
+          "direction": "decrease"
+        },
+        {
+          "src": "social compensation",
+          "tgt": "impacts of a OWF project on the local living environment",
+          "direction": "decrease"
+        },
+        {
+          "src": "social compensation",
+          "tgt": "impacts of a OWF project on the leisure activities of a local population",
+          "direction": "decrease"
+        },
+        {
+          "src": "social compensation",
+          "tgt": "impacts of a OWF project on the economic activities of a local population",
+          "direction": "decrease"
+        }
+      ],
+      "Bert": [
+        {
+          "src": "social compensation",
+          "tgt": "impacts of a OWF project on a local population",
+          "direction": "decrease"
+        },
+        {
+          "src": "social compensation",
+          "tgt": "impacts of a OWF project on the health of a local population",
+          "direction": "decrease"
+        },
+        {
+          "src": "social compensation",
+          "tgt": "impacts of a OWF project on the local living environment",
+          "direction": "decrease"
+        },
+        {
+          "src": "social compensation",
+          "tgt": "impacts of a OWF project on the leisure activities of a local population",
+          "direction": "decrease"
+        },
+        {
+          "src": "social compensation",
+          "tgt": "impacts of a OWF project on the economic activities of a local population",
+          "direction": "decrease"
+        }
+      ]
+    }
+  },
+  {
+    "text": "It is expected that both ecological and social compensation measures improve the overall acceptance of a local infrastructure, thus anchoring the latter within the surrounding community",
+    "causal relations": [
+      {
+        "src": "ecological compensation",
+        "tgt": "overall acceptance of a local infrastructure",
+        "direction": "increase"
+      },
+      {
+        "src": "social compensation",
+        "tgt": "overall acceptance of a local infrastructure",
+        "direction": "increase"
+      }
+    ],
+    "meta_data": {
+      "title": "How to model social-ecological systems? \u2013 A case study on the effects of a future offshore wind farm on the local society and ecosystem, and whether social compensation matters",
+      "authors": "Haraldsson, Matilda; Raoux, Aurore; Riera, Fabien; Hay, Julien; Dambacher, Jeffrey H.; Niquil, Nathalie",
+      "year": 2020
+    },
+    "LLM": {
+      "GPT3.5": [
+        {
+          "src": "ecological compensation",
+          "tgt": "overall acceptance of a local infrastructure",
+          "direction": "increase"
+        },
+        {
+          "src": "social compensation",
+          "tgt": "overall acceptance of a local infrastructure",
+          "direction": "increase"
+        }
+      ],
+      "Bert": [
+        {
+          "src": "ecological compensation",
+          "tgt": "overall acceptance of a local infrastructure",
+          "direction": "increase"
+        },
+        {
+          "src": "social compensation",
+          "tgt": "overall acceptance of a local infrastructure",
+          "direction": "increase"
+        }
+      ]
+    }
+  },
+  {
+    "text": "A direct negative effect that for example a wind farm can have on the trawl fishery (reduced fishing activity),",
+    "causal relations": [
+      {
+        "src": "wind farm",
+        "tgt": "trawl fishing activity",
+        "direction": "decrease"
+      }
+    ],
+    "meta_data": {
+      "title": "How to model social-ecological systems? \u2013 A case study on the effects of a future offshore wind farm on the local society and ecosystem, and whether social compensation matters",
+      "authors": "Haraldsson, Matilda; Raoux, Aurore; Riera, Fabien; Hay, Julien; Dambacher, Jeffrey H.; Niquil, Nathalie",
+      "year": 2020
+    },
+    "LLM": {
+      "GPT3.5": [
+        {
+          "src": "wind farm",
+          "tgt": "trawl fishing activity",
+          "direction": "decrease"
+        }
+      ],
+      "Bert": [
+        {
+          "src": "wind farm",
+          "tgt": "trawl fishing activity",
+          "direction": "decrease"
+        }
+      ]
+    }
+  },
+  {
+    "text": "More precisely, the construction of turbines with their associated scour protection creates new habitats and shelters. This results in increased habitat heterogeneity and can lead to changes in abundance, biomass, and species richness and composition of benthos and fish. Filter feeders such as mussels and amphipods tend to colonize and dominate the vertical structures of the turbines, benthic predators such as crabs commonly inhabit the base of the foundations and the scour protections [47,48], and fish including commercially fished species have been shown to aggregate around the foundations",
+    "causal relations": [
+      {
+        "src": "scour protection of turbines",
+        "tgt": "new habitats",
+        "direction": "increase"
+      },
+      {
+        "src": "scour protection of turbines",
+        "tgt": "new shelters",
+        "direction": "increase"
+      },
+      {
+        "src": "scour protection of turbines",
+        "tgt": "habitat heterogeneity",
+        "direction": "increase"
+      },
+      {
+        "src": "vertical structure of turbines",
+        "tgt": "filter feeders",
+        "direction": "increase"
+      },
+      {
+        "src": "vertical structure of turbines",
+        "tgt": "mussels",
+        "direction": "increase"
+      },
+      {
+        "src": "vertical structure of turbines",
+        "tgt": "amphipods",
+        "direction": "increase"
+      },
+      {
+        "src": "base of foundations",
+        "tgt": "benthic predators",
+        "direction": "increase"
+      },
+      {
+        "src": "base of foundations",
+        "tgt": "crabs",
+        "direction": "increase"
+      },
+      {
+        "src": "scour protections",
+        "tgt": "benthic predators",
+        "direction": "increase"
+      },
+      {
+        "src": "scour protections",
+        "tgt": "crabs",
+        "direction": "increase"
+      },
+      {
+        "src": "base of foundations",
+        "tgt": "fish aggregations",
+        "direction": "increase"
+      },
+      {
+        "src": "base of foundations",
+        "tgt": "commercially fished species aggregations",
+        "direction": "increase"
+      }
+    ],
+    "meta_data": {
+      "title": "How to model social-ecological systems? \u2013 A case study on the effects of a future offshore wind farm on the local society and ecosystem, and whether social compensation matters",
+      "authors": "Haraldsson, Matilda; Raoux, Aurore; Riera, Fabien; Hay, Julien; Dambacher, Jeffrey H.; Niquil, Nathalie",
+      "year": 2020
+    },
+    "LLM": {
+      "GPT3.5": [
+        {
+          "src": "scour protection of turbines",
+          "tgt": "new habitats",
+          "direction": "increase"
+        },
+        {
+          "src": "scour protection of turbines",
+          "tgt": "new shelters",
+          "direction": "increase"
+        },
+        {
+          "src": "scour protection of turbines",
+          "tgt": "habitat heterogeneity",
+          "direction": "increase"
+        },
+        {
+          "src": "vertical structure of turbines",
+          "tgt": "filter feeders",
+          "direction": "increase"
+        },
+        {
+          "src": "vertical structure of turbines",
+          "tgt": "mussels",
+          "direction": "increase"
+        },
+        {
+          "src": "vertical structure of turbines",
+          "tgt": "amphipods",
+          "direction": "increase"
+        },
+        {
+          "src": "base of foundations",
+          "tgt": "benthic predators",
+          "direction": "increase"
+        },
+        {
+          "src": "base of foundations",
+          "tgt": "crabs",
+          "direction": "increase"
+        },
+        {
+          "src": "scour protections",
+          "tgt": "benthic predators",
+          "direction": "increase"
+        },
+        {
+          "src": "scour protections",
+          "tgt": "crabs",
+          "direction": "increase"
+        },
+        {
+          "src": "base of foundations",
+          "tgt": "fish aggregations",
+          "direction": "increase"
+        },
+        {
+          "src": "base of foundations",
+          "tgt": "commercially fished species aggregations",
+          "direction": "increase"
+        }
+      ],
+      "Bert": [
+        {
+          "src": "scour protection of turbines",
+          "tgt": "new habitats",
+          "direction": "increase"
+        },
+        {
+          "src": "scour protection of turbines",
+          "tgt": "new shelters",
+          "direction": "increase"
+        },
+        {
+          "src": "scour protection of turbines",
+          "tgt": "habitat heterogeneity",
+          "direction": "increase"
+        },
+        {
+          "src": "vertical structure of turbines",
+          "tgt": "filter feeders",
+          "direction": "increase"
+        },
+        {
+          "src": "vertical structure of turbines",
+          "tgt": "mussels",
+          "direction": "increase"
+        },
+        {
+          "src": "vertical structure of turbines",
+          "tgt": "amphipods",
+          "direction": "increase"
+        },
+        {
+          "src": "base of foundations",
+          "tgt": "benthic predators",
+          "direction": "increase"
+        },
+        {
+          "src": "base of foundations",
+          "tgt": "crabs",
+          "direction": "increase"
+        },
+        {
+          "src": "scour protections",
+          "tgt": "benthic predators",
+          "direction": "increase"
+        },
+        {
+          "src": "scour protections",
+          "tgt": "crabs",
+          "direction": "increase"
+        },
+        {
+          "src": "base of foundations",
+          "tgt": "fish aggregations",
+          "direction": "increase"
+        },
+        {
+          "src": "base of foundations",
+          "tgt": "commercially fished species aggregations",
+          "direction": "increase"
+        }
+      ]
+    }
+  },
+  {
+    "text": "In addition, for navigation safety, fisheries are in some cases excluded or restricted within the wind farm area. A possible exclusion of fishing activities inside the OWFs can act as a local marine protected area [52]. This \u201creserve effect\u201d is likely to increase species abundances locally by reduced mortality rates of target species with potential spillover effects to adjacent area",
+    "causal relations": [
+      {
+        "src": "wind farm area",
+        "tgt": "fishing activity exclusion",
+        "direction": "increase"
+      },
+      {
+        "src": "fishing activity exclusion",
+        "tgt": "mortality rates of target species",
+        "direction": "decrease"
+      },
+      {
+        "src": "mortality rates of target species",
+        "tgt": "abundance of species locally",
+        "direction": "increase"
+      },
+      {
+        "src": "mortality rates of target species",
+        "tgt": "abundance of species in adjacent area",
+        "direction": "increase"
+      }
+    ],
+    "meta_data": {
+      "title": "How to model social-ecological systems? \u2013 A case study on the effects of a future offshore wind farm on the local society and ecosystem, and whether social compensation matters",
+      "authors": "Haraldsson, Matilda; Raoux, Aurore; Riera, Fabien; Hay, Julien; Dambacher, Jeffrey H.; Niquil, Nathalie",
+      "year": 2020
+    },
+    "LLM": {
+      "GPT3.5": [
+        {
+          "src": "wind farm area",
+          "tgt": "fishing activity exclusion",
+          "direction": "increase"
+        },
+        {
+          "src": "fishing activity exclusion",
+          "tgt": "mortality rates of target species",
+          "direction": "decrease"
+        },
+        {
+          "src": "mortality rates of target species",
+          "tgt": "abundance of species locally",
+          "direction": "increase"
+        },
+        {
+          "src": "mortality rates of target species",
+          "tgt": "abundance of species in adjacent area",
+          "direction": "increase"
+        }
+      ],
+      "Bert": [
+        {
+          "src": "wind farm area",
+          "tgt": "fishing activity exclusion",
+          "direction": "increase"
+        },
+        {
+          "src": "fishing activity exclusion",
+          "tgt": "mortality rates of target species",
+          "direction": "decrease"
+        },
+        {
+          "src": "mortality rates of target species",
+          "tgt": "abundance of species locally",
+          "direction": "increase"
+        },
+        {
+          "src": "mortality rates of target species",
+          "tgt": "abundance of species in adjacent area",
+          "direction": "increase"
+        }
+      ]
+    }
+  },
+  {
+    "text": "The offshore \u201cwind farm\u201d is expected to impact the social system through: i) concerns about the negative impacts of the wind farm structure on the environment (\u201cperceived environmental quality\u201d) [24, 25], and ii) a reduced \u201cperceived wellbeing\u201d (spiritual and cultural) due to the eyesore in the sea created by the wind farm structure",
+    "causal relations": [
+      {
+        "src": "wind farm area",
+        "tgt": "perceived environmental quality",
+        "direction": "decrease"
+      },
+      {
+        "src": "wind farm structure",
+        "tgt": "perceived spiritual and cultural wellbeing",
+        "direction": "decrease"
+      }
+    ],
+    "meta_data": {
+      "title": "How to model social-ecological systems? \u2013 A case study on the effects of a future offshore wind farm on the local society and ecosystem, and whether social compensation matters",
+      "authors": "Haraldsson, Matilda; Raoux, Aurore; Riera, Fabien; Hay, Julien; Dambacher, Jeffrey H.; Niquil, Nathalie",
+      "year": 2020
+    },
+    "LLM": {
+      "GPT3.5": [
+        {
+          "src": "wind farm area",
+          "tgt": "perceived environmental quality",
+          "direction": "decrease"
+        },
+        {
+          "src": "wind farm structure",
+          "tgt": "perceived spiritual and cultural wellbeing",
+          "direction": "decrease"
+        }
+      ],
+      "Bert": [
+        {
+          "src": "wind farm area",
+          "tgt": "perceived environmental quality",
+          "direction": "decrease"
+        },
+        {
+          "src": "wind farm structure",
+          "tgt": "perceived spiritual and cultural wellbeing",
+          "direction": "decrease"
+        }
+      ]
+    }
+  }
+]
