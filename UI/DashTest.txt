@@ -1,29 +1,3 @@
-[
-  {
-    "text": "Sample Text. Second sentence. \r",
-    "causal relations": [],
-    "meta_data": {
-      "title": "Title",
-      "authors": "Author(s)",
-      "year": "Year"
-    }
-  },
-  {
-    "text": "Reading in new data.\r",
-    "causal relations": [],
-    "meta_data": {
-      "title": "Title",
-      "authors": "Author(s)",
-      "year": "Year"
-    }
-  },
-  {
-    "text": "From RTF file.\r",
-    "causal relations": [],
-    "meta_data": {
-      "title": "Title",
-      "authors": "Author(s)",
-      "year": "Year"
-    }
-  }
-]
+Sample Text. Second sentence. 
+Reading in new data.
+From RTF file.
