@@ -14,10 +14,12 @@ https://mediaspace.msu.edu/media/3-17-2024-Sun_TwoSix_MVP_PLAN.mp4/1_qlm596vo
 ## Prerequisites
 ____
 ### Fine Tuning
-Python >3.10
+Python > 3.10
 
 
 ### UI
+Dash > 2.15.0
+Python > 3.8
 
 ## Objective
 ____
