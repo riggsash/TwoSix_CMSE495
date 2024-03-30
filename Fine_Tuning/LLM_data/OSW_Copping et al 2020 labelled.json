@@ -1,0 +1,1440 @@
+[
+  {
+    "text": "Abstract: Acceptance of wind energy development is challenged by stakeholders\u2019 concerns about potential effects on the environment, specifically on wildlife, such as birds, bats, and (for offshore wind) marine animals, and the habitats that support them.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Communities near wind energy developments are also concerned with social and economic impacts, as well as impacts on aesthetics, historical sites, and recreation and tourism.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Lack of a systematic, widely accepted, and balanced approach for measuring the potential damage to wildlife, habitats, and communities continues to leave wind developers, regulators, and other stakeholders in an uncertain position.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "This paper explores ecological risk-based management (RBM) in wind energy development for land-based and offshore wind installations.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "This paper provides a framework for the adaptation of ecosystem-based management to wind energy development and examines that framework through a series of case studies and best management practices for applying risk-based principles to wind energy.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Ten case studies indicate that wind farm monitoring is often driven by regulatory requirements that may not be underpinned by scientific questions.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "While each case applies principles of adaptive management, there is room for improvement in applying scientific principles to the data collection and analysis.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Challenges and constraints for wind farm development to meet RBM framework criteria include collecting sufficient baseline and monitoring data year-round, engaging stakeholder facilitators, and bringing together large and diverse scientific teams.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "The RBM framework approach may provide insights for improved siting and consenting/permitting processes for regulators and their advisors, particularly in those nations where wind energy is still in the early development stages on land or at sea. 1.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Introduction Widespread use of wind energy to power human needs can help to mitigate two of the greatest threats to the environment: global climate change and effects of direct anthropogenic encroachment on the natural world [1].",
+    "causal relations": [
+      {
+        "src": "Widespread use of wind energy to power human needs",
+        "tgt": "global climate change",
+        "direction": "Decrease"
+      },
+      {
+        "src": "Widespread use of wind energy to power human needs",
+        "tgt": "effects of direct anthropogenic encroachment on the natural world",
+        "direction": "Decrease"
+      }
+    ],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "However, the development and operation of land-based and offshore wind energy farms have the potential to cause direct and indirect harm to wildlife and the habitats they require.",
+    "causal relations": [
+      {
+        "src": "offshore wind energy farms",
+        "tgt": "direct and indirect harm to wildlife and the habitats they require.",
+        "direction": "Increase"
+      }
+    ],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Increasingly the greatest challenge facing development of wind energy on land and at sea is not technical, financial, or limited by the wind resource.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Rather, stakeholder acceptance and regulatory permission are seen as hurdles based on concerns about effects on birds, bats, and terrestrial mammals, as well as marine mammals, sea turtles, and some fish at sea.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Other issues of concern to communities near wind energy developments include social and economic impacts, as well as impacts on cultural and social values such as aesthetics, historical sites, and recreational and tourism activities [2,3].",
+    "causal relations": [
+      {
+        "src": "wind energy developments",
+        "tgt": "social and economic impacts",
+        "direction": "Increase"
+      },
+      {
+        "src": "wind energy developments",
+        "tgt": "impacts on cultural and social values such as aesthetics, historical sites, and recreational and tourism activities",
+        "direction": "Increase"
+      }
+    ],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "This paper seeks to apply risk-based approaches to manage the interactions of wind energy development and wildlife conservation.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "The most common risks and challenges for managing wind and wildlife interactions will be reviewed, and the range of potential risk-based systems discussed as background to the development of a framework and criteria for applying such a management scheme. 1.1.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Ecological Risks Posed by Wind Energy Development The range of potential risks from land-based wind farms to wildlife and habitats is well documented, while less is known about risks from offshore wind [4\u20137].",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Risks include collision risk to birds and bats [8\u201310], displacement of flying and terrestrial animals from preferred habitats [11,12], and disruption of migratory corridors [13,14], particularly for terrestrial mammals [15].",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "The direct and indirect effects from offshore wind farm development have been less well documented, but they include similar risks to bird and bat collisions [16,17]; disruption of marine mammal corridors [15] as well as harm to marine mammals, fish, and sea turtles from construction of bottom-mounted turbine towers [18]; the potential for scour and sediment resuspension around the foundations of bottom-mounted wind turbines [19]; and some evidence of displacement or barrier effects because of the presence of large offshore wind farms [20\u201322]. 1.2.",
+    "causal relations": [
+      {
+        "src": "offshore wind farm development",
+        "tgt": "bird and bat collisions",
+        "direction": "Increase"
+      },
+      {
+        "src": "offshore wind farm development",
+        "tgt": "disruption of marine mammal corridors",
+        "direction": "Increase"
+      },
+      {
+        "src": "construction of bottom-mounted turbine towers",
+        "tgt": "harm to marine mammals, fish, and sea turtles",
+        "direction": "Increase"
+      },
+      {
+        "src": "foundations of bottom-mounted wind turbines",
+        "tgt": "scour and sediment resuspension",
+        "direction": "Increase"
+      },
+      {
+        "src": "presence of large offshore wind farms",
+        "tgt": "displacement or barrier effects",
+        "direction": "Increase"
+      }
+    ],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Challenges of Wind-Wildlife Management Lack of a systematic, widely accepted, and balanced approach for measuring the potential damage to wildlife, habitats, and communities continues to leave wind developers, regulators, and other stakeholders in an uncertain position.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "This uncertainty often leads to regulatory requirements for studies and monitoring programs that do not necessarily contribute to improved environmental protection [23].",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Regulatory requirements and data collection efforts around wind farms during construction, operation, and other project phases need to be more consistently linked to the actual risk posed to a range of animals and habitats.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "One such approach to accomplishing this linkage is risk-based management (RBM), which may act as a decision support system. 1.3.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Risk and Risk-Based Management Risk is a term widely used in many contexts; for the purposes of this paper, risk is defined as the potential for a negative outcome and is considered the intersection of the probability (likelihood) of that negative outcome, and the consequence (severity) of the outcome [24].",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "RBM is broadly defined as a system for the identification, assessment, and setting of priorities among risks, so that the appropriate level of resources can be applied to minimize, monitor, and control deleterious outcomes, considering the inherent uncertainties in the system.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Managing risk is a process by which potential negative outcomes can be mitigated so that the residual risks are considered acceptable to society as informed by the identification, evaluation, and monitoring of the mechanisms and outcomes that make up the risks.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "There are many tools and constructs for identifying and managing risk for wind farms and other industrial developments that may meet the legislative intent for managing development.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "These resources include International Standards Organisation standard 31,000 [25] and the International Finance Corporation (IFC) Good Practice Handbook for Cumulative Impact Assessment [26], as well as scientific literature on these topics [27\u201329].",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "RBM is reflected in many private and public sector planning and development actions as well as project planning efforts; some of the lessons learned from other industries are relevant to a risk-based system for examining wind and wildlife interactions [11,30].",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "A number of risk-based methods have been used for environmental and natural resource management but have not yet gained widespread use in extending protection to wildlife, habitats, and ecosystem processes that might be affected by wind energy development.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "The most commonly used techniques include comparative risk analysis, multiple-criteria decision making/multiple-criteria decision analysis [31], multi-attribute utility theory, analytical hierarchy process [31], outranking, ordered weighted averaging, bow tie analysis, cumulative effects analysis, layer of protection analysis, and ecosystem-based management [32]. 1.4.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Challenges of Consenting/Permitting Wind Energy Projects Despite decades of wind development in many nations, there is still considerable uncertainty around potential effects of wind turbines, particularly offshore, on wildlife and their environment [33\u201335].",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "The uncertainty and paucity of data that link wind energy construction and operation to deleterious effects, or that demonstrate no effect, coupled with regulatory drivers, often leads regulators and stakeholders to approach wind energy consenting/permitting processes conservatively, in ways that may be as stringent as the application of the Precautionary Principle [36,37].",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Applying such precaution may lead regulators or stakeholders to conclude that birds or bats entering the rotor-swept area of a wind turbine are assumed to be fatally struck by a turbine blade.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Mixed into this precautionary approach is the erroneous equating of the potential effects of short-lived (but often high-impact) construction activities, such as pile driving at sea for offshore wind installation, with the ongoing but potentially less dangerous interactions of wind farms and wildlife during operation.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Application of the precautionary principle can result in permission being denied for new wind projects when deleterious effects are in dispute or unknown.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Where risk-based approaches have been applied to the construction and operation of wind farms, they have focused on risks other than ecological risks, including technical risk and reliability analyses, financial risks, and security risks [38\u201341]. 1.5.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Environmental Risk-Based Systems for Wind Energy Systems for examining environmental risk around wind energy farms have not been applied in a systematic manner for consenting/permitting and there have been few attempts to use risk assessments to determine a proportional level of investment in field data collection for baseline (pre-installation) assessment or post-installation monitoring.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Systematic designs of mitigation to provide effective and efficient recourse for environmental impacts are also lacking [35].",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "There are some limited examples of risk-based systems for wind energy development: Marine Scotland, the regulator for offshore energy development in Scotland, employs the Survey-Deploy-Monitor approach to allow accelerated permitting and licensing for low-risk areas.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "This risk-based approach is used when potential effects are poorly understood to enable wind turbine deployment in a manner that will reduce scientific uncertainty over time, while enabling a level of development that is proportionate to the risks [42].",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "A risk-ranking system developed in the U.S. considers the biological imperatives for the potential effects of offshore wind development on marine animals, birds, and bats, and their associated habitats; the system also considers the protected or management status for each set of organisms in the U.S. [43].",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "However, the system has not been implemented for permitting/consenting wind farms in the U.S. or internationally.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Adaptive management (AM)\u2014a learning-based management approach used to reduce scientific uncertainty\u2014has been identified as a tool for advancing the wind energy industry, but its practical application has been limited.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "AM has primarily been actively implemented in the U.S., while other nations have applied some AM principles.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "AM allows wind energy projects to adapt monitoring and mitigation over time, leading to improved decision-making [34,44]. 1.6.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Ecosystem-Based Management While many risk-based approaches used by other industries to manage natural resources provide useful insights into managing wind energy and wildlife interactions, few touch on all of the important aspects of ecosystems that land-based and offshore wind encompass.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "The risk-based approach that most closely addresses aspects of the complex ecosystems that make up the landscapes/seascapes of wind energy development is ecosystem-based management (EBM), used primarily in managing fisheries and the marine environment [45,46].",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "EBM takes into account human as well as environmental/ecological factors, using approaches that embrace holistic methods to include humans in an integrated view of managing resources while sustaining ecological integrity [47\u201349].",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "EBM has been applied in several nations to manage marine systems, notably in the U.S. by the National Oceanic and Atmospheric Administration (NOAA) to inform multi-species, multi-sector ocean management [50\u201352], and in the European Union (EU) as an integrative policy concept for the protection of aquatic biodiversity [53].",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "EBM has been used sparingly to study and manage land-based wind energy projects.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "In Canada, the development of a large land-based wind farm at Aristazabal Island, British Columbia, relied on multi-criteria decision-making based on a geographical information system (GIS) within an EBM framework for siting [54].",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Where ecological risk assessments have been applied to land-based wind farms, they appear to focus on estimating wildlife mortality rates, behavioral changes, or interspecific differences in vulnerability, rather than the vulnerability and connectivity of all pertinent ecosystem components.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "In addition, a few studies have investigated the application of ecological risk assessments on endangered or rare species populations in other nations [55]. 1.7.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Effective Application of Ecosystem-Based Management There is a gap between the tenets of EBM and its practical application and appearance in management plans [56].",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "This gap suggests that EBM concepts need to be more effectively translated and that operational tools are needed to translate EBM principles into practice.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "The elements of EBM overlap with the ecological goals of protecting wildlife and habitats under wind energy development.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "This paper explores the use of ecological RBM in land-based and offshore wind energy as a development and management tool, striving to describe a means of reducing the uncertainties in data related to wind energy/wildlife interactions that drive risk to the environment.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "By examining and managing the potential negative outcomes that may befall birds, bats, terrestrial wildlife, marine mammals, other marine organisms, and the habitats and migratory pathways that support them, RBM has the potential to ensure that wildlife protection measures are focused on the factors that pose the highest actual (as opposed to perceived) risk, while maximizing renewable energy development. 2.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Materials and Methods Based on a review of risk management approaches and the wind development needs of international regulators, project developers, and researchers, EBM was chosen as the most appropriate risk-based tool upon which to develop a wind-wildlife risk-based management framework.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "The framework was developed using EBM criteria, modified from other RBM techniques applied to other industries and natural resources [32], and adapted to goals and objectives specific to wind energy development.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "The goals of EBM were reviewed and annotated [56] and formed the basis from which objectives were derived, with the intent of assisting with responsible management of wind farms (Table 1).",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "In developing the objectives for the framework, three central attributes were used to assess potential changes in ecosystems and ecological processes over time (e.g., long-term population trajectories of long-lived species such as bats) at the scale of a wind energy farm [57]: 1.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Spatial scales: Where does the risk occur and at what scale? For example, seasonal or diurnal migratory linkages to wind farm development at one location may have an impact farther afield. 2.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Temporal scales: When does the impact occur? For example, even though the severity of an impact may appear to be limited now, it may trigger an ecological tipping point for future generations. 3.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Theoretical assessments: Which available models can appropriately assess risk across space and time? For example, economic cost-benefit models tend to poorly predict effects in the long term.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "This framework has been developed and tested empirically using a set of case studies of land-based and offshore wind.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "The wind energy farms chosen as case studies represent a small subset of existing farms where there is clear intent to examine and maintain environmental integrity by protecting wildlife populations, ensure the continuance of adequate habitat, and/or conserve ecosystem functions and services.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "The case studies do not attempt to scientifically assess the range of wind energy farms that are in development or operation around the world, but rather to identify risks posed by wind farms during multiple phases of development, to establish criteria for evaluating the acceptability of those ecological risks, and to develop best practices for implementing RBM for wind energy development. 3.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Results The RBM framework for wind-wildlife consists of a series of goals and objectives against which empirical measures of wind energy farm management can be assessed.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Derived from the EBM criteria (Table 1), the goals that showed the closest correlation to wind energy management were honed with wind-wildlife specific objectives (Table 2).",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "The case studies used to refine and test the framework were chosen from land-based and offshore wind energy farms internationally, based on those for which sufficient information was available, covering a range of development phases from planning, siting, consenting/permitting, installation, operation, maintenance, repowering, and decommissioning.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "The case studies span several decades of development from older well-established wind farms to those under development, particularly in the offshore area, as well as one long-planned offshore wind farm that failed to progress, and a set of land-based wind farms that have been evaluated as a unit within a region.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Each case study is briefly described, including the key management actions taken to protect wildlife (Table 3).",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "More information about each case study can be found in [32].",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Each case study has been examined to determine the degree to which it can be seen to meet the RBM goals for the framework, across the development phases for land-based and offshore wind farms (Table 4). 4.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Discussion The RBM framework was adapted from EBM criteria as a means of examining the range and application of studies, monitoring foci, and mitigation measures that are prevalent in wind farm development around the world, through a set of wind energy case studies.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "The intent was not to demonstrate that certain countries, or certain types of wind farms, are most closely aligned with the principles and implementation of RBM, but rather to examine how wind energy development may potentially use RBM to further the goal of ensuring that low-carbon wind energy development can proceed while protecting fragile local and regional environments.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Some deficiencies and challenges become clear from the assessment of the case studies including the difficulty in assessing wind effects on wildlife in time and space, as well as constraints that may arise in implementing RBM at land-based and offshore wind farms.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "In addition, the examination of the cases within the framework suggest some recommended actions and best practices to support wind-wildlife interactions at wind energy farms.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Collection of data around wind farms is inherently difficult due to the extensive natural variability of wildlife populations and habitats to change.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "In contrast to the typical species-by-species wind farm management, ecological RBM encourages consideration of ecological interactions between and among populations, habitats, and ecosystem functions [58].",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "The RBM wind-wildlife framework applies the criteria of sustainability, ecological health, ecosystem services, and complexity to examine these interactions (Table 2).",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Although many of the wind case studies (Table 3) considered aspects of the environment beyond species under special protection, there was little focus on understanding the complexity and interactivity of other animals, plants, and ecosystem processes that support those populations.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Similarly, virtually no consideration was given to predator-prey interactions, or species competing for food or spatial resources, nor was much emphasis placed on examining temporal and spatial home ranges of importance to wildlife [59].",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Based on many of the case studies, wind farm monitoring programs are often driven by regulatory requirements that are not necessarily underpinned by scientific questions.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Each of the cases applies some of the principles of adaptive management, indicating a desire to examine and decrease scientific uncertainty.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "However, there is room for improvement for all the cases in applying scientific principles to the collection and analysis of data, beginning with the design of sampling plans, examination of appropriate sampling intervals to capture changes in life history and seasonal signals, trophic interactions, and effects of external factors such as weather patterns and changing climates.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Particularly evident was the paucity of studies to address questions related to the potential effects on ecosystem structure, function, and services, as has been shown in other studies [60,61].",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "The RBM wind-wildlife framework was developed to embrace the values of the EBM process, and modified to reflect wind farm management.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Developing a framework that is usable for land-based and offshore wind cases is complicated by the high level of heterogeneity that exists between geographic locations, indigenous, and migratory wildlife species, national laws and regulations, stakeholder interests, regional, and intercontinental migratory corridors, and national/international financial incentives for development.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "The framework reflects these complications and, of necessity, tends toward generalizations in describing the desired outcomes of an RBM system.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Wind farm development creates challenges and constraints to meeting some of the criteria for the wind-wildlife RBM framework.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "For example, there will be a need to collect additional baseline and monitoring data year-round; engage stakeholder facilitators; and bring together a large and diverse scientific team with expertise in wildlife, habitats, ecosystem processes, economic, and other human uses, and ecological integrity.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Each of these constraints will add to the cost of preparing for, constructing, and operating a wind farm.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "To implement an RBM approach, it may be necessary for governments and regional authorities to provide public resources to ensure that native species and habitats are protected while developing new low-carbon energy sources.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Shared responsibilities and costs between the private developer and the public entities offer the best chance of success for protecting environmental assets and producing power (cf. [62,63].) 4.1.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Recommendations for Environmental RBM for Wind Energy Development Based on the case studies, recommendations for implementing RBM include the need to consider the complexity of the ecological interactions in monitoring data collection; applying planning and management tools to decrease risk; inclusion of stakeholders in planning and outcomes; and focusing on social and economic outcomes.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Although regulatory requirements will always drive what is asked of wind farm developers, there is a need ensure that the data collection, analysis, and mitigation measures are science-driven, such that data and mitigation efforts will be proportionate to the risk to the ecological system, and the addition of these data to the public record will lead to a decrease in scientific uncertainty around these interactions [63]. 4.2.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Addressing Complexity of Ecological Interactions The complexity of the ecological system in the vicinity of the project should drive the data collection, modeling, and analysis efforts.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "In many cases, the more complex relationships (like predator-prey interactions and other ecosystem responses) may be beyond the scope of a single wind farm and should be undertaken by national or regional governments to aid in planning for future wind energy expansion.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Measures are needed to enhance and enable wind energy development to address necessary and challenging aspects of RBM, and also to evaluate the effectiveness of applying RBM, as measured by positive outcomes for wind energy development and interactions with the ecosystem.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "For land-based and offshore wind energy development, these measures include the need for robust assessments prior to development for populations and habitats that have a reasonable likelihood of being affected by development and operation of a wind farm.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "In addition, post-installation monitoring must be driven by hypothesis-based questions for interactions and population health, that also direct the development and implementation of mitigation for potential deleterious effects.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Each step in the process (baseline assessment, post-installation monitoring, and mitigation) should be evaluated periodically, using adaptive processes for change when needed. 4.3.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Using the Mitigation Hierarchy and Adaptive Management to Manage Wind Farms Incorporating adaptive management principles into an RBM process to enable the wind farm operator, regulators, and other stakeholders will enable enhanced understanding of the effects of the wind farm, and allow for mid-course corrections in data collection, analysis, and mitigation.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Mitigation measures for wind farms are commonly thought of as ways to decrease adverse effects, generally after construction or operation has begun [35].",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Under RBM it is also prudent to consider design, siting, and operational plans as means of decreasing risk through avoidance.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "A key element of decreasing ecological risk for land-based wind is the micro-siting of turbines within a wind farm to ensure the least impact on key species and habitats.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "The mitigation measures described in each case vary by the location and size of the wind project, species of concern, and whether the wind farm is land-based or offshore.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Typically, mitigation measures among the land-based wind farms include measures to decrease the impacts of road building and other construction-related activities, as well as curtailment or other operational changes to decrease collision risk.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "A few cases include other operational measures, such as painting towers for increased wildlife visibility, as in the Sm\u00f8la case study.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Offshore wind farm mitigation is most attuned to decreasing the effects of construction, such as underwater noise and increased vessel traffic, and virtually no curtailment or other operational changes have been used to date [64].",
+    "causal relations": [
+      {
+        "src": "Offshore wind farm mitigation",
+        "tgt": "effects of construction, such as underwater noise and increased vessel traffic",
+        "direction": "Decrease"
+      }
+    ],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "In managing land-based and offshore wind farm case studies, monitoring results should be reevaluated and monitoring efforts realigned to act as mitigation measures, particularly in the pursuit of decreasing scientific uncertainty, supporting RBM principles.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Only a few of the case studies specifically required the development and implementation of AM plans aimed at protecting populations at risk, and virtually none considered additional aspects of the ecosystem.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Most notably missing from the application of AM were measurable feedback loops that would apply outcomes from mortality and population monitoring data to the broader ecosystem.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "In an ideal application, changes in populations from wind farm collisions or other likely effects would trigger increased monitoring of related species (predators, prey, competitors), linked habitats and migratory corridors, and (particularly at sea) ecosystem processes like circulation and sediment transport.",
+    "causal relations": [
+      {
+        "src": "changes in populations from wind farm collisions or other likely effects",
+        "tgt": "monitoring of linked habitats and migratory corridors",
+        "direction": "Increase"
+      },
+      {
+        "src": "changes in populations from wind farm collisions or other likely effects",
+        "tgt": "ecosystem processes like circulation and sediment transport",
+        "direction": "Increase"
+      },
+      {
+        "src": "changes in populations from wind farm collisions or other likely effects",
+        "tgt": "monitoring of related species (predators, prey, competitors)",
+        "direction": "Increase"
+      }
+    ],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Adaptive processes must also allow for decreases in monitoring and mitigation efforts if monitoring data indicate a lower than anticipated risk to species under special protection and the habitats that support them. 4.4.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Inclusion of Stakeholders In almost all jurisdictions, stakeholders must be allowed to play a role in some aspect of consenting and licensing wind farms.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Most public involvement focuses on the opportunity for stakeholders to provide input and comment on plans and procedures prior to authorities granting permission to site and construct a wind farm.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "A smaller number of the case studies represent a more integrated stakeholder approach throughout the life of the wind farm.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Notably, the Jura mountains wind farms require a committee of stakeholders who meet to review monitoring data and help to set operating specifications for future periods.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "For several of the wind farm cases, the proponents exceeded the legally required stakeholder engagement, understanding that consulting with affected stakeholders and the general public early and often helps to reduce opposition to the development, and can often generate useful suggestions and good will.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Under the RBM framework developed here, the engagement of stakeholders is necessary above and beyond what specific laws or regulations require. 4.5.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Social and Economic Outcomes Ecological risk is unavoidably linked to social acceptance of wind farm development.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Opposition and support for wind development often hinges on perceptions of risks or benefits that will accrue to local communities and regions [63].",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Many of the concerns are associated with the proximity of stakeholder properties and activities to proposed wind farms, including visual effects.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "In general, stakeholders object less to offshore wind farms than those on land [65].",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "It is very common for opposition to wind farms to be presented as a concern about environmental risk, even if underlying social and economic issues are at the base of the concern.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "By addressing social and economic issues alongside the environmental issues, there is an opportunity to counteract opposition to wind energy development, while ensuring that local communities are respected and kept informed of the plans and outcomes of the development. 4.6.",
+    "causal relations": [
+      {
+        "src": "addressing social and economic issues alongside the environmental issues",
+        "tgt": "opposition to wind energy development",
+        "direction": "Decrease"
+      }
+    ],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Best Management Practices for the Application of Risk-Based Management to Wind Energy Development At the initial development stage for a wind farm, the RBM context should be considered, including the development of a series of best management practices: Examining criteria that support ecological integrity and manage risk to the environment, working with the stakeholders; Measuring the criteria against proposed actions; Determining whether the proposed wind development actions are unlikely to meet the needs of a healthy environment; Empowering the wind farm proponent, regulators, and stakeholders to collectively determine the definition of environmental health in the presence of wind farms.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Authors should discuss the results and how they can be interpreted in perspective of previous studies and of the working hypotheses.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "The findings and their implications should be discussed in the broadest context possible.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Future research directions may also be highlighted. 5.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Conclusions The examination of risk-based tools and management structures leads to the conclusion that management of land-based and offshore wind farms can be enhanced by deploying wind energy projects concurrent with risk identification and mitigation.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "While ecological risk is the subject of this paper, a cascading set of risks are associated with or directly affected by ecological risk, most notably different aspects of financial and reputational risk [32].",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Although there are arguably many different ways to view and evaluate risk [32] provides a subset of these), the authors believe that EBM provides the most useful set of indicators related to wind farm development and operation.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "The EBM-influenced wind-wildlife framework is designed to deliver the most pertinent measures of how wind energy development might fit into a risk-based system.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Collection of data around wind farms is inherently difficult and wind farm monitoring programs are often driven by regulatory requirements that are not necessarily underpinned by scientific questions.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "The RBM wind-wildlife framework applies the criteria of sustainability, ecological health, ecosystem services, and complexity to examine and underpin environmental interactions.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "The wind farm case studies provide a snapshot of the range of land-based and offshore wind farms, covering most phases of development.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Developing a framework that is usable for land-based and offshore wind cases is complicated by the high level of heterogeneity that range from biogeographic, to wildlife species and communities, to financial and legal imperatives.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "The cases presented in this paper are therefore likely not to be representative of all wind farms, nor are they intended to show all possible risk-based evaluations and management actions for any particular type of wind energy development.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Even so, we can glean from the cases how construction and operational mitigation measures for wind farms are being used in practice to decrease adverse outcomes.",
+    "causal relations": [
+      {
+        "src": "construction and operational mitigation measures for wind farms",
+        "tgt": "adverse outcomes",
+        "direction": "Decrease"
+      }
+    ],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Under this framework, mitigation can be viewed as extending to the design, siting, and wildlife avoidance measures.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Stakeholder engagement and the inclusion of stakeholder concerns at an early stage of consenting and licensing wind farms is fundamental to gaining social acceptance and putting into perspective the perceptions of risks or benefits for local communities.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "Similarly, at the conception of a wind farm project, the application of best practices for wind\u2013wildlife interactions can help to defray concerns from communities over ecological damage, even if some of those concerns are more correctly social and economic concerns.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "The examination of case studies and the development of the RBM framework are first steps in operationalizing the application of risk-based wind energy development.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "More detail is needed to guide implementation of RBM from the general to the specific scale.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  },
+  {
+    "text": "A series of best practices is offered here as a start; application of these best practices and the specifics of assessments, monitoring, and mitigation plans that decrease scientific uncertainty and provide large-scale protection to living resources must be tailored to each geographic region and each set of national goals for renewables development and environmental protection.",
+    "causal relations": [],
+    "meta_data": {
+      "title": "Enabling Renewable Energy While Protecting Wildlife: An Ecological Risk-Based Approach to Wind Energy Development Using Ecosystem-Based Management Values",
+      "authors": "Copping, AE; Gorton, AM; May, R; Bennet, F; DeGeorge, E; Repas Goncalves, M; and B Rumes",
+      "year": "2020"
+    }
+  }
+]
