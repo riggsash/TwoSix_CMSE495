@@ -1,0 +1,5295 @@
+[{
+  "passage": "Livestock, especially cattle, play a significant role in income-generating activities of the Malian population, ranking as the third most important export commodity, after gold and cotton.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "livestock, especially cattle",
+          "tail": "income-generating activities"
+        },
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "export commodity",
+          "tail": "income-generating activities"
+        },
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "gold",
+          "tail": "income-generating activities"
+        },
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "cotton",
+          "tail": "income-generating activities"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "livestock, especially cattle",
+          "tail": "income-generating activities"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "export commodity",
+          "tail": "income-generating activities"
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "Livestock ... especially cattle ... significant ROLE IN ... activities ... Malian population",
+          "tail": "ACTIVITIES ... Malian population"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "LIVESTOCK",
+          "tail": "ACTIVITIES ... Malian population"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "especially CATTLE",
+          "tail": "ACTIVITIES ... Malian population"
+        }
+      ]
+    },
+    {
+      "model_name": "ChatGPT 3.5",
+      "rels": []
+    }
+  ]
+},
+{
+  "passage": "pastoralists in the arid and semi-arid regions of Mali continue to face increasing risk due to low levels of rainfall",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "direction_head": "decrease",
+          "direction_tail": "increase",
+          "head": "rainfall",
+          "tail": "risk for pastoralists"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "decrease",
+          "direction_tail": "increase",
+          "head": "rainfall",
+          "tail": "risk for pastoralists"
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "low ... RAINFALL",
+          "tail": "pastoralists ... arid ... semi-arid regions ... Mali ... increasing RISK"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "pastoralists ... arid ... semi-arid regions ... Mali ... INCREASING risk",
+          "tail": "pastoralists ... arid ... semi-arid regions ... Mali ... increasing RISK"
+        }
+      ]
+    },
+    {
+      "model_name": "ChatGPT 3.5",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "low levels of rainfall",
+          "tail": "risk for pastoralists"
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "the vulnerability of pastoralists is exacerbated by the poor functioning of markets, a general characteristic of markets in sub-Saharan Africa countries",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "poor functioning of markets",
+          "tail": "vulnerability of pastoralists"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "poor functioning of markets",
+          "tail": "vulnerability of pastoralists"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "vulnerability of pastoralists",
+          "tail": "poor functioning of markets"
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "poor FUNCTIONING ... markets",
+          "tail": "VULNERABILITY ... pastoralists"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "vulnerability ... pastoralists ... EXACERBATED ... poor functioning ... markets",
+          "tail": "VULNERABILITY ... pastoralists"
+        }
+      ]
+    },
+    {
+      "model_name": "ChatGPT 3.5",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "poor functioning of markets",
+          "tail": "vulnerability of pastoralists"
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "high transaction costs and asymmetric information, for smallholder farmers living in remote areas, with no access to markets due to poor roads and communication systems, hamper market development and opportunities for farmers to bargain for better prices",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "transaction costs",
+          "tail": "market development"
+        },
+        {
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "asymmetric information",
+          "tail": "opportunities for farmers to bargain for better prices"
+        },
+        {
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "poor roads",
+          "tail": "access to markets"
+        },
+        {
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "poor communication systems",
+          "tail": "access to markets"
+        },
+        {
+          "direction_head": "increase",
+          "direction_tail": "decreases",
+          "head": "smallholder farmers living in remote areas",
+          "tail": "market development"
+        },
+        {
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "smallholder farmers living in remote areas",
+          "tail": "opportunities for farmers to bargain for better prices"
+        },
+        {
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "transaction costs",
+          "tail": "opportunities for farmers to bargain for better prices"
+        },
+        {
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "asymmetric information",
+          "tail": "market development"
+        },
+        {
+          "direction_head": "decrease",
+          "direction_tail": "increase",
+          "head": "access to markets",
+          "tail": "transaction costs"
+        },
+        {
+          "direction_head": "decrease",
+          "direction_tail": "increase",
+          "head": "access to markets",
+          "tail": "asymmetric information"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "transaction costs",
+          "tail": "market development"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "asymmetric information",
+          "tail": "opportunities for farmers to bargain for better prices"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "poor roads",
+          "tail": "access to markets"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "poor communication systems",
+          "tail": "access to markets"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "decreases",
+          "head": "smallholder farmers living in remote areas",
+          "tail": "market development"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "smallholder farmers living in remote areas",
+          "tail": "opportunities for farmers to bargain for better prices"
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "poor ... communication SYSTEMS",
+          "tail": "NO access to markets"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "asymmetric INFORMATION",
+          "tail": "HAMPER ... development ... opportunities ... farmers ... bargain ... better prices"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "asymmetric INFORMATION",
+          "tail": "opportunities ... farmers ... BARGAIN ... better prices"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "HAMPER ... development ... opportunities ... farmers ... bargain ... better prices",
+          "tail": "DEVELOPMENT"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "HAMPER ... development ... opportunities ... farmers ... bargain ... better prices",
+          "tail": "opportunities ... farmers ... BARGAIN ... better prices"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "asymmetric INFORMATION",
+          "tail": "opportunities ... farmers ... BARGAIN ... better prices"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "poor ... communication SYSTEMS",
+          "tail": "ACCESS TO markets"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "asymmetric INFORMATION",
+          "tail": "DEVELOPMENT"
+        }
+      ]
+    },
+    {
+      "model_name": "ChatGPT 3.5",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "high transaction costs",
+          "tail": "market development"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "asymmetric information",
+          "tail": "market development"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "poor roads and communication systems",
+          "tail": "access to markets"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "poor roads and communication systems",
+          "tail": "opportunities for farmers to bargain for better prices"
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "The recent investment in improving existing roads that connect administrative centres to regional capitals, combined with the advance in use of mobile phone communications, have facilitated the development of new and efficient cereal trade routes and reduced marketing margins",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "investment in road improvement",
+          "tail": "marketing margins"
+        },
+        {
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "use of mobile phone communications",
+          "tail": "marketing margins"
+        },
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "investment in road improvement",
+          "tail": "development of new trade routes"
+        },
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "use of mobile phone communications",
+          "tail": "development of new trade routes"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "investment in road improvement",
+          "tail": "marketing margins"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "use of mobile phone communications",
+          "tail": "marketing margins"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "development of new trade routes",
+          "tail": "marketing margins"
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "recent INVESTMENT",
+          "tail": "DEVELOPMENT ... new ... efficient cereal trade routes"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "ADVANCE ... use ... mobile phone communications",
+          "tail": "DEVELOPMENT ... new ... efficient cereal trade routes"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "ADVANCE ... use ... mobile phone communications",
+          "tail": "USE ... mobile phone communications"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "recent investment ... advance ... use ... mobile phone communications ... FACILITATED ... development ... new ... efficient cereal trade routes ... reduced marketing margins",
+          "tail": "DEVELOPMENT ... new ... efficient cereal trade routes"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "recent investment ... advance ... use ... mobile phone communications ... FACILITATED ... development ... new ... efficient cereal trade routes ... reduced marketing margins",
+          "tail": "REDUCED marketing margins"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "recent INVESTMENT",
+          "tail": "REDUCED marketing margins"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "ADVANCE ... use ... mobile phone communications",
+          "tail": "REDUCED marketing margins"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "DEVELOPMENT ... new ... efficient cereal trade routes",
+          "tail": "new ... efficient cereal trade ROUTES"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "REDUCED marketing margins",
+          "tail": "marketing MARGINS"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "recent investment ... advance ... use ... mobile phone communications ... FACILITATED ... development ... new ... efficient cereal trade routes ... reduced marketing margins",
+          "tail": "new ... efficient cereal trade ROUTES"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "recent INVESTMENT",
+          "tail": "new ... efficient cereal trade ROUTES"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "ADVANCE ... use ... mobile phone communications",
+          "tail": "new ... efficient cereal trade ROUTES"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "recent investment ... advance ... use ... mobile phone communications ... FACILITATED ... development ... new ... efficient cereal trade routes ... reduced marketing margins",
+          "tail": "marketing MARGINS"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "recent INVESTMENT",
+          "tail": "marketing MARGINS"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "ADVANCE ... use ... mobile phone communications",
+          "tail": "marketing MARGINS"
+        }
+      ]
+    },
+    {
+      "model_name": "ChatGPT 3.5",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "investment in improving existing roads",
+          "tail": "development of new cereal trade routes"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "investment in improving existing roads",
+          "tail": "marketing margins"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "advance in use of mobile phone communications",
+          "tail": "development of new cereal trade routes"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "advance in use of mobile phone communications",
+          "tail": "marketing margins"
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "rural households in developing countries, especially in grazing and arid lands of Africa, rely on livestock for their livelihood",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "livestock",
+          "tail": "livelihood of rural households in developing countries"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "livestock",
+          "tail": "livelihood of rural households in developing countries"
+        },
+        {
+          "correct": false,
+          "direction_head": "decrease",
+          "direction_tail": "decrease",
+          "head": "grazing lands",
+          "tail": "livestock"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "arid lands",
+          "tail": "livelihood of rural households in developing countries"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "droughts",
+          "tail": "livestock"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "disease outbreaks",
+          "tail": "livestock"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "technology adoption",
+          "tail": "livelihood of rural households in developing countries"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "government support",
+          "tail": "livelihood of rual households in developing countries"
+        },
+        {
+          "correct": false,
+          "direction_head": "decrease",
+          "direction_tail": "decrease",
+          "head": "pasture land",
+          "tail": "livestock"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "farming techniques",
+          "tail": "livelihood of rural households in developing countrires"
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": []
+    },
+    {
+      "model_name": "ChatGPT 3.5",
+      "rels": []
+    }
+  ]
+},
+{
+  "passage": "The causal flow results indicated Sofara and Ségou markets to be receivers of price information, while Bamako and Douentza markets behaved as senders of price information in contemporaneous time.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "price information sent by Bamako market",
+          "tail": "price information received by Sofara market"
+        },
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "price information sent by Douentza market",
+          "tail": "price information received by Ségou market"
+        },
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "price information sent by Bamako market",
+          "tail": "price information received by Sofara market"
+        },
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "price information sent by Douentza market",
+          "tail": "price information received by Ségou market"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "price information sent by Bamako and Douentza markets",
+          "tail": "price information received by Sofara and Ségou markets"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "price information received by Sofara and Ségou markets",
+          "tail": "prices in Sofara and Ségou markets"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "prices in Sofara and Ségou markets",
+          "tail": "costs for consumers in Sofara and Ségou markets"
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "SENDERS ... price information",
+          "tail": "price INFORMATION"
+        }
+      ]
+    },
+    {
+      "model_name": "ChatGPT 3.5",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "Can't parse direction",
+          "head": "Bamako market",
+          "tail": "price information"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "Can't parse direction",
+          "head": "Douentza market",
+          "tail": "price information"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "Can't parse direction",
+          "head": "Sofara market",
+          "tail": "price information"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "Can't parse direction",
+          "head": "Ségou market",
+          "tail": "price information"
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "long distance and high transportation costs to move cattle between markets seem to explain in part the low level of integration. Most of the livestock producers can access only one or two markets to sell or buy livestock and depend mostly on trekking to move their animals.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "long distance",
+          "tail": "low level of integration"
+        },
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "high transportation costs",
+          "tail": "low level of integration"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "long distance",
+          "tail": "high transportation costs"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "number of markets accessible to livestock producers",
+          "tail": "integration of livestock markets"
+        },
+        {
+          "correct": false,
+          "direction_head": "decrease",
+          "direction_tail": "increase",
+          "head": "dependence on trekking to move animals",
+          "tail": "integration of livestock markets"
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "Most ... livestock producers ... BUY livestock",
+          "tail": "LIVESTOCK"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "Most ... livestock producers can ACCESS only one ... two markets",
+          "tail": "LIVESTOCK"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "only one ... two MARKETS",
+          "tail": "LIVESTOCK"
+        }
+      ]
+    },
+    {
+      "model_name": "ChatGPT 3.5",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "long distance and high transportation costs",
+          "tail": "level of integration"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "limited access to markets",
+          "tail": "level of integration"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "dependence on trekking to move animals",
+          "tail": "level of integration"
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "local rice remains highly competitive with imported rice",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "imported rice",
+          "tail": "local rice competitiveness"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "imported rice",
+          "tail": "local rice competitiveness"
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "local rice REMAINS highly competitive with imported rice",
+          "tail": "local rice ... highly COMPETITIVE WITH imported rice"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "local RICE",
+          "tail": "local rice ... highly COMPETITIVE WITH imported rice"
+        }
+      ]
+    },
+    {
+      "model_name": "ChatGPT 3.5",
+      "rels": []
+    }
+  ]
+},
+{
+  "passage": "The results show that domestic rice is more expensive than imported rice per ton, supporting the argument that rice imports undermine domestic rice production as a viable income-generating activity.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "imported rice",
+          "tail": "domestic rice production"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "imported rice",
+          "tail": "domestic rice production"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "imported rice",
+          "tail": "domestic rice price"
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "rice IMPORTS",
+          "tail": "domestic rice PRODUCTION"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "SUPPORTING ... argument ... rice imports undermine domestic rice production",
+          "tail": "rice imports UNDERMINE domestic rice production"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "SUPPORTING ... argument ... rice imports undermine domestic rice production",
+          "tail": "ARGUMENT ... rice imports undermine domestic rice production"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "rice imports UNDERMINE domestic rice production",
+          "tail": "domestic rice PRODUCTION"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "domestic rice PRODUCTION",
+          "tail": "domestic RICE"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "SUPPORTING ... argument ... rice imports undermine domestic rice production",
+          "tail": "domestic rice PRODUCTION"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "rice imports UNDERMINE domestic rice production",
+          "tail": "domestic RICE"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "rice IMPORTS",
+          "tail": "domestic RICE"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "SUPPORTING ... argument ... rice imports undermine domestic rice production",
+          "tail": "domestic RICE"
+        }
+      ]
+    },
+    {
+      "model_name": "ChatGPT 3.5",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "rice imports",
+          "tail": "domestic rice production"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "domestic rice production",
+          "tail": "viable income-generating activity"
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Despite the fact that rice is a small crop for small and medium farmers in East and South Africa, it is a natural crop in West Africa, where most of the mainland rice is produced",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "small and medium farmers in East and South Africa",
+          "tail": "rice (small increase)"
+        },
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "farmers in West Africa",
+          "tail": "rice (large increase)"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "production of rice",
+          "tail": "West African rice production"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "small and medium farmers in East and South Africa",
+          "tail": "East and South African rice production"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "natural crop in West Africa",
+          "tail": "West African rice production"
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": []
+    },
+    {
+      "model_name": "ChatGPT 3.5",
+      "rels": [
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "rice being a natural crop in West Africa",
+          "tail": "production of mainland rice in West Africa"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "rice being a small crop for small and medium farmers in East and South Africa",
+          "tail": "production of rice in East and South Africa"
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "despite increasing production, Mali still has to rely on imports, mainly from Asia (India, Thailand, Vietnam, Pakistan and China), to satisfy the rice needs of its population",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "rice imports from Asia",
+          "tail": "rice availability in Mali"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "rice imports from Asia",
+          "tail": "rice availability in Mali"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "rice availability in Mali",
+          "tail": "reliance on rice imports from Asia"
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "INCREASING production",
+          "tail": "increasing PRODUCTION"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "Mali ... imports ... Asia ... China ... SATISFY ... rice needs ... its population",
+          "tail": "rice NEEDS ... its population"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "IMPORTS ... Asia",
+          "tail": "rice NEEDS ... its population"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "Mali ... has to RELY ON imports ... Asia ... China",
+          "tail": "rice NEEDS ... its population"
+        }
+      ]
+    },
+    {
+      "model_name": "ChatGPT 3.5",
+      "rels": [
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "increasing production",
+          "tail": "rice needs satisfaction"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "relying on imports from Asia",
+          "tail": "rice needs satisfaction"
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "the need for large imports is fundamentally linked to a change in dietary habits rather than a decline in production, with consumption growing at a higher rate than production",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "dietary habits",
+          "tail": "imports"
+        },
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "consumption growing at a higher rate than production",
+          "tail": "imports"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "correct": false,
+          "direction_head": "change",
+          "direction_tail": "change",
+          "head": "dietary habits",
+          "tail": "imports"
+        },
+        {
+          "correct": false,
+          "direction_head": "change",
+          "direction_tail": "change",
+          "head": "consumption",
+          "tail": "production"
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "need for large imports ... fundamentally LINKED TO ... change ... dietary habits",
+          "tail": "CHANGE ... dietary habits"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "need for large IMPORTS",
+          "tail": "CHANGE ... dietary habits"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "DECLINE ... production",
+          "tail": "PRODUCTION"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "consumption GROWING",
+          "tail": "CONSUMPTION"
+        }
+      ]
+    },
+    {
+      "model_name": "ChatGPT 3.5",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "change in dietary habits",
+          "tail": "need for large imports"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "consumption growing at a higher rate than production",
+          "tail": "need for large imports"
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Although the 2012/13 cropping season took place in conditions of political and institutional crisis, production was supported by the State and technical partners, which allowed for a continuation of input subsidy programs and a slight increase in volume produced.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "political and institutional crisis",
+          "tail": "production"
+        },
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "input subsidy programs",
+          "tail": "production"
+        },
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "State and technical partners",
+          "tail": "input subsidy programs"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "political and institutional crisis",
+          "tail": "production"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "input subsidy programs",
+          "tail": "production"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "volume produced",
+          "tail": "support from the State and technical partners"
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "production ... SUPPORTED ... State ... technical partners",
+          "tail": "PRODUCTION"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "STATE",
+          "tail": "PRODUCTION"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "technical PARTNERS",
+          "tail": "PRODUCTION"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "ALLOWED ... continuation ... input subsidy programs",
+          "tail": "CONTINUATION ... input subsidy programs"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "CONTINUATION ... input subsidy programs",
+          "tail": "input subsidy PROGRAMS"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "slight INCREASE ... volume produced",
+          "tail": "VOLUME produced"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "volume PRODUCED",
+          "tail": "VOLUME produced"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "ALLOWED ... continuation ... input subsidy programs",
+          "tail": "input subsidy PROGRAMS"
+        }
+      ]
+    },
+    {
+      "model_name": "ChatGPT 3.5",
+      "rels": [
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "production being supported by the State and technical partners",
+          "tail": "volume produced"
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Rice imports into Mali are highly politicized, as already noted above, and can be characterized as a monopolistic situation with only two or three large importers accounting for at least two-thirds of total imports each year",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "monopolistic situation",
+          "tail": "few large importers accounting for at least two-thirds of total imports each year"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "rice imports into Mali",
+          "tail": "monopolistic situation"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "monopolistic situation",
+          "tail": "few large importers accounting for at least two-thirds of total imports each year"
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "monopolistic situation ... only two ... three large importers ACCOUNTING FOR at least two-thirds ... total imports each year",
+          "tail": "at least two-thirds ... total IMPORTS each year"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "monopolistic SITUATION",
+          "tail": "at least two-thirds ... total IMPORTS each year"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "only two ... three large IMPORTERS",
+          "tail": "at least two-thirds ... total IMPORTS each year"
+        }
+      ]
+    },
+    {
+      "model_name": "ChatGPT 3.5",
+      "rels": [
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "politicized rice imports",
+          "tail": "monopolistic situation"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "monopolistic situation",
+          "tail": "two or three large importers"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "two or three large importers",
+          "tail": "at least two-thirds of total imports each year"
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "The conditions for competitive markets are far from fulfilled, which has\nimplications in terms of trade margins and price transmission along the value chain.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "conditions for competitive markets",
+          "tail": "trade margins"
+        },
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "conditions for competitive markets",
+          "tail": "price transmission along the value chain"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "conditions for competitive markets",
+          "tail": "trade margins"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "conditions for competitive markets",
+          "tail": "price transmission along the value chain"
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "price TRANSMISSION",
+          "tail": "PRICE"
+        }
+      ]
+    },
+    {
+      "model_name": "ChatGPT 3.5",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "conditions for competitive markets not fulfilled",
+          "tail": "trade margins"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "conditions for competitive markets not fulfilled",
+          "tail": "price transmission along the value chain"
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Average prices of imported rice remained relatively lower at the country level compared to locally produced rice. These reasons can be explained by the high production costs of locally produced rice and especially by the various exceptional exemptions granted to traders for importing rice in recent years.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "production costs of locally produced rice",
+          "tail": "average prices of locally produced rice"
+        },
+        {
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "exemptions granted to traders for importing rice",
+          "tail": "average prices of imported rice"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "production costs of locally produced rice",
+          "tail": "average prices of locally produced rice"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "exemptions granted to traders for importing rice",
+          "tail": "average prices of imported rice"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "average prices of locally produced rice",
+          "tail": "overall cost of living"
+        },
+        {
+          "correct": false,
+          "direction_head": "decrease",
+          "direction_tail": "decrease",
+          "head": "average prices of imported rice",
+          "tail": "overall cost of living"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "production costs of locally produced rice",
+          "tail": "profit of rice producers"
+        },
+        {
+          "correct": false,
+          "direction_head": "decease",
+          "direction_tail": "increase",
+          "head": "exemptions granted to traders for importing rice",
+          "tail": "profit of rice producers"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "average prices of Locally produced rice",
+          "tail": "rice consumption"
+        },
+        {
+          "correct": false,
+          "direction_head": "decrease",
+          "direction_tail": "increase",
+          "head": "average prices of imported rice",
+          "tail": "rice consumption"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "overall cost of living",
+          "tail": "disposable income"
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "traders ... IMPORTING rice",
+          "tail": "exceptional EXEMPTIONS granted ... traders"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "exceptional exemptions GRANTED ... traders",
+          "tail": "exceptional EXEMPTIONS granted ... traders"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "exceptional exemptions GRANTED ... traders",
+          "tail": "traders ... IMPORTING rice"
+        }
+      ]
+    },
+    {
+      "model_name": "ChatGPT 3.5",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "high production costs of locally produced rice",
+          "tail": "higher prices of locally produced rice"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "various exceptional exemptions granted to traders for importing rice",
+          "tail": "lower prices of imported rice"
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "As part of its food self- sufficiency efforts, the Malian government is supporting farmers in the form of improved seeds, fertilizers and some agricultural aids to facilitate the production process.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "support for farmers",
+          "tail": "food self-sufficiency"
+        },
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "improved seeds",
+          "tail": "agricultural production"
+        },
+        {
+          "direction_head": "Increase",
+          "direction_tail": "increase",
+          "head": "fertilizers",
+          "tail": "agricultural production"
+        },
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "agricultural aids",
+          "tail": "agricultural production"
+        },
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "support for farmers",
+          "tail": "improved seeds"
+        },
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "support for farmers",
+          "tail": "fertilizers"
+        },
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "support for farmers",
+          "tail": "agricultural aids"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "support for farmers",
+          "tail": "food self-sufficiency"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "improved seeds",
+          "tail": "agricultural production"
+        },
+        {
+          "correct": true,
+          "direction_head": "Increase",
+          "direction_tail": "increase",
+          "head": "fertilizers",
+          "tail": "agricultural production"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "agricultural production",
+          "tail": "food self-sufficiency"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "agricultural aids",
+          "tail": "agricultural production"
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "Malian government ... some agricultural aids ... FACILITATE ... production process",
+          "tail": "PRODUCTION PROCESS"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "some agricultural AIDS",
+          "tail": "PRODUCTION PROCESS"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "FERTILIZERS",
+          "tail": "Malian government ... some agricultural aids ... FACILITATE ... production process"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "Malian government ... SUPPORTING farmers",
+          "tail": "PRODUCTION PROCESS"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "improved SEEDS",
+          "tail": "PRODUCTION PROCESS"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "FERTILIZERS",
+          "tail": "PRODUCTION PROCESS"
+        }
+      ]
+    },
+    {
+      "model_name": "ChatGPT 3.5",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "government support (improved seeds, fertilizers, agricultural aids)",
+          "tail": "farmers' production"
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Prices of livestock surge ahead of Eid. ",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "Eid celebrations",
+          "tail": "livestock prices"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "livestock prices",
+          "tail": "Eid celebrations"
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": []
+    },
+    {
+      "model_name": "ChatGPT 3.5",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "approaching Eid",
+          "tail": "prices of livestock"
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "In livestock markets around the capital Bamako, the prices of animals have shot up remarkably. Butchers and consumers alike are being asked for upwards of 500 Euro a cow. The same figure would get you two animals not so long ago.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "price of animals",
+          "tail": "cost of a cow"
+        },
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "price of animals",
+          "tail": "higher prices for butchers and consumers"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "price of animals",
+          "tail": "cost of a cow"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "cost of a cow",
+          "tail": "cost of two animals"
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "same figure would GET you two animals",
+          "tail": "two ANIMALS"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "same FIGURE",
+          "tail": "two ANIMALS"
+        }
+      ]
+    },
+    {
+      "model_name": "ChatGPT 3.5",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "prices of animals in livestock markets",
+          "tail": "higher prices for butchers and consumers"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "prices of animals in livestock markets",
+          "tail": "higher cost per cow"
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "The high cost of livestock starts in the countryside. On top of that, there are maintenance costs. It is no longer possible to walk with livestock. It is imperative to find a means of transport. To do this, you have to pay for loading and unloading and cattle feed is very expensive.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "maintenance costs",
+          "tail": "cost of livestock"
+        },
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "countryside",
+          "tail": "cost of livestock"
+        },
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "cattle feed",
+          "tail": "cost of livestock"
+        },
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "cost of transportation",
+          "tail": "cost of livestock"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "cost of livestock",
+          "tail": "maintenance costs"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "cost of livestock",
+          "tail": "cost of transportation"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "cost of transportation",
+          "tail": "overall costs"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "demand for livestock",
+          "tail": "overall costs"
+        },
+        {
+          "correct": false,
+          "direction_head": "decrease",
+          "direction_tail": "decrease",
+          "head": "profits from selling livestock",
+          "tail": "money left over from one's paycheck"
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "high cost ... livestock STARTS ... countryside",
+          "tail": "high COST ... livestock ... countryside"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "high cost ... livestock STARTS ... countryside",
+          "tail": "LIVESTOCK"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "FIND ... transport ... you",
+          "tail": "TRANSPORT"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "you have to PAY FOR loading ... unloading ... cattle feed",
+          "tail": "TRANSPORT"
+        }
+      ]
+    },
+    {
+      "model_name": "ChatGPT 3.5",
+      "rels": [
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "high cost of livestock",
+          "tail": "maintenance costs"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "high cost of livestock",
+          "tail": "need for means of transport"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "need for means of transport",
+          "tail": "loading and loading costs"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "high cost of livestock",
+          "tail": "expensive cattle feed"
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Islamist violence in Mali has also hit cattle herding areas, forcing farmers to abandon their trade.  Climate change too has led to competition for grazing lands and water, leading to intercommunal conflicts. The result, increased costs for breeders.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "Islamist violence",
+          "tail": "abandonment of cattle herding"
+        },
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "climate change",
+          "tail": "competition for grazing lands and water"
+        },
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "competition for grazing lands and water",
+          "tail": "intercommunal conflicts"
+        },
+        {
+          "direction_head": "Increase",
+          "direction_tail": "increase",
+          "head": "intercommunal conflicts",
+          "tail": "increased costs for breeders"
+        },
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "farmers abandon their trade",
+          "tail": "increased costs for breeders"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "Islamist violence",
+          "tail": "abandonment of cattle herding"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "climate change",
+          "tail": "competition for grazing lands and water"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "competition for grazing lands and water",
+          "tail": "intercommunal conflicts"
+        },
+        {
+          "correct": true,
+          "direction_head": "Increase",
+          "direction_tail": "increase",
+          "head": "intercommunal conflicts",
+          "tail": "increased costs for breeders"
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "Islamist VIOLENCE ... Mali",
+          "tail": "COMPETITION ... grazing lands ... water"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "Islamist VIOLENCE ... Mali",
+          "tail": "intercommunal CONFLICTS"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "Islamist VIOLENCE ... Mali",
+          "tail": "increased COSTS ... breeders"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "CHANGE",
+          "tail": "COMPETITION ... grazing lands ... water"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "CHANGE",
+          "tail": "intercommunal CONFLICTS"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "CHANGE",
+          "tail": "increased COSTS ... breeders"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "CHANGE",
+          "tail": "farmers ... ABANDON their trade"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "COMPETITION ... grazing lands ... water",
+          "tail": "intercommunal CONFLICTS"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "COMPETITION ... grazing lands ... water",
+          "tail": "increased COSTS ... breeders"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "COMPETITION ... grazing lands ... water",
+          "tail": "farmers ... ABANDON their trade"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "Islamist VIOLENCE ... Mali",
+          "tail": "farmers ... ABANDON their trade"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "Islamist violence ... Mali ... FORCING farmers ... abandon their trade",
+          "tail": "farmers ... ABANDON their trade"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "farmers ... ABANDON their trade",
+          "tail": "their TRADE"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "FARMERS",
+          "tail": "their TRADE"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "Islamist violence ... Mali ... change ... LED TO competition ... grazing lands ... water",
+          "tail": "COMPETITION ... grazing lands ... water"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "Islamist violence ... Mali ... change ... competition ... grazing lands ... water ... LEADING TO intercommunal conflicts",
+          "tail": "intercommunal CONFLICTS"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "intercommunal conflicts ... RESULT ... increased costs ... breeders",
+          "tail": "intercommunal CONFLICTS"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "intercommunal conflicts ... RESULT ... increased costs ... breeders",
+          "tail": "increased COSTS ... breeders"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "INCREASED costs ... breeders",
+          "tail": "increased COSTS ... breeders"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "Islamist violence ... Mali ... FORCING farmers ... abandon their trade",
+          "tail": "their TRADE"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "Islamist VIOLENCE ... Mali",
+          "tail": "their TRADE"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "Islamist violence ... Mali ... change ... LED TO competition ... grazing lands ... water",
+          "tail": "intercommunal CONFLICTS"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "Islamist violence ... Mali ... change ... LED TO competition ... grazing lands ... water",
+          "tail": "increased COSTS ... breeders"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "Islamist violence ... Mali ... change ... LED TO competition ... grazing lands ... water",
+          "tail": "farmers ... ABANDON their trade"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "CHANGE",
+          "tail": "their TRADE"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "COMPETITION ... grazing lands ... water",
+          "tail": "their TRADE"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "Islamist violence ... Mali ... change ... LED TO competition ... grazing lands ... water",
+          "tail": "their TRADE"
+        }
+      ]
+    },
+    {
+      "model_name": "ChatGPT 3.5",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "Islamist violence in Mali",
+          "tail": "farmers abandoning cattle herding"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "climate change",
+          "tail": "competition for grazing lands and water"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "competition for grazing lands and water",
+          "tail": "intercommunal conflicts"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "intercommunal conflicts",
+          "tail": "costs for breeders"
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Since 2pm, we have been here to buy a cow. We've even been looking for calves, and at the moment they're between 200,000  and 350,000 CFA francs (between 300 and 530 euros). At the moment, the sum we have is 300,000",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": []
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "number of calves",
+          "tail": "price of calves"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "price of calves",
+          "tail": "amount of money needed to buy a calf"
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "we ... BUY ... cow",
+          "tail": "COW"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "Since 2pm ... we ... BEEN here",
+          "tail": "COW"
+        }
+      ]
+    },
+    {
+      "model_name": "ChatGPT 3.5",
+      "rels": [
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "looking for calves",
+          "tail": "possibility of buying a cow"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "sum of 300,000 CFA francs",
+          "tail": "possibility of buying a calf"
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Muslim faithful in Mali say inflation has dampened the mood of this year's festivities. They want authorities to intervene to bring down prices.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "inflation",
+          "tail": "prices"
+        },
+        {
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "authorities' intervention",
+          "tail": "prices"
+        },
+        {
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "prices",
+          "tail": "mood of festivities"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "inflation",
+          "tail": "mood of festivities"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "authorities' intervention",
+          "tail": "prices"
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "inflation ... DAMPENED ... mood ... festivities",
+          "tail": "MOOD ... festivities"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "INFLATION",
+          "tail": "MOOD ... festivities"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "authorities ... BRING DOWN prices",
+          "tail": "PRICES"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "AUTHORITIES",
+          "tail": "PRICES"
+        }
+      ]
+    },
+    {
+      "model_name": "ChatGPT 3.5",
+      "rels": [
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "inflation",
+          "tail": "dampened mood of festivities"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "inflation",
+          "tail": "higher prices"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "higher prices",
+          "tail": "dampened mood of festivities"
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Mali’s Government reports  show that in Bamako the cattle population increased from 8,000 to 32,086 head from 1989 to 2012. Livestock husbandry in urban and suburban areas of West Africa’s Sahel is increasing because of the growing demand for livestock products and because well-to-do government officials and entrepreneurs, who are taking advantage of the prevailing accessibility of the market, are investing in livestock enterprises. ",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "investment in livestock enterprises",
+          "tail": "livestock husbandry/cattle population "
+        },
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "demand for livestock products",
+          "tail": "investment in livestock enterprises"
+        },
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "year 1989 to 2012",
+          "tail": "cattle population"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "cattle population",
+          "tail": "demand for livestock products"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "investment in livestock enterprises",
+          "tail": "cattle population"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "demand for livestock products",
+          "tail": "investment in livestock enterprises"
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "well-to-do government officials ... entrepreneurs ... taking advantage of ... prevailing accessibility ... market ... INVESTING IN livestock enterprises",
+          "tail": "Bamako ... cattle population INCREASED ... 2012"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "Bamako ... cattle population INCREASED ... 2012",
+          "tail": "Bamako ... cattle POPULATION"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "Livestock husbandry ... urban ... suburban areas ... West Africa ... Sahel ... INCREASING",
+          "tail": "Livestock HUSBANDRY ... urban ... suburban areas ... West Africa ... Sahel"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "growing DEMAND ... livestock products",
+          "tail": "Livestock HUSBANDRY ... urban ... suburban areas ... West Africa ... Sahel"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "growing DEMAND ... livestock products",
+          "tail": "Bamako ... cattle POPULATION"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "well-to-do government officials ... entrepreneurs ... taking advantage of ... prevailing accessibility ... market ... INVESTING IN livestock enterprises",
+          "tail": "Bamako ... cattle POPULATION"
+        }
+      ]
+    },
+    {
+      "model_name": "ChatGPT 3.5",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "growing demand for livestock products",
+          "tail": "livestock husbandry in urban and suburban areas of West Africa's Sahel"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "well-to-do government officials and entrepreneurs investing in livestock enterprises",
+          "tail": "livestock husbandry in urban and suburban areas of West Africa's Sahel"
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Feed is the main challenge to livestock husbandry in urban and suburban areas of West Africa’s Sahel because of its scarcity during the dry season and the limited access to grazing areas. Most livestock keepers therefore depend on purchased feeds, often at high prices and influenced by seasonal variations. ",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "purchased feeds",
+          "tail": "cost of livestock husbandry"
+        },
+        {
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "dry season",
+          "tail": "feed"
+        },
+        {
+          "direction_head": "decrease",
+          "direction_tail": "increase",
+          "head": "access to grazing areas",
+          "tail": "purchased feed"
+        },
+        {
+          "direction_head": "decrease",
+          "direction_tail": "increase",
+          "head": "feed",
+          "tail": "purchased feed"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "scarcity of feed",
+          "tail": "cost of purchased feeds"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "limited access to grazing areas",
+          "tail": "reliance on purchased feeds"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "seasonal variations",
+          "tail": "cost of purchased feeds"
+        },
+        {
+          "correct": true,
+          "direction_head": "Increase",
+          "direction_tail": "increase",
+          "head": "purchased feeds",
+          "tail": "cost of livestock husbandry"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "cost of livestock husbandry",
+          "tail": "profitability of livestock husbandry"
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "seasonal VARIATIONS",
+          "tail": "main CHALLENGE ... livestock husbandry ... urban ... suburban areas ... West Africa ... Sahel"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "SCARCITY during ... dry season",
+          "tail": "main CHALLENGE ... livestock husbandry ... urban ... suburban areas ... West Africa ... Sahel"
+        }
+      ]
+    },
+    {
+      "model_name": "ChatGPT 3.5",
+      "rels": [
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "scarcity of feed during the dry season",
+          "tail": "livestock husbandry in urban and suburban areas of West Africa's Sahel"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "limited access to grazing areas",
+          "tail": "livestock husbandry in urban and suburban areas of West Africa's Sahel"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "dependence on purchased feeds",
+          "tail": "livestock husbandry in urban and suburban areas of West Africa's Sahel"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "high prices of purchased feeds",
+          "tail": "livestock husbandry in urban and suburban areas of West Africa's Sahel"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "seasonal variations in feed prices",
+          "tail": "livestock husbandry in urban and suburban areas of West Africa's Sahel"
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "As a result of the increase in the livestock population and the associated growth in the demand for feeds, feed markets have sprung up in many cities and towns in the region. ",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "livestock population",
+          "tail": "demand for feeds"
+        },
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "demand for feeds",
+          "tail": "number of feed markets"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "livestock population",
+          "tail": "demand for feeds"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "demand for feeds",
+          "tail": "number of feed markets"
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "RESULT ... increase ... livestock population ... growth ... demand ... feeds ... feed markets ... sprung up ... many cities ... towns ... region",
+          "tail": "feed markets ... SPRUNG UP ... many cities ... towns ... region"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "INCREASE ... livestock population",
+          "tail": "feed markets ... SPRUNG UP ... many cities ... towns ... region"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "GROWTH ... demand ... feeds",
+          "tail": "feed markets ... SPRUNG UP ... many cities ... towns ... region"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "INCREASE ... livestock population",
+          "tail": "livestock POPULATION"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "GROWTH ... demand ... feeds",
+          "tail": "DEMAND ... feeds"
+        }
+      ]
+    },
+    {
+      "model_name": "ChatGPT 3.5",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "livestock population",
+          "tail": "growth in demand for feeds"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "growth in demand for feeds",
+          "tail": "feed markets in cities and towns"
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Information on the price and quality of feeds sold at these markets is important for optimization of livestock feeding strategies and enhancement of resource use efficiency in urban and suburban livestock production systems.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "information on price of feeds",
+          "tail": "optimization of livestock feeding strategies"
+        },
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "information on quality of feeds",
+          "tail": "optimization of livestock feeding strategies"
+        },
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "optimization of livestock feeding strategies",
+          "tail": "resource use efficiency in urban and suburban livestock production systems"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "price of feeds",
+          "tail": "optimization of livestock feeding strategies"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "quality of feeds",
+          "tail": "optimization of livestock feeding strategies"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "optimization of livestock feeding strategies",
+          "tail": "resource use efficiency in urban and suburban livestock production systems"
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "INFORMATION ... price ... quality",
+          "tail": "OPTIMIZATION ... livestock ... strategies ... efficiency"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "OPTIMIZATION ... livestock ... strategies ... efficiency",
+          "tail": "EFFICIENCY"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "OPTIMIZATION ... livestock ... strategies ... efficiency",
+          "tail": "livestock ... STRATEGIES"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "ENHANCEMENT ... resource use efficiency",
+          "tail": "resource USE"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "ENHANCEMENT ... resource use efficiency",
+          "tail": "EFFICIENCY"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "INFORMATION ... price ... quality",
+          "tail": "EFFICIENCY"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "INFORMATION ... price ... quality",
+          "tail": "livestock ... STRATEGIES"
+        }
+      ]
+    },
+    {
+      "model_name": "ChatGPT 3.5",
+      "rels": []
+    }
+  ]
+},
+{
+  "passage": "In view of the high price of crop residues, particularly cowpea hay and groundnut haulm, there are market opportunities for fodder production in suburban areas of West Africa’s Sahel.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "price of crop residues, particularly cowpea hay and groundnut haulm",
+          "tail": "market opportunities for fodder production"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "price of crop residues",
+          "tail": "market opportunities for fodder production"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "fodder production",
+          "tail": "availability of fodder"
+        },
+        {
+          "correct": false,
+          "direction_head": "decease",
+          "direction_tail": "decease",
+          "head": "availability of fodder",
+          "tail": "livestock production"
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": []
+    },
+    {
+      "model_name": "ChatGPT 3.5",
+      "rels": []
+    }
+  ]
+},
+{
+  "passage": "Beyond subsistence needs, food is also crucial for structuring social relationships, reinforcing cultural identity and marking the calendar through seasonal feasts.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "food",
+          "tail": "social relationships"
+        },
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "food",
+          "tail": "cultural identity"
+        },
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "food",
+          "tail": "seasonal feasts"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "food",
+          "tail": "social relationships"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "food",
+          "tail": "cultural identity"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "food",
+          "tail": "seasonal feasts"
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": []
+    },
+    {
+      "model_name": "ChatGPT 3.5",
+      "rels": []
+    }
+  ]
+},
+{
+  "passage": "Cattle thieves are carrying out daily killings and kidnappings in Zamfara state. Hundreds have died this year alone.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "cattle thieves",
+          "tail": "killings and kidnappings"
+        },
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "killings and kidnappings",
+          "tail": "deaths"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "cattle thieves",
+          "tail": "killings and kidnappings"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "killings and kidnappings",
+          "tail": "deaths"
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "Cattle thieves ... CARRYING OUT daily killings ... kidnappings ... Zamfara state",
+          "tail": "Cattle thieves ... daily KILLINGS ... Zamfara state"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "Cattle THIEVES",
+          "tail": "Cattle thieves ... daily KILLINGS ... Zamfara state"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "Cattle thieves ... CARRYING OUT daily killings ... kidnappings ... Zamfara state",
+          "tail": "Cattle thieves ... daily ... KIDNAPPINGS ... Zamfara state"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "Cattle THIEVES",
+          "tail": "Cattle thieves ... daily ... KIDNAPPINGS ... Zamfara state"
+        }
+      ]
+    },
+    {
+      "model_name": "ChatGPT 3.5",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "cattle thieves carrying out killings and kidnappings",
+          "tail": "deaths"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "cattle thieves carrying out killings and kidnappings",
+          "tail": "kidnappings"
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "A young family fled their village of Kanya to Zurmi town, both in Zamfara state, after cattle rustlers on motorcycles stormed her hometown with AK47s.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "cattle rustlers",
+          "tail": "fleeing villagers"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "cattle rustlers",
+          "tail": "fleeing villagers"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "AK47s",
+          "tail": "fleeing villagers"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "young family",
+          "tail": "fled village"
+        },
+        {
+          "correct": false,
+          "direction_head": "Increase",
+          "direction_tail": "increase",
+          "head": "village",
+          "tail": "fled villagers"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "Zamfara state",
+          "tail": "fleeing villagers"
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": []
+    },
+    {
+      "model_name": "ChatGPT 3.5",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "cattle rustlers storming the village with AK47s",
+          "tail": "young family fleeing their village"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "young family fleeing their village",
+          "tail": "population in Zurmi town"
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Cattle rustling, which has long afflicted northern Nigeria, has assumed a dangerous dimension in recent years. ",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "cattle rustling",
+          "tail": "danger"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "cattle rustling",
+          "tail": "danger"
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": []
+    },
+    {
+      "model_name": "ChatGPT 3.5",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "cattle rustling",
+          "tail": "dangerous dimension"
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "The many forests in the area, especially the twin forests of Mashema in Zamfara’s north bordering nearby Niger Republic and Birnin Gwari to the south leading to the neighbouring, equally insecure state of Kaduna, have served as bases for criminals who stockpile sophisticated weapons.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "criminals",
+          "tail": "sophisticated weapons"
+        },
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "forests",
+          "tail": "bases for criminals"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "criminals",
+          "tail": "sophisticated weapons"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "forests",
+          "tail": "bases for criminals"
+        },
+        {
+          "correct": false,
+          "direction_head": "Increase",
+          "direction_tail": "increase",
+          "head": "neighboring states",
+          "tail": "insecurity"
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": []
+    },
+    {
+      "model_name": "ChatGPT 3.5",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "forests serving as bases for criminals",
+          "tail": "stockpiling of sophisticated weapons"
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "The situation in Zamfara is nothing new and has been building for years since the state adopted [Islamic] law as a placebo to respond to economic challenges.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "economic challenges",
+          "tail": "adoption of Islamic law"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "adoption of Islamic law",
+          "tail": "economic challenges"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "economic challenges",
+          "tail": "adoption of Islamic law"
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "situation ... Zamfara ... BUILDING ... years since ... state adopted ... Islamic ... law",
+          "tail": "SITUATION ... Zamfara"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "state ADOPTED ... Islamic ... law",
+          "tail": "Islamic ... LAW"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "state ADOPTED ... Islamic ... law",
+          "tail": "RESPOND ... economic challenges"
+        }
+      ]
+    },
+    {
+      "model_name": "ChatGPT 3.5",
+      "rels": [
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "adoption of Islamic law",
+          "tail": "building of the situation in Zamfara"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "economic challenges",
+          "tail": "adoption of Islamic law"
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Nigeria’s law enforcement agencies are understaffed and with its army stretched thin by other conflicts, the cattle-rustler crisis has continued unabated mostly in Zamfara but also Kaduna, Katsina, Niger and, recently, Sokoto states.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "conflicts",
+          "tail": "stretched thin army"
+        },
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "law enforcement agencies are understaffed",
+          "tail": "cattle-rustler crisis"
+        },
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "stretched thin army",
+          "tail": "cattle-rustler crisis"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "cattle-rustler crisis",
+          "tail": "understaffed law enforcement agencies"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "conflicts",
+          "tail": "stretched thin army"
+        },
+        {
+          "correct": false,
+          "direction_head": "Increase",
+          "direction_tail": "increase",
+          "head": "affected states",
+          "tail": "cattle-rustler crisis"
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "crisis ... CONTINUED unabated ... Zamfara",
+          "tail": "crisis ... UNABATED ... Zamfara"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "CRISIS ... Zamfara",
+          "tail": "crisis ... UNABATED ... Zamfara"
+        }
+      ]
+    },
+    {
+      "model_name": "ChatGPT 3.5",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "law enforcement agencies being understaffed",
+          "tail": "cattle-rustler crisis"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "army being stretched thin by other conflicts",
+          "tail": "cattle-rustler crisis"
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "The bandits are mostly Fulani mercenaries attacking predominantly Hausa settlements, with some criminal elements among the ethnic militia also instigating their own attacks in similar patterns, says the state government.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "Fulani mercenaries",
+          "tail": "attacks on Hausa settlements"
+        },
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "criminal elements among ethnic militia",
+          "tail": "attacks on Hausa settlements"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "Fulani mercenaries",
+          "tail": "attacks on Hausa settlements"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "criminal elements among ethnic militia",
+          "tail": "attacks on Hausa settlements"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "attacks on Hausa settlements",
+          "tail": "instability in the state"
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "some criminal elements ... ethnic militia ... INSTIGATING their own attacks",
+          "tail": "their own ATTACKS"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "some criminal ELEMENTS ... ethnic militia",
+          "tail": "their own ATTACKS"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "ethnic MILITIA",
+          "tail": "their own ATTACKS"
+        }
+      ]
+    },
+    {
+      "model_name": "ChatGPT 3.5",
+      "rels": [
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "Fulani mercenaries attacking predominantly Hausa settlements",
+          "tail": "farmers being attacked and kidnapped"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "criminal elements among the ethnic militia instigating attacks",
+          "tail": "farmers being attacked and kidnapped"
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "In Nigeria, we like our binary fixtures – Muslim versus Christian, Igbo versus Hausa, Fulani versus Yoruba.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": []
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "Muslim",
+          "tail": "Igbo"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "decease",
+          "head": "Christian",
+          "tail": "Fulani"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "Hausa",
+          "tail": "Yoruba"
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": []
+    },
+    {
+      "model_name": "ChatGPT 3.5",
+      "rels": []
+    }
+  ]
+},
+{
+  "passage": "Finances that ought to be used in the development of other sectors are used in addressing farmers–herdsmen conflict.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "finances used in addressing farmers-herdsmen conflict",
+          "tail": "finances available for development of other sectors"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "finances used in addressing farmers-herdsmen conflict",
+          "tail": "finances available for development of other sectors"
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "ADDRESSING farmers ... herdsmen conflict",
+          "tail": "herdsmen CONFLICT"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "ADDRESSING farmers ... herdsmen conflict",
+          "tail": "FARMERS"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "Finances ... USED",
+          "tail": "herdsmen CONFLICT"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "Finances ... USED",
+          "tail": "FARMERS"
+        }
+      ]
+    },
+    {
+      "model_name": "ChatGPT 3.5",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "finances used in addressing farmers-herdsmen conflict",
+          "tail": "finances available for development of other sectors"
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Inadequate supplies of agricultural products will consequently lead to worries, unrest, dearth of food securities, and adverse effects on national economy and security.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "direction_head": "decrease",
+          "direction_tail": "increase",
+          "head": "agricultural products",
+          "tail": "worries"
+        },
+        {
+          "direction_head": "decrease",
+          "direction_tail": "increase",
+          "head": "agricultural products",
+          "tail": "unrest"
+        },
+        {
+          "direction_head": "decrease",
+          "direction_tail": "increase",
+          "head": "agricultural products",
+          "tail": "dearth of food securities"
+        },
+        {
+          "direction_head": "decrease",
+          "direction_tail": "increase",
+          "head": "products",
+          "tail": "adverse effects on national economy"
+        },
+        {
+          "direction_head": "decrease",
+          "direction_tail": "increase",
+          "head": "products",
+          "tail": "adverse effects on national security "
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "decrease",
+          "direction_tail": "increase",
+          "head": "agricultural products",
+          "tail": "worries"
+        },
+        {
+          "correct": true,
+          "direction_head": "decrease",
+          "direction_tail": "increase",
+          "head": "agricultural products",
+          "tail": "unrest"
+        },
+        {
+          "correct": true,
+          "direction_head": "decease",
+          "direction_tail": "increase",
+          "head": "agricultural products",
+          "tail": "dearth of food securities"
+        },
+        {
+          "correct": true,
+          "direction_head": "decrease",
+          "direction_tail": "increase",
+          "head": "agricultural producst",
+          "tail": "adverse effects on national economy and security"
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "Inadequate SUPPLIES ... agricultural products",
+          "tail": "WORRIES"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "Inadequate SUPPLIES ... agricultural products",
+          "tail": "UNREST"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "Inadequate SUPPLIES ... agricultural products",
+          "tail": "DEARTH ... food securities"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "Inadequate supplies ... agricultural products will ... LEAD TO worries ... unrest ... dearth ... food securities ... adverse effects on national economy ... security",
+          "tail": "Inadequate supplies ... agricultural products ... adverse EFFECTS ON national economy ... security"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "Inadequate SUPPLIES ... agricultural products",
+          "tail": "Inadequate supplies ... agricultural products ... adverse EFFECTS ON national economy ... security"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "Inadequate supplies ... agricultural products will ... LEAD TO worries ... unrest ... dearth ... food securities ... adverse effects on national economy ... security",
+          "tail": "WORRIES"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "Inadequate supplies ... agricultural products will ... LEAD TO worries ... unrest ... dearth ... food securities ... adverse effects on national economy ... security",
+          "tail": "UNREST"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "Inadequate supplies ... agricultural products will ... LEAD TO worries ... unrest ... dearth ... food securities ... adverse effects on national economy ... security",
+          "tail": "DEARTH ... food securities"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "Inadequate supplies ... agricultural products ... adverse EFFECTS ON national economy ... security",
+          "tail": "national ECONOMY"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "Inadequate SUPPLIES ... agricultural products",
+          "tail": "national ECONOMY"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "Inadequate supplies ... agricultural products ... adverse EFFECTS ON national economy ... security",
+          "tail": "national ... SECURITY"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "Inadequate SUPPLIES ... agricultural products",
+          "tail": "national ... SECURITY"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "Inadequate supplies ... agricultural products will ... LEAD TO worries ... unrest ... dearth ... food securities ... adverse effects on national economy ... security",
+          "tail": "national ECONOMY"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "Inadequate supplies ... agricultural products will ... LEAD TO worries ... unrest ... dearth ... food securities ... adverse effects on national economy ... security",
+          "tail": "national ... SECURITY"
+        }
+      ]
+    },
+    {
+      "model_name": "ChatGPT 3.5",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "adequate supplies of agricultural products",
+          "tail": "worries"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "adequate supplies of agricultural products",
+          "tail": "unrest"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "adequate supplies of agricultural products",
+          "tail": "dearth of food securities"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "adequate supplies of agricultural products",
+          "tail": "adverse effects on national economy"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "adequate supplies of agricultural products",
+          "tail": "adverse effects on national security"
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Availability of agricultural products will result in vibrant health, stable mental and physical development of the citizens, and national productivity ",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "availability of agricultural products",
+          "tail": "vibrant health"
+        },
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "availability of agricultural products",
+          "tail": "stable mental development of the citizens"
+        },
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "availability of agricultural products",
+          "tail": "national productivity"
+        },
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "availability of agricultural products",
+          "tail": "stable physical development of the citizens"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "availability of agricultural products",
+          "tail": "vibrant health"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "availability of agricultural products",
+          "tail": "stable mental and physical development of the citizens"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "availability of agricultural products",
+          "tail": "national productivity"
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "AVAILABILITY ... agricultural products",
+          "tail": "vibrant HEALTH"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "AVAILABILITY ... agricultural products",
+          "tail": "stable mental ... physical DEVELOPMENT ... citizens"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "agricultural PRODUCTS",
+          "tail": "vibrant HEALTH"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "agricultural PRODUCTS",
+          "tail": "stable mental ... physical DEVELOPMENT ... citizens"
+        }
+      ]
+    },
+    {
+      "model_name": "ChatGPT 3.5",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "availability of agricultural products",
+          "tail": "vibrant health"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "availability of agricultural products",
+          "tail": "stable mental development"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "availability of agricultural products",
+          "tail": "stable physical development"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "availability of agricultural products",
+          "tail": "national productivity"
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "The menaces of cattle rustling and banditry activities have become a serious threat to the safety and lives of the entire people of Zamfara State (including Anka and Maradun local government area).",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "cattle rustling",
+          "tail": "threat to safety and lives"
+        },
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "banditry activities",
+          "tail": "threat to safety and lives"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "cattle rustling",
+          "tail": "threat to safety and lives"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "banditry activities",
+          "tail": "threat to safety and lives"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "threat to safety and lives",
+          "tail": "anxiety and fear among the people"
+        },
+        {
+          "correct": false,
+          "direction_head": "Increase",
+          "direction_tail": "increase",
+          "head": "anxiety and fear among the people",
+          "tail": "migration to other areas"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "migration to other areas",
+          "tail": "population density"
+        },
+        {
+          "correct": false,
+          "direction_head": "decrease",
+          "direction_tail": "decrease",
+          "head": "population density",
+          "tail": "economic activities"
+        },
+        {
+          "correct": false,
+          "direction_head": "decrease",
+          "direction_tail": "decrease",
+          "head": "economic activities",
+          "tail": "standard of living"
+        },
+        {
+          "correct": false,
+          "direction_head": "decrease",
+          "direction_tail": "decrease",
+          "head": "standard of living",
+          "tail": "quality of life"
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "menaces ... cattle rustling ... banditry activities ... serious THREAT TO ... safety ... lives ... entire people ... Zamfara State",
+          "tail": "SAFETY ... entire people ... Zamfara State"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "MENACES",
+          "tail": "SAFETY ... entire people ... Zamfara State"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "cattle RUSTLING",
+          "tail": "SAFETY ... entire people ... Zamfara State"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "BANDITRY",
+          "tail": "SAFETY ... entire people ... Zamfara State"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "banditry ACTIVITIES",
+          "tail": "SAFETY ... entire people ... Zamfara State"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "menaces ... cattle rustling ... banditry activities ... serious THREAT TO ... safety ... lives ... entire people ... Zamfara State",
+          "tail": "LIVES ... entire people ... Zamfara State"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "MENACES",
+          "tail": "LIVES ... entire people ... Zamfara State"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "cattle RUSTLING",
+          "tail": "LIVES ... entire people ... Zamfara State"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "BANDITRY",
+          "tail": "LIVES ... entire people ... Zamfara State"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "banditry ACTIVITIES",
+          "tail": "LIVES ... entire people ... Zamfara State"
+        }
+      ]
+    },
+    {
+      "model_name": "ChatGPT 3.5",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "cattle rustling and banditry activities",
+          "tail": "threat to safety and lives of people in Zamfara State"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "cattle rustling and banditry activities",
+          "tail": "threat to safety and lives of people in Anka local government area"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "cattle rustling and banditry activities",
+          "tail": "threat to safety and lives of people in Maradun local government area"
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Cattle rustling has also been conceived as a criminal act of taking cow for economic purposes. ",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": []
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "cattle rustling",
+          "tail": "economic gain"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "cattle rustling",
+          "tail": "number of cows taken"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "number of cows taken",
+          "tail": "economic gain"
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": []
+    },
+    {
+      "model_name": "ChatGPT 3.5",
+      "rels": [
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "cattle rustling",
+          "tail": "economic gain"
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Banditry, on the contrary, has been described as the act of robbery or violent crime especially in an area where the rule of law has broken down. It mostly involved the use of coercion and threat to rob, rape, and kill. ",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "banditry",
+          "tail": "robbery"
+        },
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "banditry",
+          "tail": "violent crime"
+        },
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "banditry",
+          "tail": "violent crime"
+        },
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "banditry",
+          "tail": "coercion and threat to kill"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "banditry",
+          "tail": "use of coercion"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "banditry",
+          "tail": "threat to rob"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "banditry",
+          "tail": "threat to rape"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "banditry",
+          "tail": "threat to kill"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "use of coercion",
+          "tail": "threat to rob"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "use of coercion",
+          "tail": "threat to rape"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "use of coercion",
+          "tail": "threat to kill"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "threat to rob",
+          "tail": "robbery"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "threat to rape",
+          "tail": "rape"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "threat to kill",
+          "tail": "killing"
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "mostly INVOLVED ... use ... coercion ... threat ... rob ... rape ... kill",
+          "tail": "USE ... coercion"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "mostly INVOLVED ... use ... coercion ... threat ... rob ... rape ... kill",
+          "tail": "THREAT ... rob ... rape ... kill"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "THREAT ... rob ... rape ... kill",
+          "tail": "ROB"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "THREAT ... rob ... rape ... kill",
+          "tail": "RAPE"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "THREAT ... rob ... rape ... kill",
+          "tail": "KILL"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "mostly INVOLVED ... use ... coercion ... threat ... rob ... rape ... kill",
+          "tail": "ROB"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "mostly INVOLVED ... use ... coercion ... threat ... rob ... rape ... kill",
+          "tail": "RAPE"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "mostly INVOLVED ... use ... coercion ... threat ... rob ... rape ... kill",
+          "tail": "KILL"
+        }
+      ]
+    },
+    {
+      "model_name": "ChatGPT 3.5",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "banditry",
+          "tail": "robbery"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "banditry",
+          "tail": "violent crime"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "banditry",
+          "tail": "use of coercion"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "banditry",
+          "tail": "use of threat"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "banditry",
+          "tail": "robbery"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "banditry",
+          "tail": "rape"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "banditry",
+          "tail": "kill"
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Scarcity of resources which basically emanated from situation like drought remained a major problem responsible for the farmers and herders conflict.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "scarcity of resources",
+          "tail": "farmer and herder conflict"
+        },
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "drought",
+          "tail": "scarcity of resources"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "scarcity of resources",
+          "tail": "farmer and herder conflict"
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "SCARCITY ... resources",
+          "tail": "herders CONFLICT"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "DROUGHT",
+          "tail": "SCARCITY ... resources"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "Scarcity ... resources ... REMAINED ... major problem",
+          "tail": "major PROBLEM"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "SCARCITY ... resources",
+          "tail": "major PROBLEM"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "Scarcity ... resources ... major problem RESPONSIBLE FOR ... herders conflict",
+          "tail": "herders CONFLICT"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "major PROBLEM",
+          "tail": "herders CONFLICT"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "Scarcity ... resources ... REMAINED ... major problem",
+          "tail": "herders CONFLICT"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "DROUGHT",
+          "tail": "major PROBLEM"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "DROUGHT",
+          "tail": "herders CONFLICT"
+        }
+      ]
+    },
+    {
+      "model_name": "ChatGPT 3.5",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "scarcity of resources (e.g., drought)",
+          "tail": "farmers and herders conflict"
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Closely to the previous observation, were also of the view that climatic conditions should be seen as responsible for the lingering conflicts between farmers and herdsmen. They attributed these to the rate at which deserts are encroaching the Sahel regions that provide the source of livelihood for the cattle.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "source of livelihood for cattle",
+          "tail": "conflicts between farmers and herdsmen"
+        },
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "climatic conditions",
+          "tail": "desert encroachment"
+        },
+        {
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "desert encroachment",
+          "tail": "source of livelihood for cattle"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "desert encroachment",
+          "tail": "conflicts between farmers and herdsmen"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "climatic conditions",
+          "tail": "desert encroachment"
+        },
+        {
+          "correct": false,
+          "direction_head": "Increase",
+          "direction_tail": "increase",
+          "head": "Sahel regions",
+          "tail": "source of livelihood for cattle"
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "climatic CONDITIONS should",
+          "tail": "lingering CONFLICTS ... farmers ... herdsmen"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "climatic conditions should ... RESPONSIBLE FOR ... lingering conflicts ... farmers ... herdsmen",
+          "tail": "lingering CONFLICTS ... farmers ... herdsmen"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "deserts ... encroaching ... Sahel regions ... PROVIDE ... source ... livelihood ... cattle",
+          "tail": "SOURCE ... livelihood ... cattle"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "deserts ... ENCROACHING ... Sahel regions ... provide ... source ... livelihood ... cattle",
+          "tail": "SOURCE ... livelihood ... cattle"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "deserts ... encroaching ... Sahel REGIONS ... provide ... source ... livelihood ... cattle",
+          "tail": "SOURCE ... livelihood ... cattle"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "SOURCE ... livelihood ... cattle",
+          "tail": "LIVELIHOOD ... cattle"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "deserts ... encroaching ... Sahel regions ... PROVIDE ... source ... livelihood ... cattle",
+          "tail": "LIVELIHOOD ... cattle"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "deserts ... ENCROACHING ... Sahel regions ... provide ... source ... livelihood ... cattle",
+          "tail": "LIVELIHOOD ... cattle"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "deserts ... encroaching ... Sahel REGIONS ... provide ... source ... livelihood ... cattle",
+          "tail": "LIVELIHOOD ... cattle"
+        }
+      ]
+    },
+    {
+      "model_name": "ChatGPT 3.5",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "climatic conditions",
+          "tail": "conflicts between farmers and herdsmen"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "desert encroachment in Sahel regions",
+          "tail": "conflicts between farmers and herdsmen"
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "The encroachment in their own observation has been consequently responsible for the migration of herdsmen searching for their means of survival for themselves and their cattle.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "encroachment",
+          "tail": "migration of herdsmen"
+        },
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "migration of herdsmen",
+          "tail": "search for means of survival for themselves"
+        },
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "migration of herdsmen",
+          "tail": "search for means of survival for their cattle"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "encroachment",
+          "tail": "migration of herdsmen"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "migration of herdsmen",
+          "tail": "search for means of survival"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "search for means of survival",
+          "tail": "difficulty in finding adequate resources"
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "ENCROACHMENT",
+          "tail": "MIGRATION ... herdsmen"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "encroachment ... RESPONSIBLE FOR ... migration ... herdsmen",
+          "tail": "MIGRATION ... herdsmen"
+        }
+      ]
+    },
+    {
+      "model_name": "ChatGPT 3.5",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "encroachment",
+          "tail": "migration of herdsmen"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "migration of herdsmen",
+          "tail": "search for means of survival"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "migration of herdsmen",
+          "tail": "search for means of survival for cattle"
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Similarly, Audu (2013) argued that the consequences of climate change which has led to scarcity of water in the semi and region in sub-Saharan Africa can be seen as responsible for the farmers–herdsmen conflict.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "scarcity of water",
+          "tail": "farmer-herdsmen conflict"
+        },
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "climate change",
+          "tail": "scarcity of water"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "scarcity of water",
+          "tail": "farmer-herdsmen conflict"
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "CONSEQUENCES",
+          "tail": "SCARCITY ... water ... semi ... region ... sub-Saharan Africa"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "SCARCITY ... water ... semi ... region ... sub-Saharan Africa",
+          "tail": "CONFLICT"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "consequences ... LED TO scarcity ... water ... semi ... region ... sub-Saharan Africa",
+          "tail": "SCARCITY ... water ... semi ... region ... sub-Saharan Africa"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "consequences ... scarcity ... water ... semi ... region ... sub-Saharan Africa ... RESPONSIBLE FOR ... herdsmen conflict",
+          "tail": "CONFLICT"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "CONSEQUENCES",
+          "tail": "CONFLICT"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "consequences ... LED TO scarcity ... water ... semi ... region ... sub-Saharan Africa",
+          "tail": "CONFLICT"
+        }
+      ]
+    },
+    {
+      "model_name": "ChatGPT 3.5",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "scarcity of water in the semi-arid region in sub-Saharan Africa",
+          "tail": "farmers-herdsmen conflict"
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Consequently, therefore, scarcity of water which technically has been responsible for insufficient grazing of land has led to violent conflicts among farmers and herders.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "insufficient grazing of land",
+          "tail": "violent conflicts among farmers and herders"
+        },
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "scarcity of water",
+          "tail": "insufficient grazing of land"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "scarcity of water",
+          "tail": "violent conflicts among farmers and herders"
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "SCARCITY ... water",
+          "tail": "violent CONFLICTS ... farmers ... herders"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "scarcity ... water ... LED TO violent conflicts ... farmers ... herders",
+          "tail": "violent CONFLICTS ... farmers ... herders"
+        }
+      ]
+    },
+    {
+      "model_name": "ChatGPT 3.5",
+      "rels": [
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "scarcity of water",
+          "tail": "sufficient grazing of land"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "head": "sufficient grazing of land",
+          "tail": "violent conflicts among farmers and herders"
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Among the farmers, youth are mostly involved in immoral acts such as raping and harassment of the herdsmen’s women. ",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "youth involvement in immoral acts",
+          "tail": "raping and harassment of herdsmen's women"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "youth involvement in immoral acts",
+          "tail": "raping and harassment of herdsmen's women"
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "youth ... mostly INVOLVED IN immoral acts ... raping ... harassment ... herdsmen ... women",
+          "tail": "youth ... immoral ACTS"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "YOUTH",
+          "tail": "youth ... immoral ACTS"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "youth ... mostly INVOLVED IN immoral acts ... raping ... harassment ... herdsmen ... women",
+          "tail": "RAPING ... herdsmen ... women"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "YOUTH",
+          "tail": "RAPING ... herdsmen ... women"
+        },
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "youth ... mostly INVOLVED IN immoral acts ... raping ... harassment ... herdsmen ... women",
+          "tail": "HARASSMENT ... herdsmen ... women"
+        },
+        {
+          "correct": false,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "YOUTH",
+          "tail": "HARASSMENT ... herdsmen ... women"
+        }
+      ]
+    },
+    {
+      "model_name": "ChatGPT 3.5",
+      "rels": [
+        {
+          "correct": true,
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "head": "youth involvement in immoral acts",
+          "tail": "raping and harassment of the herdsmen's women"
+        }
+      ]
+    }
+  ]
+}]

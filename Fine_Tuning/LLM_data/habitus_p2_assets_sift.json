@@ -1,0 +1,5920 @@
+[{
+  "passage": "The iron and folate tablets are prescribed to prevent and treat anaemia (decrease in the number of red blood cells) during pregnancy.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "tablets",
+          "tail": "anaemia",
+          "direction_head": "increase",
+          "direction_tail": "decrease"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "tablets",
+          "tail": "anaemia",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "tablets",
+          "tail": "anaemia",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Eggs and chicken are very good source of protein.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "Eggs",
+          "tail": "protein",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "chicken",
+          "tail": "protein",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "Eggs",
+          "tail": "protein",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "chicken",
+          "tail": "protein",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "Eggs",
+          "tail": "protein",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "chicken",
+          "tail": "protein",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Now that we are approaching rainy season, … … access road is a serious problem because all the routes are bad.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "bad",
+          "tail": "problem",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "bad",
+          "tail": "problem",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "bad",
+          "tail": "problem",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Sugarcane is a rich source of iron and vitamins A, C, B1, B2, B3, B5, and B6.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "Sugarcane",
+          "tail": "iron",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "Sugarcane",
+          "tail": "vitamins",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "Sugarcane",
+          "tail": "iron",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "Sugarcane",
+          "tail": "vitamins",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "Sugarcane",
+          "tail": "iron",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "Sugarcane",
+          "tail": "vitamins",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Other health sources of protein are lean meats, low-fat milk, nuts, and beans such as kidney beans.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "beans",
+          "tail": "protein",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "meats",
+          "tail": "protein",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "milk",
+          "tail": "protein",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "nuts",
+          "tail": "protein",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "beans",
+          "tail": "protein",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "beans",
+          "tail": "protein",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "meats",
+          "tail": "protein",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "milk",
+          "tail": "protein",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "nuts",
+          "tail": "protein",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "beans",
+          "tail": "protein",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "beans",
+          "tail": "protein",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "meats",
+          "tail": "protein",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "milk",
+          "tail": "protein",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "nuts",
+          "tail": "protein",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "beans",
+          "tail": "protein",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Touching a child makes him choke which leads to his death.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "Touching",
+          "tail": "choke",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "choke",
+          "tail": "death",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "Touching",
+          "tail": "choke",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "choke",
+          "tail": "death",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "Touching",
+          "tail": "choke",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "choke",
+          "tail": "death",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "And the colostrum gives strength that's why it was fed.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "colostrum",
+          "tail": "strength",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "colostrum",
+          "tail": "strength",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "colostrum",
+          "tail": "strength",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Anita may have thought that feeding colostrum gives the child the power to fight the disease.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "feeding",
+          "tail": "power to",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "feeding",
+          "tail": "power to",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "feeding",
+          "tail": "power to",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "If they are anemic, this sometimes may lead to death.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "anemic",
+          "tail": "death",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "anemic",
+          "tail": "death",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "anemic",
+          "tail": "death",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Ectopic pregnancy is a medical emergency and can be fatal if not treated.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "treated",
+          "tail": "fatal",
+          "direction_head": "increase",
+          "direction_tail": "decrease"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "treated",
+          "tail": "fatal",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "treated",
+          "tail": "fatal",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Feeding this milk will keep the child healthy.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "Feeding",
+          "tail": "healthy",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "Feeding",
+          "tail": "healthy",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "Feeding",
+          "tail": "healthy",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "A woman deliver in the hospital or health facility is not brave.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "deliver",
+          "tail": "not",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "deliver",
+          "tail": "not",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "deliver",
+          "tail": "not",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "The pastor said I should use the anointing oil to smear my abdomen and that will ensure my normal delivery; if not, I will die with my baby.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "delivery",
+          "tail": "die",
+          "direction_head": "increase",
+          "direction_tail": "decrease"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "delivery",
+          "tail": "die",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "delivery",
+          "tail": "die",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "During the singing, some women were thinking about the severe pain associated with the labour rather the unborn baby.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "labour",
+          "tail": "pain",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "labour",
+          "tail": "pain",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "labour",
+          "tail": "pain",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Some of the women felt that it was consoling or reassuring to know that others are praying during pregnancy.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "praying",
+          "tail": "consoling",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "praying",
+          "tail": "reassuring",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "praying",
+          "tail": "consoling",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "praying",
+          "tail": "reassuring",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "praying",
+          "tail": "consoling",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "praying",
+          "tail": "reassuring",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Women felt that group prayer and fellowship among members was reassuring and at the end of a safe delivery, women gave testimonies and thanks to God at Church.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "prayer",
+          "tail": "reassuring",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "fellowship",
+          "tail": "reassuring",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "prayer",
+          "tail": "reassuring",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "fellowship",
+          "tail": "reassuring",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "prayer",
+          "tail": "reassuring",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "fellowship",
+          "tail": "reassuring",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "As long as I am breast feeding I don't get pregnant",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "breast feeding",
+          "tail": "get pregnant",
+          "direction_head": "increase",
+          "direction_tail": "decrease"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "breast feeding",
+          "tail": "get pregnant",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "breast feeding",
+          "tail": "get pregnant",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Mother's colostrum gives strength to fight against diseases.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "colostrum",
+          "tail": "strength",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "strength",
+          "tail": "diseases",
+          "direction_head": "increase",
+          "direction_tail": "decrease"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "colostrum",
+          "tail": "strength",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "strength",
+          "tail": "diseases",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "colostrum",
+          "tail": "strength",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "strength",
+          "tail": "diseases",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "It's consoling that somebody is praying for you, somebody is thinking about you and checking on you, I think it is really necessary.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "praying",
+          "tail": "consoling",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "thinking about",
+          "tail": "consoling",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "checking on",
+          "tail": "consoling",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "praying",
+          "tail": "consoling",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "thinking about",
+          "tail": "consoling",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "checking on",
+          "tail": "consoling",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "praying",
+          "tail": "consoling",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "thinking about",
+          "tail": "consoling",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "checking on",
+          "tail": "consoling",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "I prayed when I was at the hospital that God should be with me to enable me deliver in peace.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "be with",
+          "tail": "deliver",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "be with",
+          "tail": "deliver",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "be with",
+          "tail": "deliver",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "The women prayed believing that God will help them go through labour successfully and minimize their pain because the pain was unbearable.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "help",
+          "tail": "labour",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "help",
+          "tail": "labour",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "help",
+          "tail": "labour",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Soni decided to get her child vaccinated because vaccinations can prevent fatal diseases.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "vaccinations",
+          "tail": "diseases",
+          "direction_head": "increase",
+          "direction_tail": "decrease"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "vaccinations",
+          "tail": "diseases",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "vaccinations",
+          "tail": "diseases",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "He thought women who gave birth in a health facility were not brave enough and he refused to donate his blood to save his wife.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "gave birth",
+          "tail": "not",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "gave birth",
+          "tail": "not",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "gave birth",
+          "tail": "not",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "The prayer offered by pregnant women increases their faith and hope in God and it affords them the confidence of going through a safe delivery.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "prayer",
+          "tail": "confidence",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "prayer",
+          "tail": "faith",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "prayer",
+          "tail": "hope",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "prayer",
+          "tail": "confidence",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "prayer",
+          "tail": "faith",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "prayer",
+          "tail": "hope",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "prayer",
+          "tail": "confidence",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "prayer",
+          "tail": "faith",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "prayer",
+          "tail": "hope",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Anita fed colostrum to the baby because feeding gives the child the ability to fight against the disease.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "fed",
+          "tail": "fight against",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "feeding",
+          "tail": "fight against",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "fed",
+          "tail": "fight against",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "feeding",
+          "tail": "fight against",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "fed",
+          "tail": "fight against",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "feeding",
+          "tail": "fight against",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Often the woman already wishes to leave her husband, and the rival’s coming provides an institu­tionalized excuse for her to leave.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "coming",
+          "tail": "leave",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "coming",
+          "tail": "leave",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "coming",
+          "tail": "leave",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Yes, it is true, women are not supposed to say they are pregnant if it's not visible. They say if you talk about it then witches will kill your child.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "talk",
+          "tail": "kill",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "talk",
+          "tail": "kill",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "talk",
+          "tail": "kill",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "IFA consumption also prevents swelling of hands and legs, it also increases strength in the body. And it also makes the child healthy.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "consumption",
+          "tail": "strength",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "consumption",
+          "tail": "swelling",
+          "direction_head": "increase",
+          "direction_tail": "decrease"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "consumption",
+          "tail": "strength",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "consumption",
+          "tail": "swelling",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "consumption",
+          "tail": "strength",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "consumption",
+          "tail": "swelling",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Myth & superstition: Don’t eat THAT, it will make your baby sick",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "eat",
+          "tail": "sick",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "eat",
+          "tail": "sick",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "eat",
+          "tail": "sick",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Anemia in early pregnancy is associated with multiple poor pregnancy and infant outcomes, including reduced length of gestation, IUGR, and infant anemia, with implications for infant health and development [19–22] .",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "Anemia",
+          "tail": "IUGR",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "Anemia",
+          "tail": "anemia",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "Anemia",
+          "tail": "outcomes",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "Anemia",
+          "tail": "reduced",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "Anemia",
+          "tail": "length",
+          "direction_head": "increase",
+          "direction_tail": "decrease"
+        },
+        {
+          "head": "Anemia",
+          "tail": "gestation",
+          "direction_head": "increase",
+          "direction_tail": "decrease"
+        },
+        {
+          "head": "reduced",
+          "tail": "gestation",
+          "direction_head": "increase",
+          "direction_tail": "decrease"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "Anemia",
+          "tail": "IUGR",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "Anemia",
+          "tail": "anemia",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "Anemia",
+          "tail": "outcomes",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "Anemia",
+          "tail": "reduced",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "Anemia",
+          "tail": "length",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        },
+        {
+          "head": "Anemia",
+          "tail": "gestation",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        },
+        {
+          "head": "reduced",
+          "tail": "gestation",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "Anemia",
+          "tail": "IUGR",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "Anemia",
+          "tail": "anemia",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "Anemia",
+          "tail": "outcomes",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "Anemia",
+          "tail": "reduced",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "Anemia",
+          "tail": "length",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        },
+        {
+          "head": "Anemia",
+          "tail": "gestation",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        },
+        {
+          "head": "reduced",
+          "tail": "gestation",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "The mother thought it was not safe to keep such a fine child, as the prince might fall in love with her, so she told her husband that her daughter ought to be killed and thrown away into the bush.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "keep",
+          "tail": "fall in love with",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "keep",
+          "tail": "fall in love with",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "keep",
+          "tail": "fall in love with",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "After her birth Hauwa started to lose a lot of blood, the leading cause of maternal death worldwide.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "lose",
+          "tail": "death",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "lose",
+          "tail": "death",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "lose",
+          "tail": "death",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Innovative, multisectoral strategies that move beyond facility-based platforms are needed to reduce the burden of maternal undernutrition in Northeast Nigeria.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "strategies",
+          "tail": "undernutrition",
+          "direction_head": "increase",
+          "direction_tail": "decrease"
+        },
+        {
+          "head": "strategies",
+          "tail": "burden",
+          "direction_head": "increase",
+          "direction_tail": "decrease"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "strategies",
+          "tail": "undernutrition",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        },
+        {
+          "head": "strategies",
+          "tail": "burden",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "strategies",
+          "tail": "undernutrition",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        },
+        {
+          "head": "strategies",
+          "tail": "burden",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Take the myth around eating eggs during pregnancy: we know eating eggs is safe as long as the eggs are cooked well to avoid salmonella infection.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "cooked",
+          "tail": "infection",
+          "direction_head": "increase",
+          "direction_tail": "decrease"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "cooked",
+          "tail": "infection",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "cooked",
+          "tail": "infection",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "a female participant made reference to 'studies done in European countries' which she claims support her view that injectables cause breast cancer",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "injectables",
+          "tail": "cancer",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "injectables",
+          "tail": "cancer",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "injectables",
+          "tail": "cancer",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Specific dietary restrictions such as avoidance of fish in diet may predispose the pregnant woman to dietary deficiencies.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "restrictions",
+          "tail": "deficiencies",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "avoidance",
+          "tail": "deficiencies",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "restrictions",
+          "tail": "deficiencies",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "avoidance",
+          "tail": "deficiencies",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "restrictions",
+          "tail": "deficiencies",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "avoidance",
+          "tail": "deficiencies",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "... at 7 months I could not feel my baby move so when I went to the hospital and they said the baby was big that was why.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "big",
+          "tail": "not",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "big",
+          "tail": "not",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "big",
+          "tail": "not",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "It is believed that if a woman does not do the ritual, the child will be abnormal.'",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "not",
+          "tail": "abnormal",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "not",
+          "tail": "abnormal",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "not",
+          "tail": "abnormal",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "I even heard that if you don’t have sex when you reach a certain stage in your life you may even die of [accumulated] sperm.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "sperm",
+          "tail": "die",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "sperm",
+          "tail": "die",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "sperm",
+          "tail": "die",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Some men were of the view that IUCD can \"kill your penis\" or cause injury during sex.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "IUCD",
+          "tail": "injury",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "IUCD",
+          "tail": "injury",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "IUCD",
+          "tail": "injury",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Our religion and culture forbids the free mingling of men and women you know.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "religion",
+          "tail": "mingling",
+          "direction_head": "increase",
+          "direction_tail": "decrease"
+        },
+        {
+          "head": "culture",
+          "tail": "mingling",
+          "direction_head": "increase",
+          "direction_tail": "decrease"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "religion",
+          "tail": "mingling",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        },
+        {
+          "head": "culture",
+          "tail": "mingling",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "religion",
+          "tail": "mingling",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        },
+        {
+          "head": "culture",
+          "tail": "mingling",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Family influence and secrecy were associated with the use of artefacts.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "influence",
+          "tail": "use",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "secrecy",
+          "tail": "use",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "influence",
+          "tail": "use",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "secrecy",
+          "tail": "use",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "influence",
+          "tail": "use",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "secrecy",
+          "tail": "use",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "It was erroneously believed that for women who do not menstruate monthly, the waste products that the menstrual fluid is supposed to get rid of can accumulate and lead to \"diseases\".",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "waste products",
+          "tail": "diseases",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "menstrual fluid",
+          "tail": "waste products",
+          "direction_head": "increase",
+          "direction_tail": "decrease"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "waste products",
+          "tail": "diseases",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "menstrual fluid",
+          "tail": "waste products",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "waste products",
+          "tail": "diseases",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "menstrual fluid",
+          "tail": "waste products",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "The cancer, it was claimed, was the result of accumulated menstrual flow arising from amenorrhoea.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "menstrual flow",
+          "tail": "cancer",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "amenorrhoea",
+          "tail": "menstrual flow",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "menstrual flow",
+          "tail": "cancer",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "amenorrhoea",
+          "tail": "menstrual flow",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "menstrual flow",
+          "tail": "cancer",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "amenorrhoea",
+          "tail": "menstrual flow",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "It [breast feeding] also helps the mother's uterus to shrink and close …helping to stop bleeding.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "breast feeding",
+          "tail": "shrink",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "breast feeding",
+          "tail": "close",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "shrink",
+          "tail": "stop",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "close",
+          "tail": "stop",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "breast feeding",
+          "tail": "shrink",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "breast feeding",
+          "tail": "close",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "shrink",
+          "tail": "stop",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "close",
+          "tail": "stop",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "breast feeding",
+          "tail": "shrink",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "breast feeding",
+          "tail": "close",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "shrink",
+          "tail": "stop",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "close",
+          "tail": "stop",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Also, pregnancy and childbirth are associated with religious and traditional beliefs and practices in many countries.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "pregnancy",
+          "tail": "beliefs",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "pregnancy",
+          "tail": "practices",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "childbirth",
+          "tail": "beliefs",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "childbirth",
+          "tail": "practices",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "pregnancy",
+          "tail": "beliefs",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "pregnancy",
+          "tail": "practices",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "childbirth",
+          "tail": "beliefs",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "childbirth",
+          "tail": "practices",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "pregnancy",
+          "tail": "beliefs",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "pregnancy",
+          "tail": "practices",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "childbirth",
+          "tail": "beliefs",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "childbirth",
+          "tail": "practices",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "A few of the participants reported their traditional beliefs and practices such as food and water restrictions and tribal rituals invoked extra protection from ancestors.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "rituals",
+          "tail": "protection from",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "beliefs",
+          "tail": "protection from",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "practices",
+          "tail": "protection from",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "restrictions",
+          "tail": "protection from",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "rituals",
+          "tail": "protection from",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "beliefs",
+          "tail": "protection from",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "practices",
+          "tail": "protection from",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "restrictions",
+          "tail": "protection from",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "rituals",
+          "tail": "protection from",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "beliefs",
+          "tail": "protection from",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "practices",
+          "tail": "protection from",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "restrictions",
+          "tail": "protection from",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "The main direct causes of maternal mortality are haemorrhage, eclampsia, sepsis and unsafe abortion, while the indirect causes include hepatitis, anaesthetic complications, HIV/AIDS-related deaths and acute renal failure.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "hepatitis",
+          "tail": "mortality",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "complications",
+          "tail": "mortality",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "HIV",
+          "tail": "deaths",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "HIV",
+          "tail": "mortality",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "AIDS",
+          "tail": "deaths",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "AIDS",
+          "tail": "mortality",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "deaths",
+          "tail": "mortality",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "failure",
+          "tail": "mortality",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "haemorrhage",
+          "tail": "mortality",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "eclampsia",
+          "tail": "mortality",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "sepsis",
+          "tail": "mortality",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "abortion",
+          "tail": "mortality",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "hepatitis",
+          "tail": "mortality",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "complications",
+          "tail": "mortality",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "HIV",
+          "tail": "deaths",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "HIV",
+          "tail": "mortality",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "AIDS",
+          "tail": "deaths",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "AIDS",
+          "tail": "mortality",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "deaths",
+          "tail": "mortality",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "failure",
+          "tail": "mortality",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "haemorrhage",
+          "tail": "mortality",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "eclampsia",
+          "tail": "mortality",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "sepsis",
+          "tail": "mortality",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "abortion",
+          "tail": "mortality",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "hepatitis",
+          "tail": "mortality",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "complications",
+          "tail": "mortality",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "HIV",
+          "tail": "deaths",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "HIV",
+          "tail": "mortality",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "AIDS",
+          "tail": "deaths",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "AIDS",
+          "tail": "mortality",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "deaths",
+          "tail": "mortality",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "failure",
+          "tail": "mortality",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "haemorrhage",
+          "tail": "mortality",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "eclampsia",
+          "tail": "mortality",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "sepsis",
+          "tail": "mortality",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "abortion",
+          "tail": "mortality",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "There are some who do not use contraceptives because it ‘causes cancer’; ‘it causes barrenness in a woman’; ‘it gives headache’; or ‘it causes complications during delivery’.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "contraceptives",
+          "tail": "headache",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "contraceptives",
+          "tail": "complications",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "contraceptives",
+          "tail": "cancer",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "contraceptives",
+          "tail": "barrenness",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "contraceptives",
+          "tail": "headache",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "contraceptives",
+          "tail": "complications",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "contraceptives",
+          "tail": "cancer",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "contraceptives",
+          "tail": "barrenness",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "contraceptives",
+          "tail": "headache",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "contraceptives",
+          "tail": "complications",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "contraceptives",
+          "tail": "cancer",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "contraceptives",
+          "tail": "barrenness",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "I'm not sure but I think they [pregnancy complications] can't cause any serious harm to my baby and me if I rest.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "rest",
+          "tail": "harm",
+          "direction_head": "increase",
+          "direction_tail": "decrease"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "rest",
+          "tail": "harm",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "rest",
+          "tail": "harm",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Mango is nutritious, rich in fibre, which can help prevent constipation, also rich in vitamin C, vitamin A, vitamin B6 and folic acid, which are all vital nutrients for a pregnant and a breastfeeding mother.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "Mango",
+          "tail": "vitamin A",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "Mango",
+          "tail": "vitamin B6",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "Mango",
+          "tail": "folic acid",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "Mango",
+          "tail": "nutrients",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "Mango",
+          "tail": "fibre",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "Mango",
+          "tail": "vitamin C",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "Mango",
+          "tail": "constipation",
+          "direction_head": "increase",
+          "direction_tail": "decrease"
+        },
+        {
+          "head": "fibre",
+          "tail": "constipation",
+          "direction_head": "increase",
+          "direction_tail": "decrease"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "Mango",
+          "tail": "vitamin A",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "Mango",
+          "tail": "vitamin B6",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "Mango",
+          "tail": "folic acid",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "Mango",
+          "tail": "nutrients",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "Mango",
+          "tail": "fibre",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "Mango",
+          "tail": "vitamin C",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "Mango",
+          "tail": "constipation",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        },
+        {
+          "head": "fibre",
+          "tail": "constipation",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "Mango",
+          "tail": "vitamin A",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "Mango",
+          "tail": "vitamin B6",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "Mango",
+          "tail": "folic acid",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "Mango",
+          "tail": "nutrients",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "Mango",
+          "tail": "fibre",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "Mango",
+          "tail": "vitamin C",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "Mango",
+          "tail": "constipation",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        },
+        {
+          "head": "fibre",
+          "tail": "constipation",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Not bathing the baby immediately after birth will cause the baby to have body odor.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "Not",
+          "tail": "body odor",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "Not",
+          "tail": "have",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "Not",
+          "tail": "body odor",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "Not",
+          "tail": "have",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "Not",
+          "tail": "body odor",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "Not",
+          "tail": "have",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "I know that the anointing breaks the yoke of the devil; I have that faith.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "anointing",
+          "tail": "yoke",
+          "direction_head": "increase",
+          "direction_tail": "decrease"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "anointing",
+          "tail": "yoke",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "anointing",
+          "tail": "yoke",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Anita fed colostrum to her child so that it does not have any diseases such as pneumonia, fever, turning body color blue.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "fed",
+          "tail": "fever",
+          "direction_head": "increase",
+          "direction_tail": "decrease"
+        },
+        {
+          "head": "fed",
+          "tail": "turning",
+          "direction_head": "increase",
+          "direction_tail": "decrease"
+        },
+        {
+          "head": "fed",
+          "tail": "have",
+          "direction_head": "increase",
+          "direction_tail": "decrease"
+        },
+        {
+          "head": "fed",
+          "tail": "diseases",
+          "direction_head": "increase",
+          "direction_tail": "decrease"
+        },
+        {
+          "head": "fed",
+          "tail": "pneumonia",
+          "direction_head": "increase",
+          "direction_tail": "decrease"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "fed",
+          "tail": "fever",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        },
+        {
+          "head": "fed",
+          "tail": "turning",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        },
+        {
+          "head": "fed",
+          "tail": "have",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        },
+        {
+          "head": "fed",
+          "tail": "diseases",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        },
+        {
+          "head": "fed",
+          "tail": "pneumonia",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "fed",
+          "tail": "fever",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        },
+        {
+          "head": "fed",
+          "tail": "turning",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        },
+        {
+          "head": "fed",
+          "tail": "have",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        },
+        {
+          "head": "fed",
+          "tail": "diseases",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        },
+        {
+          "head": "fed",
+          "tail": "pneumonia",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "I had vaginal discharge four months ago and I used a traditional medicine it stopped",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "medicine",
+          "tail": "discharge",
+          "direction_head": "increase",
+          "direction_tail": "decrease"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "medicine",
+          "tail": "discharge",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "medicine",
+          "tail": "discharge",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "To avoid complications due to diabetes during pregnancy period, women should check whether they have diabetes before including sugarcane in their diet.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "diabetes",
+          "tail": "complications",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "diabetes",
+          "tail": "complications",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "diabetes",
+          "tail": "complications",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Major causes of death in the Christian Billiri Society included poor health care, substance taking, HIV/AIDS, cattle Fulani attacks and civil crisis among farmers.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "HIV",
+          "tail": "death",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "AIDS",
+          "tail": "death",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "attacks",
+          "tail": "death",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "crisis",
+          "tail": "death",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "health care",
+          "tail": "death",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "taking",
+          "tail": "death",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "HIV",
+          "tail": "death",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "AIDS",
+          "tail": "death",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "attacks",
+          "tail": "death",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "crisis",
+          "tail": "death",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "health care",
+          "tail": "death",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "taking",
+          "tail": "death",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "HIV",
+          "tail": "death",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "AIDS",
+          "tail": "death",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "attacks",
+          "tail": "death",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "crisis",
+          "tail": "death",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "health care",
+          "tail": "death",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "taking",
+          "tail": "death",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "The reason [women] don't use the health center is because don't have facilities, so they prefer using the native, and there it is trial by error, the woman will struggle continuously and give birth",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "n't",
+          "tail": "prefer",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "n't",
+          "tail": "n't",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "n't",
+          "tail": "prefer",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "n't",
+          "tail": "n't",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "n't",
+          "tail": "prefer",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "n't",
+          "tail": "n't",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "men don't support because they are unemployed",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "unemployed",
+          "tail": "n't",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "unemployed",
+          "tail": "support",
+          "direction_head": "increase",
+          "direction_tail": "decrease"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "unemployed",
+          "tail": "n't",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "unemployed",
+          "tail": "support",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "unemployed",
+          "tail": "n't",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "unemployed",
+          "tail": "support",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Some men were hesitant to assist with household chores because they believed it would create an expectation of ongoing involvement with chores after pregnancy.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "assist",
+          "tail": "expectation",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "assist",
+          "tail": "expectation",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "assist",
+          "tail": "expectation",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Women identified a high workload as an issue during pregnancy and a barrier to accessing maternal healthcare services.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "workload",
+          "tail": "accessing",
+          "direction_head": "increase",
+          "direction_tail": "decrease"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "workload",
+          "tail": "accessing",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "workload",
+          "tail": "accessing",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Even, we do not want to be uncovered so that our private parts do not be seen.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "uncovered",
+          "tail": "seen",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "uncovered",
+          "tail": "seen",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "uncovered",
+          "tail": "seen",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "It was believed that infections caused bad blood whose compromised quality was no good for procreation or optimal sexual functioning. ",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "infections",
+          "tail": "blood",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "infections",
+          "tail": "blood",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "infections",
+          "tail": "blood",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Notions about infections were that they could cause dirt in the body which would block the womb or they would eat up one's 'insides' and damage them.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "infections",
+          "tail": "dirt",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "infections",
+          "tail": "dirt",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "infections",
+          "tail": "dirt",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "The use of contraception was linked vicariously to promiscuity: Promiscuous women were linked to the use of contraception, multiple abortions and disease or infections.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "use",
+          "tail": "promiscuity",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "women",
+          "tail": "abortions",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "women",
+          "tail": "disease",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "women",
+          "tail": "infections",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "women",
+          "tail": "use",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "use",
+          "tail": "promiscuity",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "women",
+          "tail": "abortions",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "women",
+          "tail": "disease",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "women",
+          "tail": "infections",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "women",
+          "tail": "use",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "use",
+          "tail": "promiscuity",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "women",
+          "tail": "abortions",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "women",
+          "tail": "disease",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "women",
+          "tail": "infections",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "women",
+          "tail": "use",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "The use of exogenous hormones would eventually disrupt the body's natural functions, and lead to infertility.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "use",
+          "tail": "infertility",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "use",
+          "tail": "functions",
+          "direction_head": "increase",
+          "direction_tail": "decrease"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "use",
+          "tail": "infertility",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "use",
+          "tail": "functions",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "use",
+          "tail": "infertility",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "use",
+          "tail": "functions",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": " Low quality or watery sperm also emerged as cause of infertility. ",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "sperm",
+          "tail": "infertility",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "sperm",
+          "tail": "infertility",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "sperm",
+          "tail": "infertility",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Despite the fact almost everyone held witchcraft to be a cause of infertility witchdoctors were not always seen as a source of help. ",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "witchcraft",
+          "tail": "infertility",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "witchcraft",
+          "tail": "infertility",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "witchcraft",
+          "tail": "infertility",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "A witchdoctor uses evil to counter evil therefore even if a witchdoctor gave a woman a child, which he could and would, the child would not survive till birth or die early in his life.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "evil",
+          "tail": "evil",
+          "direction_head": "increase",
+          "direction_tail": "decrease"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "evil",
+          "tail": "evil",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "evil",
+          "tail": "evil",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Some held that Western medical treatment was effective only if there is a Western medical cause of infertility.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "cause",
+          "tail": "effective",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "cause",
+          "tail": "effective",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "cause",
+          "tail": "effective",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Recourse to visiting witchdoctors was commonplace when curses were suspected as causing infertility.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "curses",
+          "tail": "infertility",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "suspected",
+          "tail": "Recourse",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "curses",
+          "tail": "infertility",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "suspected",
+          "tail": "Recourse",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "curses",
+          "tail": "infertility",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "suspected",
+          "tail": "Recourse",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "The herbalist explained to us that dreaming of having intercourse with an animal such as a black snake could also cause the woman to lose a pregnancy.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "dreaming",
+          "tail": "lose",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "dreaming",
+          "tail": "pregnancy",
+          "direction_head": "increase",
+          "direction_tail": "decrease"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "dreaming",
+          "tail": "lose",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "dreaming",
+          "tail": "pregnancy",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "dreaming",
+          "tail": "lose",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "dreaming",
+          "tail": "pregnancy",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Patronizing herbalists was especially common when women held the cause of their infertility to be 'dirt in the womb' - herbs were held to cleanse the womb of impurities.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "dirt",
+          "tail": "infertility",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "held",
+          "tail": "Patronizing",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "dirt",
+          "tail": "infertility",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "held",
+          "tail": "Patronizing",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "dirt",
+          "tail": "infertility",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "held",
+          "tail": "Patronizing",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Usually, the herbalist would mix various herbs, animal fat and animal's skin such as lion's skin. These herbs were thought to clean a woman's womb making it suitable for conception or make a man potent.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "clean",
+          "tail": "suitable",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "clean",
+          "tail": "potent",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "clean",
+          "tail": "suitable",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "clean",
+          "tail": "potent",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "clean",
+          "tail": "suitable",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "clean",
+          "tail": "potent",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Male infertility frequently remained silent and so when exposed could create considerable discord. ",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "exposed",
+          "tail": "discord",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "exposed",
+          "tail": "discord",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "exposed",
+          "tail": "discord",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Participants also believed that illiteracy and low levels of education among some of the women were barriers to seeking skilled pregnancy health care.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "illiteracy",
+          "tail": "seeking",
+          "direction_head": "increase",
+          "direction_tail": "decrease"
+        },
+        {
+          "head": "education",
+          "tail": "seeking",
+          "direction_head": "increase",
+          "direction_tail": "decrease"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "illiteracy",
+          "tail": "seeking",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        },
+        {
+          "head": "education",
+          "tail": "seeking",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "illiteracy",
+          "tail": "seeking",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        },
+        {
+          "head": "education",
+          "tail": "seeking",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Other women themselves initiated divorce because they felt guilty for being unable to bear children for their partners.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "felt",
+          "tail": "initiated",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "unable",
+          "tail": "felt",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "felt",
+          "tail": "initiated",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "unable",
+          "tail": "felt",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "felt",
+          "tail": "initiated",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "unable",
+          "tail": "felt",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Such beliefs include that contraception causes \"mahaifan kulle\" [locked womb] among women.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "contraception",
+          "tail": "mahaifan kulle",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "contraception",
+          "tail": "locked womb",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "contraception",
+          "tail": "mahaifan kulle",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "contraception",
+          "tail": "locked womb",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "contraception",
+          "tail": "mahaifan kulle",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "contraception",
+          "tail": "locked womb",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "The trophy doesn't fit into the brown suitcase because it's too small.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "small",
+          "tail": "n't",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "small",
+          "tail": "n't",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "small",
+          "tail": "n't",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "The trophy doesn't fit into the brown suitcase because it's too large.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "large",
+          "tail": "n't",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "large",
+          "tail": "n't",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "large",
+          "tail": "n't",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "The man couldn't lift his son because he was so weak.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "weak",
+          "tail": "n't",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "weak",
+          "tail": "n't",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "weak",
+          "tail": "n't",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "The man couldn't lift his son because he was so heavy.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "heavy",
+          "tail": "n't",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "heavy",
+          "tail": "n't",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "heavy",
+          "tail": "n't",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Striking numbers of Hausa women are admitted to hospital with very serious burns sustained by being immersed in scalding water or falling onto beds of glowing coals .",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "immersed",
+          "tail": "burns",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "falling",
+          "tail": "burns",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "immersed",
+          "tail": "burns",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "falling",
+          "tail": "burns",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "immersed",
+          "tail": "burns",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "falling",
+          "tail": "burns",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Soni must have got the child vaccinated because by getting vaccinated the child does not get polio like disease and the child remains healthy.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "getting",
+          "tail": "remains",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "getting",
+          "tail": "get",
+          "direction_head": "increase",
+          "direction_tail": "decrease"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "getting",
+          "tail": "remains",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "getting",
+          "tail": "get",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "getting",
+          "tail": "remains",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "getting",
+          "tail": "get",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "If I will feed colostrum , the child will remain healthy and will not get weak.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "feed",
+          "tail": "not",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "feed",
+          "tail": "remain",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "feed",
+          "tail": "weak",
+          "direction_head": "increase",
+          "direction_tail": "decrease"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "feed",
+          "tail": "not",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "feed",
+          "tail": "remain",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "feed",
+          "tail": "weak",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "feed",
+          "tail": "not",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "feed",
+          "tail": "remain",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "feed",
+          "tail": "weak",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Anita fed colostrum to her child because child gets nutrition from mother's milk. Child stays healthy.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "milk",
+          "tail": "nutrition",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "milk",
+          "tail": "nutrition",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "milk",
+          "tail": "nutrition",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": " This milk is very rich in nutrients and anti-bodies to protect a newborn baby against diseases.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "milk",
+          "tail": "nutrients",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "milk",
+          "tail": "anti - bodies",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "anti - bodies",
+          "tail": "diseases",
+          "direction_head": "increase",
+          "direction_tail": "decrease"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "milk",
+          "tail": "nutrients",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "milk",
+          "tail": "anti - bodies",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "anti - bodies",
+          "tail": "diseases",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "milk",
+          "tail": "nutrients",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "milk",
+          "tail": "anti - bodies",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "anti - bodies",
+          "tail": "diseases",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Our religion does not allow our naked body to be seen by any other person other than husbands.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "religion",
+          "tail": "seen",
+          "direction_head": "increase",
+          "direction_tail": "decrease"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "religion",
+          "tail": "seen",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "religion",
+          "tail": "seen",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "male and female participants perceived that women's negative attitudes during pregnancy were a reason for the lack of male support. Negative attitudes included rudeness, aggressiveness and laziness",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "attitudes",
+          "tail": "lack",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "attitudes",
+          "tail": "lack",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "attitudes",
+          "tail": "lack",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "The bible says 'my people perish due to lack of knowledge'. That is why some of our communities are still doing female circumcision. If the gospel gets there they will stop it.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "bible",
+          "tail": "perish",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "lack",
+          "tail": "perish",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "bible",
+          "tail": "perish",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "lack",
+          "tail": "perish",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "bible",
+          "tail": "perish",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "lack",
+          "tail": "perish",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Lack of blood in the woman will lead to repeated illness.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "Lack",
+          "tail": "illness",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "Lack",
+          "tail": "illness",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "Lack",
+          "tail": "illness",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Men who want to have plenty of children like to do kunika. ",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "do",
+          "tail": "have",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "do",
+          "tail": "have",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "do",
+          "tail": "have",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Women who do kunika are considered as hyper-sexual. Therefore, they are shamed.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "considered",
+          "tail": "shamed",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "considered",
+          "tail": "shamed",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "considered",
+          "tail": "shamed",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Insufficient sperm was popularly believed to cause male infertility though the insufficiency was something natural and dictated by God at the time of birth.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "sperm",
+          "tail": "infertility",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "insufficiency",
+          "tail": "infertility",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "sperm",
+          "tail": "infertility",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "insufficiency",
+          "tail": "infertility",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "sperm",
+          "tail": "infertility",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "insufficiency",
+          "tail": "infertility",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "When I was eight months pregnant I came here to test for HIV and I was very concerned that I could be infected as he has been unfaithful.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "unfaithful",
+          "tail": "infected",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "unfaithful",
+          "tail": "infected",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "unfaithful",
+          "tail": "infected",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Men - all they were interested in were male babies to keep their names going...",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "keep",
+          "tail": "names",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "keep",
+          "tail": "names",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "keep",
+          "tail": "names",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Suman must have felt that if she takes TT injection, then the child and mother will never have tetanus. Because of this, she decided to take TT injection.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "takes",
+          "tail": "never",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "takes",
+          "tail": "never",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "takes",
+          "tail": "never",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Woman would have thought that both the mother and child will stay safe by taking TT injection during vaccination. Will stay healthy. ",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "taking",
+          "tail": "stay",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "taking",
+          "tail": "stay",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "taking",
+          "tail": "stay",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Soni decided to vaccinate her baby, because she thought that by doing so her child will be safe from diseases",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "doing so",
+          "tail": "safe from",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "doing so",
+          "tail": "safe from",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "doing so",
+          "tail": "safe from",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "passage": "Soni decided to vaccinate the baby, so that it could be healthy and not suffer from fever, whooping cough and infection.",
+  "rels": [
+    {
+      "model_name": "Ground truth",
+      "rels": [
+        {
+          "head": "cough",
+          "tail": "suffer",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "infection",
+          "tail": "suffer",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "fever",
+          "tail": "suffer",
+          "direction_head": "increase",
+          "direction_tail": "increase"
+        },
+        {
+          "head": "vaccinate",
+          "tail": "cough",
+          "direction_head": "increase",
+          "direction_tail": "decrease"
+        },
+        {
+          "head": "vaccinate",
+          "tail": "infection",
+          "direction_head": "increase",
+          "direction_tail": "decrease"
+        },
+        {
+          "head": "vaccinate",
+          "tail": "suffer",
+          "direction_head": "increase",
+          "direction_tail": "decrease"
+        },
+        {
+          "head": "vaccinate",
+          "tail": "fever",
+          "direction_head": "increase",
+          "direction_tail": "decrease"
+        }
+      ]
+    },
+    {
+      "model_name": "Llama 2",
+      "rels": [
+        {
+          "head": "cough",
+          "tail": "suffer",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "infection",
+          "tail": "suffer",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "fever",
+          "tail": "suffer",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "vaccinate",
+          "tail": "cough",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        },
+        {
+          "head": "vaccinate",
+          "tail": "infection",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        },
+        {
+          "head": "vaccinate",
+          "tail": "suffer",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        },
+        {
+          "head": "vaccinate",
+          "tail": "fever",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "model_name": "Weber",
+      "rels": [
+        {
+          "head": "cough",
+          "tail": "suffer",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "infection",
+          "tail": "suffer",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "fever",
+          "tail": "suffer",
+          "direction_head": "increase",
+          "direction_tail": "increase",
+          "correct": false
+        },
+        {
+          "head": "vaccinate",
+          "tail": "cough",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        },
+        {
+          "head": "vaccinate",
+          "tail": "infection",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        },
+        {
+          "head": "vaccinate",
+          "tail": "suffer",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        },
+        {
+          "head": "vaccinate",
+          "tail": "fever",
+          "direction_head": "increase",
+          "direction_tail": "decrease",
+          "correct": false
+        }
+      ]
+    }
+  ]
+}]
