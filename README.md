@@ -39,8 +39,7 @@ The fine tuning aspect involves training existing LLMs to effectively extract re
 ____
 
 ### Fine Tuning Resources:
-- ChatGPT
-- lama2
+- Llama2
 - Mistral
 - Hugging Face
 
