@@ -6,3 +6,4 @@ datasets>=2.18.0
 scipy>=1.12.0
 ipywidgets>=8.1.2
 matplotlib>=3.8.3
+jsonl2json>=1.0.0
