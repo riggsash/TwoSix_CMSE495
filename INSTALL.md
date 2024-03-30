@@ -6,6 +6,8 @@
 
 - Dash
 
+- Dash bootstrap components
+
 - dash_selectable
 
 ## Installation
