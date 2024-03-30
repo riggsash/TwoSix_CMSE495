@@ -39,12 +39,12 @@ The fine tuning aspect involves training existing LLMs to effectively extract re
 ____
 
 ### Fine Tuning Resources:
-- Llama2
-- Mistral
-- Hugging Face
+- [Llama2](https://llama.meta.com/llama2/)
+- [Mistral](https://docs.mistral.ai)
+- [Hugging Face](https://huggingface.co)
 
 ### UI Resources:
-- Dash
+- [Dash](https://github.com/plotly/dash/blob/dev/README.md)
   
 
 ## Installation
@@ -63,8 +63,7 @@ Clone the repository: git clone https://github.com/riggsash/TwoSix_LLM.git
 ____
 
 ### Fine Tune Example:
-Check out [mistral_finetune_own_data_tutorial.ipynb](https://github.com/riggsash/TwoSix_LLM/blob/main/Fine_Tuning/mistral_finetune_own_data_tutorial.ipynb) for a working finetuning example
-
+Check out [mistral_finetune_own_data_tutorial.ipynb](https://github.com/riggsash/TwoSix_LLM/blob/main/Fine_Tuning/mistral_finetune_own_data_tutorial.ipynb) for a working finetuning example. This example uses [OSW_labeled_data.json](https://github.com/riggsash/TwoSix_LLM/blob/main/Fine_Tuning/LLM_data/OSW_labeled_data.json) to fine tune Mistral
 
 ### Reproducable Figure:
 Check out [Reproducibility.md](https://github.com/riggsash/TwoSix_LLM/blob/main/Fine_Tuning/Reproducibility.md) for instructions on how to make reproducable plot related to the [Fine_Tuning](https://github.com/riggsash/TwoSix_LLM/tree/main/Fine_Tuning) aspect of the project.
