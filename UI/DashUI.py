@@ -13,9 +13,13 @@ from datetime import date
 """
 Functionality ideas:
 - Could write "helper" functions for callbacks to increase readability of callbacks
+- Maybe LLM output comparison with ground truths would work better in a tab
+-- First goal though is getting the information and tables created, then they can be implemented wherever is ideal
 
 Functionality to be added:
-- Ability to read in files (besides RTF) and be added to sentences for data labeling (Look at: Dash upload component)
+- Ability to read in PDF files and convert them to txt, and process them that way
+- Undo button
+- Ability to manually compare LLM output to ground truth labels and mark them as correct or incorrect
 
 Functionality to be updated:
 - (Not Required) Being able to choose the file name for the download
@@ -29,8 +33,6 @@ Unexpected (or frustrating) Behavior:
 --- Also, this issue may not be relevant as why would you upload the same thing multiple times consecutively.
 --- This issue is probably due to the filename not changing within the app, thus not invoking the callback.
 Errors in Functionality:
-- If you hold down the right arrow key, it will out of index on the function for the datatable, this affects nothing for
-- the program as far as I can tell, and the error it throws does not crash the program.
 - Weird infrequent error where next/back count increases by an additional 1 every live update from dash
 -- There should be no live update for users as this occurs when the code or css is edited
 -- A fix could be to put the JS code into its own asset file, and maybe it won't dupe the event reader
@@ -200,7 +202,13 @@ app.layout = html.Div([
         html.Div(id="next-data"),
         html.Br(),
         html.Br(),
-        dbc.Button('Discard Current Sentence', outline=True, color="danger", id="discard-btn"),
+        dbc.Row([
+            dbc.Col([dbc.Button('Discard Current Sentence', outline=True, color="danger", id="discard-btn")],),
+            dbc.Col([]),
+            dbc.Col([dbc.Button('Display LLM Outputs',id='llm-output-btn')],
+                    className="d-grid gap-2 d-md-flex justify-content-end"),
+        ]),
+        #dbc.Button('Discard Current Sentence', outline=True, color="danger", id="discard-btn"),
         html.Br(),
         html.Br(),
         html.Br(),
@@ -213,7 +221,7 @@ app.layout = html.Div([
                     dbc.Button('Select Files')
             ]),),
             dbc.Button('Download JSON', id='download-btn', n_clicks=0),],
-        className="d-grid gap-2 d-md-flex justify-content-end"),
+            className="d-grid gap-2 d-md-flex justify-content-end"),
         ]),
         #dbc.Button('Modify and add new sentence', outline=True, color="info", id="inverse-btn"),
         html.Br(),
@@ -222,6 +230,35 @@ app.layout = html.Div([
         html.Br(),
         html.Br(),
         html.Div(id="output-data-upload"),
+        dbc.Modal(
+            [
+                dbc.ModalHeader(dbc.ModalTitle("LLM Output Comparison")),
+                dbc.ModalBody(children=[
+                    dash_table.DataTable(id="datatable-llm-output",
+                                        style_cell={
+                                            'height': 'auto',
+                                            # all three widths are needed
+                                            'minWidth': '10px', 'width': '10px', 'maxWidth': '10px',
+                                            'whiteSpace': 'normal'
+                                        },
+                                        # style_table={'height': '225px', 'overflowY': 'auto'},
+                                        style_header={
+                                            'backgroundColor': 'rgb(30, 30, 30)',
+                                            'color': 'white'
+                                        },
+                                        style_data={
+                                            'backgroundColor': 'rgb(50, 50, 50)',
+                                            'color': 'white'
+                                        },
+
+                                        merge_duplicate_headers=True,
+                    )
+                ]),
+            ],
+            id="modal-xl",
+            size="xl",
+            is_open=False,
+        ),
         dcc.Store(id='input-sentences', data=["Please Insert RTF or JSON File"], storage_type='local'),
 
         dcc.Store(id='all-relation-store', data=[], storage_type='local'),
@@ -231,6 +268,7 @@ app.layout = html.Div([
         dcc.Store(id='meta-data',data={"title": "", "authors": "", "year": ""},storage_type='memory'),
         dcc.Store(id='llm-metrics',data={}, storage_type='local'),
         dcc.Store(id='llm-scores',data={}, storage_type='local'),
+        dcc.Store(id='llm-outputs',data={}, storage_type='local'),
         #dcc.Store(id='index-store',data=0, storage_type='memory'),
         dcc.Download(id="download-json"),
     ],
@@ -319,9 +357,11 @@ def next_sentence(n_clicks, back_clicks, current_text, all_data,curr_relation,se
      Input('next-btn', 'n_clicks'),
      Input('reset-btn', 'n_clicks')],
     [State("dash-selectable", "selectedValue"),
-     State("current-relation-store", "data")],
+     State("current-relation-store", "data"),
+     State("inverse-div",'hidden')
+     ],
 )
-def allLabel(inc, dec, src, tgt, next, reset, selected_data, relation):
+def allLabel(inc, dec, src, tgt, next, reset, selected_data, relation, modifier_block):
     """
     Function that handles all relation button data
     :param inc: Increase button
@@ -338,21 +378,23 @@ def allLabel(inc, dec, src, tgt, next, reset, selected_data, relation):
     direcText = f"Direction: "
     srcText = f"Source: "
     tgtText = f"Target: "
+    if button_id == "reset-btn":
+        relation = {'src': "", 'tgt': '', 'direction': ''}
+        return direcText, srcText, tgtText, relation
+    if not modifier_block: # not modifier_block because this is visibility, when it is visible, we do not allow
+        return dash.no_update, dash.no_update,dash.no_update, dash.no_update
     if button_id == "increase-btn":
-        relation["direction"] = "increase"
-        return f"Direction: increase",dash.no_update, dash.no_update,relation
+        relation["direction"] = "Increase"
+        return f"Direction: Increase",dash.no_update, dash.no_update,relation
     elif button_id == "decrease-btn":
-        relation["direction"] = "decrease"
-        return f"Direction: decrease",dash.no_update, dash.no_update,relation
+        relation["direction"] = "Decrease"
+        return f"Direction: Decrease",dash.no_update, dash.no_update,relation
     elif button_id == "source-btn":
         relation["src"] = selected_data
         return dash.no_update, f"Source: {selected_data}", dash.no_update,relation
     elif button_id == "target-btn":
         relation["tgt"] = selected_data
         return dash.no_update, dash.no_update, f"Target: {selected_data}",relation
-    elif button_id == "reset-btn":
-        relation = {'src': "", 'tgt': '', 'direction': ''}
-        return direcText, srcText, tgtText, relation
     else:  # This else corresponds to initial call (program start) and when the next button is hit
         # Have not tried multiple changes to one output from one button,
         # and it probably isn't a good idea, so don't change this
@@ -366,11 +408,14 @@ def allLabel(inc, dec, src, tgt, next, reset, selected_data, relation):
     [State('current-relation-store','data'),
      State('all-relation-store', 'data'),
      State('next-btn', 'n_clicks'),
-     State('back-btn', 'n_clicks')],
+     State('back-btn', 'n_clicks'),
+     State("inverse-div",'hidden')],
     prevent_initial_call=True,
 )
-def save_relation(n_clicks,curr_relation,all_data,for_index,back_index):
+def save_relation(n_clicks,curr_relation,all_data,for_index,back_index, modifier_block):
     index = int(for_index)-int(back_index)
+    if not modifier_block: # not modifier_block because this is visibility, when it is visible, we do not allow
+       return dash.no_update, dash.no_update
     if index <= 0:
         return all_data,dash.no_update
     all_data = saving_relation(index-1,all_data,curr_relation)
@@ -540,20 +585,22 @@ def abbreviation_handler(sentences):
                Output('all-relation-store','data', allow_duplicate=True),
                Output(metadata_prompt,'hidden'),
                Output('llm-metrics','data'),
-               Output('llm-scores','data')],
+               Output('llm-scores','data'),
+               Output('llm-outputs','data')],
               Input('upload-data', 'contents'),
               [State('upload-data', 'filename'),
                State('input-sentences','data'),
                State('all-relation-store','data'),
                State('llm-metrics','data'),
-               State('llm-scores','data')],
+               State('llm-scores','data'),
+               State('llm-outputs','data')],
               prevent_initial_call="initial_duplicate"
 )
-def upload(list_of_contents, list_of_names,inp_sentences,data,LLM_metrics,LLM_scores):
+def upload(list_of_contents, list_of_names,inp_sentences,data,LLM_metrics,LLM_scores, LLM_outputs):
     if list_of_contents is None:
         if len(inp_sentences) > 1:
-            return inp_sentences, dash.no_update, dash.no_update, dash.no_update, dash.no_update
-        return dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update
+            return inp_sentences, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update
+        return dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update
     content_type, content_string = list_of_contents.split(',')
     decoded = base64.b64decode(content_string)
     if ".json" in list_of_names:
@@ -566,6 +613,10 @@ def upload(list_of_contents, list_of_names,inp_sentences,data,LLM_metrics,LLM_sc
                 LLM_metrics[LLM] = {}
             for sentence in data:
                 for LLM in sentence['LLM'].keys():  # LLM is a list of relations
+                    if LLM in LLM_outputs.keys():
+                        LLM_outputs[LLM].append(sentence['LLM'][LLM])
+                    else:
+                        LLM_outputs[LLM] = sentence['LLM'][LLM]
                     for relation in sentence['causal relations']:
                         if relation not in sentence['LLM'][LLM]:
                             LLM_scores[LLM]['FN'] += 1
@@ -584,8 +635,8 @@ def upload(list_of_contents, list_of_names,inp_sentences,data,LLM_metrics,LLM_sc
                 LLM_metrics[LLM]['F1'] = (2 * LLM_metrics[LLM]['precision'] * LLM_metrics[LLM]['recall']) / (LLM_metrics[LLM]['precision'] + LLM_metrics[LLM]['recall'])
                 LLM_metrics[LLM]['accuracy'] = ((LLM_scores[LLM]['TP'] + LLM_scores[LLM]['TN']) /
                                                 (LLM_scores[LLM]['TP'] + LLM_scores[LLM]['TN'] + LLM_scores[LLM]['FP'] + LLM_scores[LLM]['FN']))
-            return inp_sentences, data, dash.no_update, LLM_metrics, LLM_scores
-        return inp_sentences, data, dash.no_update, dash.no_update, dash.no_update
+            return inp_sentences, data, dash.no_update, LLM_metrics, LLM_scores, LLM_outputs
+        return inp_sentences, data, dash.no_update, dash.no_update, dash.no_update, dash.no_update
     if ".rtf" in list_of_names:
         temp = io.StringIO(decoded.decode('utf-8')).getvalue()
         text = rtf_to_text(temp)
@@ -623,7 +674,7 @@ def upload(list_of_contents, list_of_names,inp_sentences,data,LLM_metrics,LLM_sc
                         "causal relations": [],
                         "meta_data": {"title": "", "authors": "", "year": ""}}
             data.append(template)
-    return inp_sentences, data, False, dash.no_update, dash.no_update
+    return inp_sentences, data, False, dash.no_update, dash.no_update, dash.no_update
 
 
 @app.callback([Output(metadata_prompt,'hidden',allow_duplicate=True),
@@ -932,6 +983,75 @@ def update_metrics(llmMetrics, cols, data):
     rows.append(row)
     return rows, cols
 
+
+def toggle_modal(n1, is_open):
+    if n1:
+        return not is_open
+    return is_open
+
+app.callback(Output("modal-xl","is_open"),
+              Input("llm-output-btn","n_clicks"),
+              State("modal-xl","is_open")
+)(toggle_modal)
+
+@app.callback(Output("datatable-llm-output","data"),
+              Output("datatable-llm-output","columns"),
+              Input("llm-output-btn","n_clicks"),
+              State("llm-outputs","data"),
+              State("next-btn","n_clicks"),
+              State("back-btn","n_clicks"),
+)
+def LLM_comparison(n_clicks, llm_outputs, next_btn, prev_btn):
+    index = int(next_btn)-int(prev_btn)-1
+    if index < 0:
+        return dash.no_update, dash.no_update
+    if llm_outputs is None:
+        return dash.no_update, dash.no_update
+    cols = []
+    row = {}
+    llm_rows = {}
+    rows = []
+    i = 0
+    llm_processed = 0
+    number_of_llms = len(llm_outputs.keys())
+    for llm in llm_outputs.keys():
+        current_sentence_data = llm_outputs[llm][index]
+        if type(current_sentence_data) is list:
+            cols.append({'name': [f'{llm}', 'Source'], 'id': f"{i}", 'hideable': 'first'})
+            cols.append({'name': [f'{llm}', 'Target'], 'id': f"{i+1}"})
+            cols.append({'name': [f'{llm}', 'Direction'], 'id': f"{i+2}"})
+            if llm_processed == 0:
+                for relation in current_sentence_data:
+                    row = {}
+                    row[llm_processed*3] = f"{relation['src']}"
+
+                    row[llm_processed*3+1] = f"{relation['tgt']}"
+
+                    row[llm_processed*3+2] = f"{relation['direction']}"
+                    rows.append(row)
+            else:
+                #if len(current_sentence_data)>
+                for relation, j in zip(current_sentence_data, range(len(current_sentence_data))):
+                    rows[j][llm_processed * 3] = f"{relation['src']}"
+
+                    rows[j][llm_processed * 3 + 1] = f"{relation['tgt']}"
+
+                    rows[j][llm_processed * 3 + 2] = f"{relation['direction']}"
+                    #rows.append(row)
+        else:
+            cols.append({'name': [f'{llm}','Source'], 'id': f"{i}", 'hideable':'first'})
+            row[i] = f"{current_sentence_data['src']}"
+
+            cols.append({'name': [f'{llm}', 'Target'], 'id': f"{i+1}"})
+            row[i+1] = f"{current_sentence_data['tgt']}"
+
+            cols.append({'name': [f'{llm}', 'Direction'], 'id': f"{i+2}"})
+            row[i+2] = f"{current_sentence_data['direction']}"
+        i += 3
+        llm_processed += 1
+    if type(current_sentence_data) is not list:
+        rows.append(row)
+    return rows, cols
 
 if __name__ == '__main__':
     app.run_server(debug=True)
