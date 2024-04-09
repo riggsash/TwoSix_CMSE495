@@ -813,15 +813,12 @@ def upload(list_of_contents, list_of_names,inp_sentences,data,LLM_metrics,LLM_sc
                 LLM_metrics[LLM] = {}
             for sentence in data:
                 for LLM in sentence['LLM'].keys():  # LLM is a list of relations
-                    truth_value = ''
                     for relation in sentence['causal relations']:
                         if relation not in sentence['LLM'][LLM]:
                             LLM_scores[LLM]['FN'] += 1
-                            truth_value = 'FN'
                     if len(LLM) == 0:
                         if len(sentence['causal relations']) == 0:
                             LLM_scores[LLM]['TN'] += 1
-                            truth_value = 'TN'
                     i = 0
                     for relation in sentence['LLM'][LLM]:
                         if relation not in sentence['causal relations']:
@@ -832,14 +829,15 @@ def upload(list_of_contents, list_of_names,inp_sentences,data,LLM_metrics,LLM_sc
                             LLM_scores[LLM]['TP'] += 1
                             sentence['LLM'][LLM][i]['truth'] = 'TP'
                         i += 1
-                    #raise ValueError(LLM_outputs)
                     if LLM in LLM_outputs.keys():
                         LLM_outputs[LLM].append(sentence['LLM'][LLM])
-                        #raise TypeError(LLM_outputs)
-                        #raise TypeError(sentence['LLM'][LLM])
                     else:
-                        LLM_outputs[LLM] = sentence['LLM'][LLM]
-                    #raise TypeError(LLM_outputs)
+                        if sentence['LLM'][LLM] == []:
+                            LLM_outputs[LLM] = [[]]
+                        else:
+                            LLM_outputs[LLM] = sentence['LLM'][LLM]
+
+
             for LLM in LLM_scores:
                 LLM_metrics[LLM]['precision'] = LLM_scores[LLM]['TP'] / (LLM_scores[LLM]['TP'] + LLM_scores[LLM]['FP'])
                 LLM_metrics[LLM]['recall'] = LLM_scores[LLM]['TP'] / (LLM_scores[LLM]['TP'] + LLM_scores[LLM]['FN'])
