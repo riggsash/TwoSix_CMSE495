@@ -56,12 +56,13 @@ Unexpected (or frustrating) Behavior:
 --- As LLM comparison doesn't need to update the labeled data upon sentence switch, it could take the inputs of
 --- next_sentence and do the operation itself, but I'm not sure if this is faster
 --- OR just add the new objects to the original functions as additional outputs
--- Things that might work, but don't have time for or have other issues:
---- Having ALL of the objects on a single page, then hiding and revealing them when "tab switch"
----- Would have to create own version of tabs then
 
 Errors in Functionality:
 - Duplicate download-btn id, can be fixed easily
+
+- Discarding sentences is not good with LLM comparison currently
+-- LLM outputs DO NOT update when sentences are discarded.
+- On a related note, modifying and adding sentences WILL ALSO BREAK LLM COMPARISON
 
 - Weird error where next/back count increases by an additional 1 every live update from dash
 -- There should be no live update for users as this occurs when the code or css is edited
@@ -1088,7 +1089,7 @@ app.clientside_callback(
     prevent_initial_call=True
 )
 def increase_decrease_keys(n1, n2): # don't know why we need an additional function and callback here,
-    # but it doesn't seem to work without it
+    # but it doesn't work without it currently
     return dash.no_update
 
 app.clientside_callback(
@@ -1123,7 +1124,7 @@ app.clientside_callback(
     prevent_initial_call=True
 )
 def source_keybind(n1, n2): # don't know why we need an additional function and callback here,
-    # but it doesn't seem to work without it
+    # but it doesn't work without it currently
     return dash.no_update
 
 
@@ -1149,8 +1150,7 @@ app.clientside_callback(
     Input("target-btn", "n_clicks"),
     prevent_initial_call=True
 )
-def target_keybind(n1): # don't know why we need an additional function and callback here,
-    # but it doesn't seem to work without it
+def target_keybind(n1):
     return dash.no_update
 
 @app.callback(
@@ -1203,10 +1203,8 @@ def LLM_comparison(n_clicks, llm_outputs, next_btn, prev_btn):
         return dash.no_update, dash.no_update
     if llm_outputs is None:
         return dash.no_update, dash.no_update
-    llm_rows = {}
     rows = []
     i = 0
-    number_of_llms = len(llm_outputs.keys())
     # This next section orders the LLMs by the number of outputs, ensuring that the length of the array the first
     # LLM is equal to the largest amount of relations, so we don't have an indexing error
     # This is done because dash wants ids with each and every row, and unless we invert our data structure to have
@@ -1357,7 +1355,8 @@ def ground_truth_update(data):
                 LLM_metrics[LLM]['recall'] = LLM_scores[LLM]['TP'] / (LLM_scores[LLM]['TP'] + LLM_scores[LLM]['FN'])
                 LLM_metrics[LLM]['F1'] = (2 * LLM_metrics[LLM]['precision'] * LLM_metrics[LLM]['recall']) / (LLM_metrics[LLM]['precision'] + LLM_metrics[LLM]['recall'])
                 LLM_metrics[LLM]['accuracy'] = ((LLM_scores[LLM]['TP'] + LLM_scores[LLM]['TN']) /
-                                                (LLM_scores[LLM]['TP'] + LLM_scores[LLM]['TN'] + LLM_scores[LLM]['FP'] + LLM_scores[LLM]['FN']))"""
+                                                (LLM_scores[LLM]['TP'] + LLM_scores[LLM]['TN'] + LLM_scores[LLM]['FP'] + LLM_scores[LLM]['FN']))
+"""
 
 if __name__ == '__main__':
     app.run_server(debug=True)
