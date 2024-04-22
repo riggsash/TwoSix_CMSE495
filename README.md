@@ -1,7 +1,10 @@
 # TwoSix_LLM  
 ____
 
-Repository for CMSE 495 Experiential Learning in Data Science
+Repository for CMSE 495 Experiential Learning in Data Science  
+
+**Final Report (DRAFT)**  
+https://docs.google.com/document/d/1Enu2aUX3rHJTQf9CMgrm2AzQznRWbVEtoQKsfxBrYSs/edit?usp=sharing
 
 **Project Plan Video:**  
 https://mediaspace.msu.edu/media/t/1_8ezxk12i  
